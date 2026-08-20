@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English بالعربي | الموسوعة التعليمية الشاملة — البركة ديجيتال</title>
+    <title>English بالعربي | موسوعة المحادثات ومواقف الحياة — البركة ديجيتال</title>
     <!-- خطوط جوجل الرسمية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,11 +26,13 @@
             --text-muted: #64748B;
             --border-color: #E2E8F0;
             --success: #10B981;
+            --speaker-a-bg: rgba(30, 64, 175, 0.06);
+            --speaker-b-bg: rgba(217, 119, 6, 0.06);
             --radius-xl: 18px;
             --radius-lg: 12px;
             --radius-md: 8px;
-            --shadow-premium: 0 6px 25px -3px rgba(8, 18, 37, 0.07);
-            --shadow-gold: 0 4px 15px rgba(217, 119, 6, 0.25);
+            --shadow-subtle: 0 6px 20px -2px rgba(8, 18, 37, 0.06);
+            --shadow-gold: 0 4px 15px rgba(217, 119, 6, 0.28);
             --font-ar: 'Cairo', sans-serif;
             --font-en: 'Plus Jakarta Sans', sans-serif;
             --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -42,59 +44,78 @@
             --text-main: #F8FAFC;
             --text-muted: #94A3B8;
             --border-color: #1E2E48;
-            --shadow-premium: 0 8px 30px rgba(0, 0, 0, 0.45);
+            --speaker-a-bg: rgba(59, 130, 246, 0.12);
+            --speaker-b-bg: rgba(245, 158, 11, 0.12);
+            --shadow-subtle: 0 8px 30px rgba(0, 0, 0, 0.45);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-ar); -webkit-tap-highlight-color: transparent; }
         body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
         .en-text { font-family: var(--font-en); direction: ltr; display: inline-block; }
 
-        /* الشريط العلوي */
+        /* شريط التنقل */
         .navbar { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-color); }
         [data-theme="dark"] .navbar { background: rgba(12, 23, 40, 0.94); }
-        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.2rem; }
+        .nav-container { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.8rem 1.2rem; }
         .brand-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
         .brand-icon { width: 44px; height: 44px; background: var(--gold-gradient); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 1.35rem; font-weight: 900; box-shadow: var(--shadow-gold); }
         .brand-text h1 { font-size: 1.25rem; font-weight: 900; color: var(--primary-navy); margin: 0; line-height: 1.1; }
         [data-theme="dark"] .brand-text h1 { color: #FFF; }
         .brand-text span { font-size: 0.72rem; color: var(--accent-gold); font-weight: 800; }
-        .nav-links { display: flex; align-items: center; gap: 1.1rem; list-style: none; }
-        .nav-link { color: var(--text-main); font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 5px; }
+        .nav-links { display: flex; align-items: center; gap: 1rem; list-style: none; overflow-x: auto; }
+        .nav-link { color: var(--text-main); font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 5px; white-space: nowrap; }
         .nav-link:hover, .nav-link.active { color: var(--accent-gold); }
-        .btn-gold { background: var(--gold-gradient); color: #FFF; border: none; padding: 0.55rem 1.2rem; border-radius: var(--radius-md); font-weight: 800; font-size: 0.9rem; cursor: pointer; box-shadow: var(--shadow-gold); display: inline-flex; align-items: center; gap: 6px; transition: var(--transition); }
+
+        .btn-gold { background: var(--gold-gradient); color: #FFF; border: none; padding: 0.55rem 1.2rem; border-radius: var(--radius-md); font-weight: 800; font-size: 0.88rem; cursor: pointer; box-shadow: var(--shadow-gold); display: inline-flex; align-items: center; gap: 6px; transition: var(--transition); }
         .btn-gold:hover { transform: translateY(-2px); }
-        .btn-secondary { background: var(--card-light); color: var(--text-main); border: 1px solid var(--border-color); padding: 0.55rem 1.1rem; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+        .btn-secondary { background: var(--card-light); color: var(--text-main); border: 1px solid var(--border-color); padding: 0.55rem 1rem; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
 
         /* منطقة الشاشات */
         #app-viewport { flex: 1; display: flex; flex-direction: column; }
-        .view-section { display: none; padding: 2rem 1.2rem; max-width: 1400px; margin: 0 auto; width: 100%; animation: fadeIn 0.3s ease; }
+        .view-section { display: none; padding: 2rem 1.2rem; max-width: 1440px; margin: 0 auto; width: 100%; animation: fadeIn 0.3s ease; }
         .view-section.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* شبكات الكروت */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.3rem; margin-top: 1.5rem; }
-        .card { background: var(--card-light); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 1.6rem; box-shadow: var(--shadow-premium); display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); }
+        /* تبويبات المحادثات ومواضيع الحياة */
+        .category-tabs { display: flex; gap: 0.6rem; overflow-x: auto; padding: 0.5rem 0 1.2rem; justify-content: flex-start; scrollbar-width: none; }
+        .category-tabs::-webkit-scrollbar { display: none; }
+        .cat-tab { padding: 0.6rem 1.2rem; border-radius: 50px; background: var(--card-light); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 800; font-size: 0.88rem; cursor: pointer; white-space: nowrap; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .cat-tab.active, .cat-tab:hover { background: var(--royal-blue); color: #FFF; border-color: var(--royal-blue); }
+
+        /* فقاعات المحادثات الحوارية المتسلسلة (Dialogues) */
+        .dialogue-thread { display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem; }
+        .dialogue-node { display: flex; flex-direction: column; padding: 1.2rem 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); position: relative; }
+        .dialogue-node.speaker-a { background: var(--speaker-a-bg); border-right: 4px solid var(--royal-blue); align-self: flex-start; width: 100%; max-width: 950px; }
+        .dialogue-node.speaker-b { background: var(--speaker-b-bg); border-right: 4px solid var(--accent-gold); align-self: flex-end; width: 100%; max-width: 950px; }
+
+        .speaker-tag { font-size: 0.78rem; font-weight: 800; padding: 2px 10px; border-radius: 12px; display: inline-block; margin-bottom: 6px; width: fit-content; }
+        .speaker-a .speaker-tag { background: rgba(30, 64, 175, 0.15); color: var(--royal-blue); }
+        .speaker-b .speaker-tag { background: rgba(217, 119, 6, 0.15); color: var(--accent-gold); }
+
+        .dialogue-en { font-size: 1.15rem; font-weight: 800; color: var(--primary-navy); }
+        [data-theme="dark"] .dialogue-en { color: #F1F5F9; }
+        .dialogue-ar { font-size: 0.95rem; font-weight: 700; color: var(--text-muted); margin: 4px 0 2px; }
+        .dialogue-pron { font-size: 0.82rem; color: var(--accent-gold); }
+
+        /* الكروت والشبكات */
+        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
+        .card { background: var(--card-light); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 1.5rem; box-shadow: var(--shadow-subtle); display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); }
         .card:hover { transform: translateY(-4px); border-color: var(--accent-gold); }
-        .card-icon { width: 50px; height: 50px; background: rgba(30, 64, 175, 0.08); color: var(--royal-blue); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1rem; }
 
-        .search-box { position: relative; max-width: 650px; margin: 0 auto 1.5rem; }
-        .search-box input { width: 100%; padding: 0.9rem 1.4rem 0.9rem 3rem; border-radius: 50px; border: 2px solid var(--border-color); background: var(--card-light); color: var(--text-main); font-size: 0.95rem; font-weight: 600; outline: none; }
-        .search-box i { position: absolute; left: 1.2rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); }
-
-        .dialogue-item { background: var(--bg-light); border: 1px solid var(--border-color); padding: 1.2rem; border-radius: var(--radius-lg); margin-bottom: 0.9rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
-        
+        /* التذييل الرسمي */
         .footer { background: var(--primary-navy); color: #FFF; margin-top: auto; border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 3rem 1.2rem 1.5rem; }
-        .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-        .footer-bottom { max-width: 1400px; margin: 1.2rem auto 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #94A3B8; flex-wrap: wrap; gap: 1rem; }
+        .footer-grid { max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+        .footer-bottom { max-width: 1440px; margin: 1.2rem auto 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #94A3B8; flex-wrap: wrap; gap: 1rem; }
 
         @media (max-width: 850px) { .nav-links { display: none; } }
     </style>
 </head>
 <body>
 
+    <!-- الشريط العلوي -->
     <header class="navbar">
         <div class="nav-container">
-            <div class="brand-logo" onclick="app.navigate('home')">
+            <div class="brand-logo" onclick="app.navigate('conversations')">
                 <div class="brand-icon">EN</div>
                 <div class="brand-text">
                     <h1>English بالعربي</h1>
@@ -103,77 +124,92 @@
             </div>
 
             <ul class="nav-links">
-                <li><a class="nav-link active" onclick="app.navigate('home')"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
-                <li><a class="nav-link" onclick="app.navigate('life-tracks')"><i class="fa-solid fa-earth-americas"></i> مواقف الحياة (15 مسارًا)</a></li>
-                <li><a class="nav-link" onclick="app.navigate('encyclopedia')"><i class="fa-solid fa-book-bookmark"></i> المعجم الموسوعي</a></li>
-                <li><a class="nav-link" onclick="app.navigate('grammar-lab')"><i class="fa-solid fa-shapes"></i> القواعد المدققة</a></li>
+                <li><a class="nav-link active" onclick="app.navigate('conversations')"><i class="fa-solid fa-comments"></i> موسوعة المحادثات (12 مجالاً)</a></li>
+                <li><a class="nav-link" onclick="app.navigate('alphabet')"><i class="fa-solid fa-font"></i> الحروف والأصوات</a></li>
+                <li><a class="nav-link" onclick="app.navigate('numbers')"><i class="fa-solid fa-clock"></i> الأرقام والزمان</a></li>
+                <li><a class="nav-link" onclick="app.navigate('vocab')"><i class="fa-solid fa-book-atlas"></i> خزانة الكلمات</a></li>
                 <li><a class="nav-link" onclick="app.navigate('about')"><i class="fa-solid fa-award"></i> عن المنصة</a></li>
             </ul>
 
             <div class="nav-actions">
-                <button class="btn-gold" onclick="app.navigate('life-tracks')">تصفح الـ 15 مسارًا</button>
+                <button class="btn-gold" onclick="app.navigate('conversations')"><i class="fa-solid fa-headphones"></i> ابدأ الاستماع للمحادثات</button>
             </div>
         </div>
     </header>
 
+    <!-- منطقة الشاشات التفاعلية -->
     <main id="app-viewport">
 
-        <!-- 1. الشاشة الرئيسية -->
-        <section id="view-home" class="view-section active">
-            <div style="text-align:center; max-width:850px; margin:2rem auto;">
-                <div style="background:rgba(217, 119, 6, 0.12); color:var(--accent-gold); padding:0.35rem 1rem; border-radius:50px; font-weight:800; font-size:0.85rem; display:inline-block; margin-bottom:1rem;">
-                    <i class="fa-solid fa-shield-check"></i> البركة ديجيتال | تَعَلَّمْ بِذَكَاء… وَانْطَلِقْ بِثِقَة
+        <!-- 1. موسوعة المحادثات المكثفة في جميع مجالات الحياة -->
+        <section id="view-conversations" class="view-section active">
+            <div style="text-align:center; max-width:900px; margin:0 auto 1.5rem;">
+                <div style="background:rgba(217, 119, 6, 0.12); color:var(--accent-gold); padding:0.35rem 1rem; border-radius:50px; font-weight:800; font-size:0.85rem; display:inline-block; margin-bottom:0.8rem;">
+                    <i class="fa-solid fa-shield-check"></i> محادثات حية مدققة وشاملة لكافة تفاصيل الحياة اليومية
                 </div>
-                <h2 style="font-size:2.6rem; font-weight:900; line-height:1.3; color:var(--primary-navy);">الموسوعة الشاملة لمواقف الحياة اليومية بالإنجليزية</h2>
-                <p style="color:var(--text-muted); font-size:1.1rem; margin:1rem 0 2rem;">15 مسارًا متكاملاً يغطي أكثر من 120 جملة ومحادثة حقيقية مدققة وموثقة لغويًا مع النطق الصوتي الفوري.</p>
-                <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-                    <button class="btn-gold" style="padding:0.8rem 2rem;" onclick="app.navigate('life-tracks')"><i class="fa-solid fa-play"></i> استعرض المسارات الـ 15</button>
-                    <button class="btn-secondary" style="padding:0.8rem 1.6rem;" onclick="app.navigate('encyclopedia')"><i class="fa-solid fa-magnifying-glass"></i> بحث في المعجم</button>
+                <h2 style="font-size:2.4rem; font-weight:900; color:var(--primary-navy);">موسوعة المحادثات الواقعية المكثفة</h2>
+                <p style="color:var(--text-muted); font-size:1.05rem; margin-top:0.4rem;">اختر المجال الحياتي للاستماع لحوارات كاملة ومتسلسلة بين طرفين مع النطق والترجمة</p>
+            </div>
+
+            <!-- شريط تصنيفات مجالات الحياة الـ 12 -->
+            <div class="category-tabs" id="conv-category-tabs">
+                <button class="cat-tab active" onclick="app.loadCategory('airport')"><i class="fa-solid fa-plane-departure"></i> 1. المطار والسفر</button>
+                <button class="cat-tab" onclick="app.loadCategory('hotel')"><i class="fa-solid fa-hotel"></i> 2. الفندق والإقامة</button>
+                <button class="cat-tab" onclick="app.loadCategory('restaurant')"><i class="fa-solid fa-utensils"></i> 3. المطعم والمقهى</button>
+                <button class="cat-tab" onclick="app.loadCategory('shopping')"><i class="fa-solid fa-bag-shopping"></i> 4. التسوق والمتاجر</button>
+                <button class="cat-tab" onclick="app.loadCategory('hospital')"><i class="fa-solid fa-user-doctor"></i> 5. الطبيب والصيدلية</button>
+                <button class="cat-tab" onclick="app.loadCategory('directions')"><i class="fa-solid fa-map-location-dot"></i> 6. الشارع والاتجاهات</button>
+                <button class="cat-tab" onclick="app.loadCategory('taxi')"><i class="fa-solid fa-taxi"></i> 7. التاكسي والمواصلات</button>
+                <button class="cat-tab" onclick="app.loadCategory('bank')"><i class="fa-solid fa-building-columns"></i> 8. البنك والمالية</button>
+                <button class="cat-tab" onclick="app.loadCategory('work')"><i class="fa-solid fa-briefcase"></i> 9. بيئة العمل والمقابلات</button>
+                <button class="cat-tab" onclick="app.loadCategory('emergency')"><i class="fa-solid fa-shield-halved"></i> 10. الطوارئ والشرطة</button>
+                <button class="cat-tab" onclick="app.loadCategory('housing')"><i class="fa-solid fa-house"></i> 11. استئجار السكن</button>
+                <button class="cat-tab" onclick="app.loadCategory('phone')"><i class="fa-solid fa-phone-volume"></i> 12. المكالمات الهاتفية</button>
+            </div>
+
+            <!-- بطاقة الموقف وتفاصيل الحوار المكثف -->
+            <div class="card" style="margin-top:1rem; padding:2rem;">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:1.5rem;">
+                    <div>
+                        <h3 id="conv-title-ar" style="font-size:1.4rem; color:var(--royal-blue);">في المطار وإنهاء إجراءات السفر</h3>
+                        <span id="conv-title-en" class="en-text" style="color:var(--accent-gold); font-weight:800; font-size:0.95rem;">At the Airport & Check-in</span>
+                    </div>
+                    <button class="btn-gold" onclick="app.playEntireDialogue()"><i class="fa-solid fa-play"></i> تشغيل الحوار كاملاً بالصوت</button>
+                </div>
+
+                <div class="dialogue-thread" id="dialogue-nodes-container">
+                    <!-- تعبئة أطراف الحوار ديناميكياً -->
                 </div>
             </div>
         </section>
 
-        <!-- 2. مسارات مواقف الحياة الـ 15 المتكاملة -->
-        <section id="view-life-tracks" class="view-section">
+        <!-- 2. قسم الحروف والأصوات -->
+        <section id="view-alphabet" class="view-section">
             <div style="text-align:center; margin-bottom:1.5rem;">
-                <h2 style="font-size:2.2rem; font-weight:900;">مسارات ومواقف الحياة الواقعية (15 مسارًا كاملاً)</h2>
-                <p style="color:var(--text-muted);">انقر على أي مسار لعرض كافة جمله ومحادثاته مع النطق والترجمة</p>
+                <h2 style="font-size:2.2rem; font-weight:900;">الأبجدية الإنجليزية وأصوات الحروف (26 حرفاً)</h2>
+                <p style="color:var(--text-muted);">انقر على الحرف لسماع نطقه مع المثال التوضيحي</p>
             </div>
-            <div class="cards-grid" id="tracks-grid">
-                <!-- يتم التوليد بالكامل من بنك الـ 15 مسارًا -->
-            </div>
+            <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(130px, 1fr)); gap:1rem;" id="alphabet-grid-box"></div>
         </section>
 
-        <!-- 3. عارض الدرس والمحادثات الغني -->
-        <section id="view-lesson-viewer" class="view-section">
-            <div class="card" style="max-width:900px; margin:0 auto; padding:2.2rem;" id="lesson-detail-box">
-                <!-- محتوى المحادثات الكاملة للدرس المحدد -->
-            </div>
-        </section>
-
-        <!-- 4. المعجم والبحث الموسوعي -->
-        <section id="view-encyclopedia" class="view-section">
+        <!-- 3. قسم الأرقام والزمان -->
+        <section id="view-numbers" class="view-section">
             <div style="text-align:center; margin-bottom:1.5rem;">
-                <h2 style="font-size:2.2rem; font-weight:900;">المعجم الموسوعي للجمل والمفردات</h2>
-                <p style="color:var(--text-muted);">ابحث فورياً في كافة جمل ومصطلحات المنصة</p>
+                <h2 style="font-size:2.2rem; font-weight:900;">الأرقام، الأيام، الشهور، وفصول السنة</h2>
+                <p style="color:var(--text-muted);">الأعداد والتقويم الزمني اليومي بالإنجليزية</p>
             </div>
-            <div class="search-box">
-                <input type="text" id="encyclo-search" placeholder="ابحث بالعربية أو الإنجليزية (مثال: مطار، hotel, بطاقة)..." oninput="app.searchEncyclopedia()">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="cards-grid" id="encyclo-results"></div>
+            <div class="cards-grid" id="numbers-grid-box"></div>
         </section>
 
-        <!-- 5. مختبر القواعد -->
-        <section id="view-grammar-lab" class="view-section">
+        <!-- 4. خزانة المفردات المصنفة -->
+        <section id="view-vocab" class="view-section">
             <div style="text-align:center; margin-bottom:1.5rem;">
-                <h2 style="font-size:2.2rem; font-weight:900;">مختبر القواعد المدققة للمبتدئين</h2>
-                <p style="color:var(--text-muted);">أصول بناء الجملة الإنجليزية بأسلوب فصيح ومبسط</p>
+                <h2 style="font-size:2.2rem; font-weight:900;">خزانة المفردات الأساسية المصنفة</h2>
+                <p style="color:var(--text-muted);">الألوان، العائلة، أجزاء الجسم، والأطعمة</p>
             </div>
-            <div class="cards-grid" id="grammar-grid"></div>
+            <div class="cards-grid" id="vocab-grid-box"></div>
         </section>
 
-        <!-- 6. عن المنصة والهوية الرسمية -->
+        <!-- 5. عن المنصة والهوية الرسمية -->
         <section id="view-about" class="view-section">
             <div class="card" style="max-width:850px; margin:0 auto; padding:2.5rem;">
                 <h2 style="color:var(--primary-navy); margin-bottom:0.5rem;">البركة ديجيتال | Barakah Digital</h2>
@@ -183,204 +219,230 @@
                 </p>
                 <div style="background:var(--bg-light); border-right:4px solid var(--royal-blue); padding:1.2rem; border-radius:var(--radius-md);">
                     <h3 style="color:var(--royal-blue); font-size:1.1rem; margin-bottom:0.3rem;">أكاديمية اللغة الإنجليزية — English Academy</h3>
-                    <p style="font-size:0.95rem; color:var(--text-muted);">أول البرامج التعليمية المتخصصة المقدمة عبر منصة البركة ديجيتال • تحت الإشراف العام لـ: <strong>أ/ عبد الله أحمد</strong></p>
+                    <p style="font-size:0.95rem; color:var(--text-muted);">أول البرامج التعليمية المتخصصة المقدمة عبر منصة البركة ديجيتال • المشرف العام: <strong>أ/ عبد الله أحمد</strong></p>
                 </div>
             </div>
         </section>
 
     </main>
 
+    <!-- التذييل الرسمي -->
     <footer class="footer">
         <div class="footer-grid">
             <div>
                 <h3 style="margin-bottom:0.8rem;">English بالعربي</h3>
                 <p style="color:#94A3B8; font-size:0.9rem; line-height:1.8;">
-                    <strong>البركة ديجيتال:</strong> منصة تعليمية شاملة تتيح المعرفة الموثوقة.
+                    <strong>البركة ديجيتال:</strong> منصة تعليمية شاملة تتيح المعرفة الموثوقة للمبتدئين.
                     <br><span style="color:#FBBF24; font-weight:700;">«تَعَلَّمْ بِذَكَاء… وَانْطَلِقْ بِثِقَة»</span>
                 </p>
             </div>
             <div>
-                <h4 style="margin-bottom:0.8rem; color:#FFF;">المسارات التعليمية</h4>
-                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:5px;">مواقف السفر والمطارات (15 مسارًا)</p>
-                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:5px;">المعجم الموسوعي الصوتي</p>
-                <p style="color:#94A3B8; font-size:0.85rem;">مختبر القواعد المدققة</p>
+                <h4 style="margin-bottom:0.8rem; color:#FFF;">موسوعة المحادثات</h4>
+                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:5px;">حوارات المطار والسفر والفنادق</p>
+                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:5px;">حوارات المطاعم، المقاهي، والتسوق</p>
+                <p style="color:#94A3B8; font-size:0.85rem;">حوارات الرعاية الصحية والعمل</p>
             </div>
             <div>
                 <h4 style="margin-bottom:0.8rem; color:#FFF;">الإشراف والاعتماد</h4>
                 <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:5px;">المشرف العام: <strong>عبد الله أحمد</strong></p>
-                <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:5px;">التطوير البرمجي: <strong>البركة ديجيتال</strong></p>
-                <p style="color:var(--accent-gold-light); font-size:0.85rem; margin-top:8px;">محتوى موثق ومدقق بالكامل © 2026</p>
+                <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:5px;">التطوير الموسوعي: <strong>البركة ديجيتال</strong></p>
+                <p style="color:var(--accent-gold-light); font-size:0.85rem; margin-top:8px;">محتوى مدقق وموثق بالكامل © 2026</p>
             </div>
         </div>
         <div class="footer-bottom">
             <div>جميع الحقوق محفوظة لمنصة English بالعربي | أكاديمية اللغة الإنجليزية</div>
-            <div>إنتاج: البركة ديجيتال • إشراف: عبد الله أحمد</div>
+            <div>إنتاج وتطوير: البركة ديجيتال • إشراف: عبد الله أحمد</div>
         </div>
     </footer>
 
-    <!-- محرك البيانات الشامل للـ 15 مساراً -->
+    <!-- محرك بنك المحادثات الموسوعي الكامل -->
     <script>
         const app = {
             state: {
-                // بنك بيانات 15 مساراً حياتياً واقعياً كاملاً
-                tracks: [
-                    {
-                        id: 't1', icon: 'fa-plane-departure', titleAr: 'في المطار وإجراءات السفر', titleEn: 'Airport & Travel',
-                        desc: 'تسليم الحقائب، بوابات الصعود، وختم الجوازات والتفتيش.',
-                        dialogue: [
-                            { en: "Where is the check-in desk for Flight 204?", ar: "أين مكتب إنهاء إجراءات السفر للرحلة 204؟", pron: "وِيرْ إِزْ ذَا تْشِيكْ إِنْ دِيسْكْ فُورْ فْلَايْتْ..." },
-                            { en: "Here is my passport and ticket.", ar: "تفضل، هذا جواز سفري وتذكرتي.", pron: "هِيرْ إِزْ مَايْ بَاسْبُورْتْ أَنْدْ تِيكِتْ" },
-                            { en: "I only have one carry-on bag.", ar: "لدي حقيبة يد واحدة فقط للمقصورة.", pron: "آيْ أُونْلِي هَافْ وَانْ كَارِي أُونْ بَاغ" },
-                            { en: "Which gate should I go to?", ar: "إلى أي بوابة يجب أن أتوجه؟", pron: "وِتْشْ غِيتْ شُودْ آيْ غُو تُو؟" },
-                            { en: "Where is the baggage claim area?", ar: "أين منطقة استلام الأمتعة والحقائب؟", pron: "وِيرْ إِزْ ذَا بَاغِيجْ كْلِيمْ إِيرِيَا؟" }
+                currentCategory: 'airport',
+                
+                // بنك المحادثات المكثفة في 12 مجالاً حياتياً (حوارات متسلسلة بين A و B)
+                conversations: {
+                    airport: {
+                        titleAr: "في المطار وإنهاء إجراءات السفر والصعود",
+                        titleEn: "At the Airport & Flight Check-in",
+                        dialogues: [
+                            { speaker: "موظف المطار (A)", en: "Good morning! Can I see your passport and ticket, please?", ar: "صباح الخير! هل يمكنني رؤية جواز سفرك وتذكرتك، لو سمحت؟", pron: "جُودْ مُورْنِينْغ! كَانْ آيْ سِي يُورْ بَاسْبُورْتْ أَنْدْ تِيكِيتْ بْلِيزْ؟" },
+                            { speaker: "المسافر (B)", en: "Good morning. Here is my passport and booking confirmation.", ar: "صباح الخير. تفضل، هذا جواز سفري وتأكيد الحجز.", pron: "جُودْ مُورْنِينْغ. هِيرْ إِزْ مَايْ بَاسْبُورْتْ أَنْدْ بُوكِينْغ كُونْفِرْمِيشِنْ." },
+                            { speaker: "موظف المطار (A)", en: "How many bags are you checking in today?", ar: "كم عدد الحقائب التي تود شحنها اليوم؟", pron: "هَاوْ مِينِي بَاغْزْ آرْ يُو تْشِيكِينْغ إِنْ تُودِي؟" },
+                            { speaker: "المسافر (B)", en: "Just one suitcase, and I have this small backpack as carry-on.", ar: "حقيبة واحدة فقط، ومعي هذه الحقيبة الظهرية الصغيرة للمقصورة.", pron: "جَاسْتْ وَانْ سُوتْكِيسْ، أَنْدْ آيْ هَافْ ذِسْ سْمُولْ بَاكْبَاكْ..." },
+                            { speaker: "موظف المطار (A)", en: "Please place your suitcase on the scale.", ar: "رجاءً ضع حقيبتك على الميزان.", pron: "بْلِيزْ بْلِيسْ يُورْ سُوتْكِيسْ أُونْ ذَا سْكِيلْ." },
+                            { speaker: "موظف المطار (A)", en: "Your flight departs from Gate 14 at 10:30 AM. Have a great flight!", ar: "ستغادر رحلتك من البوابة رقم 14 في العاشرة والنصف صباحاً. رحلة سعيدة!", pron: "يُورْ فْلَايْتْ دِيبَارْتْسْ فْرُومْ غِيتْ فُورْتِينْ..." },
+                            { speaker: "المسافر (B)", en: "Thank you very much for your help!", ar: "شكراً جزيلاً لك على مساعدتك!", pron: "ثَانْكْ يُو فِيرِي مَاتْشْ فُورْ يُورْ هِيلْبْ!" }
                         ]
                     },
-                    {
-                        id: 't2', icon: 'fa-hotel', titleAr: 'في الفندق والحجوزات', titleEn: 'Hotel & Booking',
-                        desc: 'تسجيل الوصول، طلب الإفطار، والخدمات الإضافية.',
-                        dialogue: [
-                            { en: "I have a reservation under the name Ahmed.", ar: "لدي حجز مسبق باسم أحمد.", pron: "آيْ هَافْ أَيْ رِيزِرْفِيشِنْ أَنْدَرْ ذَا نِيمْ أَحْمَدْ" },
-                            { en: "What time is breakfast served?", ar: "في أي وقت يتم تقديم وجبة الإفطار؟", pron: "وَاتْ تَايْمْ إِزْ بْرِيكْفَاسْتْ سِيرْفْدْ؟" },
-                            { en: "What is the Wi-Fi password?", ar: "ما هي كلمة سر شبكة الواي فاي؟", pron: "وَاتْ إِزْ ذَا وَايْ فَايْ بَاسْوُورْدْ؟" },
-                            { en: "Could I have extra towels, please?", ar: "هل يمكنني الحصول على مناشف إضافية؟", pron: "كُودْ آيْ هَافْ إِكْسْتْرَا تَاوِلْزْ، بْلِيزْ؟" },
-                            { en: "I would like to check out now.", ar: "أود تسجيل المغادرة ودفع الحساب الآن.", pron: "آيْ وُودْ لَايْكْ تُو تْشِيكْ آوْتْ نَاوْ" }
+                    hotel: {
+                        titleAr: "في الفندق وتسجيل الوصول والخدمات",
+                        titleEn: "At the Hotel & Room Check-in",
+                        dialogues: [
+                            { speaker: "موظف الاستقبال (A)", en: "Welcome to Royal Hotel! How may I assist you today?", ar: "أهلاً بك في فندق رويال! كيف يمكنني مساعدتك اليوم؟", pron: "وِيلْكَامْ تُو رُويَالْ هُوتِيلْ! هَاوْ مِي آيْ أَسِيستْ يُو تُودِي؟" },
+                            { speaker: "النزيل (B)", en: "Hello, I have a reservation under the name Ahmed for three nights.", ar: "مرحباً، لدي حجز باسم أحمد لمدة ثلاث ليالٍ.", pron: "هَلُو، آيْ هَافْ أَيْ رِيزِرْفِيشِنْ أَنْدَرْ ذَا نِيمْ أَحْمَدْ..." },
+                            { speaker: "موظف الاستقبال (A)", en: "Yes, Mr. Ahmed. A deluxe room with a king-size bed, correct?", ar: "نعم سيد أحمد. غرفة ديلوكس بسرير كبير مزدوج، أليس كذلك؟", pron: "يِسْ مِسْتَرْ أَحْمَدْ. أَيْ دِيلُوكسْ رُومْ وِذْ أَيْ كِينْغ سَايْزْ بِيْدْ، كُورِيكْتْ؟" },
+                            { speaker: "النزيل (B)", en: "Yes, that is correct. Does the room have free Wi-Fi?", ar: "نعم، هذا صحيح تماماً. هل تتضمن الغرفة إنترنت واي فاي مجاني؟", pron: "يِسْ ذَاتْ إِزْ كُورِيكْتْ. دَازْ ذَا رُومْ هَافْ فْرِي وَايْ فَايْ؟" },
+                            { speaker: "موظف الاستقبال (A)", en: "Yes, Wi-Fi is complimentary. Here is your key card for Room 405.", ar: "نعم، الواي فاي مجاني بالكامل. تفضل، هذه بطاقة مفتاح الغرفة رقم 405.", pron: "يِسْ، وَايْ فَايْ إِزْ كُومْبْلِيمِينْتَارِي. هِيرْ إِزْ يُورْ كِي كَارْدْ..." },
+                            { speaker: "النزيل (B)", en: "What time is breakfast served in the morning?", ar: "في أي وقت يتم تقديم وجبة الإفطار صباحاً؟", pron: "وَاتْ تَايْمْ إِزْ بْرِيكْفَاسْتْ سِيرْفْدْ إِنْ ذَا مُورْنِينْغ؟" },
+                            { speaker: "موظف الاستقبال (A)", en: "Breakfast is served from 6:30 AM to 10:00 AM in the main restaurant.", ar: "يُقدم الإفطار من الساعة 6:30 وحتى 10:00 صباحاً في المطعم الرئيسي.", pron: "بْرِيكْفَاسْتْ إِزْ سِيرْفْدْ فْرُومْ..." }
                         ]
                     },
-                    {
-                        id: 't3', icon: 'fa-utensils', titleAr: 'في المطعم وطلب الوجبات', titleEn: 'Restaurant & Dining',
-                        desc: 'قائمة الطعام، السؤال عن المكونات، وطلب الفاتورة.',
-                        dialogue: [
-                            { en: "A table for two, please.", ar: "طاولة لشخصين، من فضلك.", pron: "أَيْ تِيبِلْ فُورْ تُو، بْلِيزْ" },
-                            { en: "Could we have the menu, please?", ar: "هل يمكننا الحصول على قائمة الطعام؟", pron: "كُودْ وِي هَافْ ذَا مِينْيُو، بْلِيزْ؟" },
-                            { en: "Is this food halal?", ar: "هل هذا الطعام حلال؟", pron: "إِزْ ذِسْ فُودْ حَلَالْ؟" },
-                            { en: "I would like to order grilled chicken.", ar: "أود أن أطلب دجاجًا مشويًا.", pron: "آيْ وُودْ لَايْكْ تُو أُورْدَرْ غْرِيلْدْ تْشِيكِنْ" },
-                            { en: "Could we have the bill, please?", ar: "هل يمكننا الحصول على الفاتورة، لو سمحت؟", pron: "كُودْ وِي هَافْ ذَا بِلْ، بْلِيزْ؟" }
+                    restaurant: {
+                        titleAr: "في المطعم وطلب الوجبات والفاتورة",
+                        titleEn: "At the Restaurant & Ordering Food",
+                        dialogues: [
+                            { speaker: "النادِل (A)", en: "Good evening! Welcome. A table for how many people?", ar: "مساء الخير! أهلاً بكم. طاولة لكم شخص؟", pron: "جُودْ إِيفْنِينْغ! وِيلْكَامْ. أَيْ تِيبِلْ فُورْ هَاوْ مِينِي بِيبلْ؟" },
+                            { speaker: "الزبون (B)", en: "Good evening. A table for two by the window, please.", ar: "مساء الخير. طاولة لشخصين بجانب النافذة، من فضلك.", pron: "جُودْ إِيفْنِينْغ. أَيْ تِيبِلْ فُورْ تُو بَايْ ذَا وِينْدُو، بْلِيزْ." },
+                            { speaker: "النادِل (A)", en: "Right this way, please. Here are your menus. Can I bring you some water to start?", ar: "تفضلا من هنا. ها هي قوائم الطعام. هل أحضر لكما بعض الماء للبدء؟", pron: "رَايْتْ ذِسْ وِي بْلِيزْ. هِيرْ آرْ يُورْ مِينْيُوزْ..." },
+                            { speaker: "الزبون (B)", en: "Yes, sparkling water, please. What is the soup of the day?", ar: "نعم، مياه فوارة لو سمحت. ما هو حساء اليوم؟", pron: "يِسْ سْبَارْكْلِينْغ وَاتَرْ بْلِيزْ. وَاتْ إِزْ ذَا سُوبْ أُوفْ ذَا دِي؟" },
+                            { speaker: "النادِل (A)", en: "Today's special is creamy mushroom soup. Are you ready to order entrees?", ar: "طبق اليوم الخاص هو حساء الفطر بالكريمة. هل أنتم جاهزون لطلب الأطباق الرئيسية؟", pron: "تُودِيزْ سْبِيشَلْ إِزْ كْرِيمِي مَاشْرُومْ سُوبْ..." },
+                            { speaker: "الزبون (B)", en: "Yes, I would like the grilled salmon with vegetables.", ar: "نعم، أود طلب سمك السلمون المشوي مع الخضار.", pron: "يِسْ، آيْ وُودْ لَايْكْ ذَا غْرِيلْدْ سَامُونْ وِذْ فِيجْتَبِلْزْ." },
+                            { speaker: "الزبون (B)", en: "Excuse me, could we have the check, please?", ar: "لو سمحت، هل يمكننا الحصول على الفاتورة؟", pron: "إِكْسْكْيُوزْ مِي، كُودْ وِي هَافْ ذَا تْشِيكْ بْلِيزْ؟" }
                         ]
                     },
-                    {
-                        id: 't4', icon: 'fa-bag-shopping', titleAr: 'التسوق وشراء الملابس', titleEn: 'Shopping & Clothes',
-                        desc: 'الأسعار، المقاسات، غرف القياس، وطرق الدفع.',
-                        dialogue: [
-                            { en: "How much is this shirt?", ar: "كم سعر هذا القميص؟", pron: "هَاوْ مَاتْشْ إِزْ ذِسْ شِيرْتْ؟" },
-                            { en: "Do you have this in a larger size?", ar: "هل يتوفر هذا بمقاس أكبر؟", pron: "دُو يُو هَافْ ذِسْ إِنْ أَيْ لَارْجَرْ سَايْزْ؟" },
-                            { en: "Where is the fitting room?", ar: "أين تقع غرفة قياس الملابس؟", pron: "وِيرْ إِزْ ذَا فِيتِينْغ رُومْ؟" },
-                            { en: "Do you accept credit cards?", ar: "هل تقبلون بطاقات الائتمان؟", pron: "دُو يُو أَكْسِيبْتْ كْرِيدِتْ كَارْدْزْ؟" }
+                    shopping: {
+                        titleAr: "في المتجر والتسوق واختيار المقاسات",
+                        titleEn: "At the Store & Shopping for Clothes",
+                        dialogues: [
+                            { speaker: "البائع (A)", en: "Hello! Can I help you find anything in particular?", ar: "مرحباً! هل يمكنني مساعدتك في العثور على شيء محدد؟", pron: "هَلُو! كَانْ آيْ هِيلْبْ يُو فَايْنْدْ أَنِيْثِينْغ..." },
+                            { speaker: "المشتري (B)", en: "Yes, I am looking for a cotton jacket in dark blue.", ar: "نعم، أنا أبحث عن سترة قطنية باللون الأزرق الداكن.", pron: "يِسْ، آيْ أَمْ لُوكِينْغ فُورْ أَيْ كُوتِنْ جَاكِيتْ..." },
+                            { speaker: "البائع (A)", en: "We have this stylish model. What size are you wearing?", ar: "لدينا هذا الموديل الأنيق. ما هو المقاس الذي ترتديه؟", pron: "وِي هَافْ ذِسْ سْتَايْلِشْ مُودِلْ. وَاتْ سَايْزْ آرْ يُو وِيرِينْغ؟" },
+                            { speaker: "المشتري (B)", en: "Medium size. Can I try it on in the fitting room?", ar: "مقاس متوسط (Medium). هل يمكنني تجربتها في غرفة القياس؟", pron: "مِيدْيُومْ سَايْزْ. كَانْ آيْ تْرَايْ إِتْ أُونْ..." },
+                            { speaker: "البائع (A)", en: "Of course! The fitting rooms are right over there to the left.", ar: "بالتأكيد! غرف القياس هناك تماماً على جهة اليسار.", pron: "أُوفْ كُورْس! ذَا فِيتِينْغ رُومْزْ آرْ رَايْتْ أُوفَرْ ذِيرْ..." },
+                            { speaker: "المشتري (B)", en: "It fits perfectly! How much is it?", ar: "إنها تناسبني تماماً! كم سعرها؟", pron: "إِتْ فِيتْسْ بِيرْفِكْتْلِي! هَاوْ مَاتْشْ إِزْ إِتْ؟" },
+                            { speaker: "البائع (A)", en: "It is $65, and there is a 10% discount at the checkout counter.", ar: "سعرها 65 دولاراً، وهناك خصم 10% عند صندوق الدفع.", pron: "إِتْ إِزْ سِكْسْتِي فَايْفْ دُولَارْزْ..." }
                         ]
                     },
-                    {
-                        id: 't5', icon: 'fa-user-doctor', titleAr: 'عند الطبيب وفي الصيدلية', titleEn: 'Doctor & Pharmacy',
-                        desc: 'وصف الأعراض الشائعة، الصداع، والحصول على الدواء.',
-                        dialogue: [
-                            { en: "I have a severe headache and fever.", ar: "أعاني من صداع شديد وحمى.", pron: "آيْ هَافْ أَيْ سِيفِيرْ هِيدِيكْ أَنْدْ فِيفَرْ" },
-                            { en: "I need a medicine for cough.", ar: "أحتاج إلى دواء مهدئ للسعال.", pron: "آيْ نِيدْ أَيْ مِيدْسِنْ فُورْ كَافْ" },
-                            { en: "How many times a day should I take this?", ar: "كم مرة في اليوم يجب أن أتناول هذا الدواء؟", pron: "هَاوْ مِينِي تَايْمْزْ أَيْ دِي شُودْ آيْ تِيكْ ذِسْ؟" },
-                            { en: "Take one pill after meals twice daily.", ar: "تناول حبة واحدة بعد الأكل مرتين يوميًا.", pron: "تِيكْ وَانْ بِلْ آَفْتَرْ مِيلْزْ تْوَايْسْ دِيلِي" }
+                    hospital: {
+                        titleAr: "عند الطبيب وفي الصيدلية لوصف العلاج",
+                        titleEn: "At the Doctor & Pharmacy",
+                        dialogues: [
+                            { speaker: "الطبيب (A)", en: "Hello Mr. Ali. What seems to be the problem today?", ar: "أهلاً سيد علي. ما هي المشكلة أو الأعراض التي تشعر بها اليوم؟", pron: "هَلُو مِسْتَرْ عَلِي. وَاتْ سِيمْزْ تُو بِي ذَا بْرُوبْلِمْ تُودِي؟" },
+                            { speaker: "المريض (B)", en: "Doctor, I have had a severe sore throat and headache for two days.", ar: "يا دكتور، أعاني من التهاب حاد في الحلق وصداع منذ يومين.", pron: "دَاكْتُورْ، آيْ هَافْ هَادْ أَيْ سِيفِيرْ سُورْ ثْرُوتْ..." },
+                            { speaker: "الطبيب (A)", en: "Let me check your temperature and examine your throat.", ar: "دعني أقيس درجة حرارتك وأفحص حلقك.", pron: "لِتْ مِي تْشِيكْ يُورْ تِيمْبْرَاتْشَرْ أَنْدْ إِغْزَامِنْ..." },
+                            { speaker: "الطبيب (A)", en: "You have a mild throat infection. I will write a prescription for antibiotics.", ar: "لديك التهاب بسيط في الحلق. سأكتب لك وصفة طبية لمضاد حيوي.", pron: "يُو هَافْ أَيْ مَايْلْدْ ثْرُوتْ إِنْفِيكْشِنْ..." },
+                            { speaker: "المريض (B)", en: "How should I take this medication?", ar: "كيف يجب أن أتناول هذا الدواء؟", pron: "هَاوْ شُودْ آيْ تِيكْ ذِسْ مِيدِيكِيشِنْ؟" },
+                            { speaker: "الصيدلي (A)", en: "Take one tablet every 12 hours after eating for five days.", ar: "تناول قرصاً واحداً كل 12 ساعة بعد الأكل لمدة خمسة أيام.", pron: "تِيكْ وَانْ تَابْلِتْ إِفْرِي تْوِيلْفْ آوَرْزْ آَفْتَرْ إِيتِينْغ..." }
                         ]
                     },
-                    {
-                        id: 't6', icon: 'fa-map-location-dot', titleAr: 'السؤال عن الطرق والاتجاهات', titleEn: 'Asking for Directions',
-                        desc: 'الاستدلال على محطات القطار، الشوارع، والمباني.',
-                        dialogue: [
-                            { en: "Excuse me, how can I get to the train station?", ar: "معذرة، كيف أصل إلى محطة القطار؟", pron: "إِكْسْكْيُوزْ مِي، هَاوْ كَانْ آيْ غِيتْ تُو..." },
-                            { en: "Go straight and turn left at the traffic light.", ar: "امشِ للأمام مباشرة ثم انعطف يسارًا عند الإشارة.", pron: "غُو سْتْرِيتْ أَنْدْ تِيرْنْ لِيفْتْ..." },
-                            { en: "Is it within walking distance?", ar: "هل المكان قريب ويمكن الوصول إليه مشيًا؟", pron: "إِزْ إِتْ وِذِينْ وَوكِينْغ دِسْتَانْسْ؟" }
+                    directions: {
+                        titleAr: "السؤال عن الطرق والاتجاهات في المدينة",
+                        titleEn: "Asking for Directions in the City",
+                        dialogues: [
+                            { speaker: "السائل (B)", en: "Excuse me! Could you tell me how to get to the central library?", ar: "معذرة! هل يمكنك إخباري كيف أصل إلى المكتبة المركزية؟", pron: "إِكْسْكْيُوزْ مِي! كُودْ يُو تِيلْ مِي هَاوْ تُو غِيتْ..." },
+                            { speaker: "المواطن (A)", en: "Sure! Walk straight down this street for two blocks.", ar: "بالتأكيد! امشِ للأمام مباشرة في هذا الشارع لمسافة تقاطعين.", pron: "شُور! وَوكْ سْتْرِيتْ دَاوْنْ ذِسْ سْتْرِيتْ..." },
+                            { speaker: "المواطن (A)", en: "When you reach the traffic lights, turn left onto King Street.", ar: "عندما تصل إلى إشارة المرور، انعطف يساراً إلى شارع الملك.", pron: "وِينْ يُو رِيتْشْ ذَا تْرَافِيكْ لَايْتْسْ، تِيرْنْ لِيفْتْ..." },
+                            { speaker: "السائل (B)", en: "Is it far from here? Should I take a bus?", ar: "هل هي بعيدة من هنا؟ هل يجب أن أركب حافلة؟", pron: "إِزْ إِتْ فَارْ فْرُومْ هِيرْ؟ شُودْ آيْ تِيكْ أَيْ بَاسْ؟" },
+                            { speaker: "المواطن (A)", en: "No, it is only a 5-minute walk. You will see a large white building on your right.", ar: "لا، إنها مسافة 5 دقائق مشياً فقط. سترى مبنى أبيض كبيراً على يمينك.", pron: "نُو، إِتْ إِزْ أُونْلِي أَيْ فَايْفْ مِينِتْ وَوكْ..." }
                         ]
                     },
-                    {
-                        id: 't7', icon: 'fa-car', titleAr: 'المواصلات واستئجار السيارات', titleEn: 'Transport & Car Rental',
-                        desc: 'ركوب التاكسي، المترو، وتأجير السيارات والتأمين.',
-                        dialogue: [
-                            { en: "Please take me to this address.", ar: "رجاءً خذني إلى هذا العنوان المكتوب.", pron: "بْلِيزْ تِيكْ مِي تُو ذِسْ أَدْرِيسْ" },
-                            { en: "I would like to rent a small car for three days.", ar: "أود استئجار سيارة صغيرة لمدة 3 أيام.", pron: "آيْ وُودْ لَايْكْ تُو رِينْتْ أَيْ سْمُولْ كَارْ..." },
-                            { en: "Does the price include full insurance?", ar: "هل يشمل هذا السعر التأمين الشامل؟", pron: "دَازْ ذَا بْرَايْسْ إِنْكْلُودْ فُولْ إِنْشُورَانْسْ؟" }
+                    taxi: {
+                        titleAr: "ركوب سيارة الأجرة (التاكسي) وتحديد الوجهة",
+                        titleEn: "Taking a Taxi & Setting Destination",
+                        dialogues: [
+                            { speaker: "الراكب (B)", en: "Hello! Are you available?", ar: "مرحباً! هل أنت متاح للتوصيل؟", pron: "هَلُو! آرْ يُو أَفِيلَابِلْ؟" },
+                            { speaker: "السائق (A)", en: "Yes, hop in! Where would you like to go?", ar: "نعم، تفضل بالركوب! إلى أين تود الذهاب؟", pron: "يِسْ، هُوبْ إِنْ! وِيرْ وُودْ يُو لَايْكْ تُو غُو؟" },
+                            { speaker: "الراكب (B)", en: "Please take me to the City Center Mall.", ar: "رجاءً خذني إلى مول سيتي سنتر.", pron: "بْلِيزْ تِيكْ مِي تُو ذَا سِيتِي سِنْتَرْ مُولْ." },
+                            { speaker: "السائق (A)", en: "Sure. Do you prefer taking the highway? It is faster but has a toll.", ar: "بالتأكيد. هل تفضل سلك الطريق السريع؟ إنه أسرع لكنه طريق برسوم.", pron: "شُور. دُو يُو بْرِيفِيرْ تِيكِينْغ ذَا هَايْ وِي؟..." },
+                            { speaker: "الراكب (B)", en: "Yes, take the highway, please. I am in a bit of a hurry.", ar: "نعم، اسلك الطريق السريع لو سمحت. أنا على عجلة من أمري.", pron: "يِسْ، تِيكْ ذَا هَايْ وِي بْلِيزْ. آيْ أَمْ إِنْ أَيْ بِتْ..." },
+                            { speaker: "الراكب (B)", en: "How much is the fare, and do you accept credit card?", ar: "كم تبلغ الأجرة، وهل تقبل الدفع بالبطاقة الائتمانية؟", pron: "هَاوْ مَاتْشْ إِزْ ذَا فِيرْ، أَنْدْ دُو يُو أَكْسِيبْتْ..." }
                         ]
                     },
-                    {
-                        id: 't8', icon: 'fa-building-columns', titleAr: 'في البنك والمعاملات المالية', titleEn: 'Bank & Financial Services',
-                        desc: 'تحويل الأموال، استبدال العملات، والصراف الآلي.',
-                        dialogue: [
-                            { en: "Where is the nearest ATM?", ar: "أين أجد أقرب صراف آلي؟", pron: "وِيرْ إِزْ ذَا نِيرِسْتْ إِي تِي إِمْ؟" },
-                            { en: "I want to exchange some US Dollars to Euros.", ar: "أريد استبدال دولارات أمريكية باليورو.", pron: "آيْ وَانْتْ تُو إِكْسْتْشِينْجْ سَمْ..." },
-                            { en: "What is the exchange rate today?", ar: "ما هو سعر صرف العملة اليوم؟", pron: "وَاتْ إِزْ ذِي إِكْسْتْشِينْجْ رِيتْ تُودِي؟" }
+                    bank: {
+                        titleAr: "في البنك وفتح الحسابات وتحويل الأموال",
+                        titleEn: "At the Bank & Financial Services",
+                        dialogues: [
+                            { speaker: "الموظف (A)", en: "Good afternoon! How can I assist you today?", ar: "طاب مساؤك! كيف يمكنني مساعدتك في البنك اليوم؟", pron: "جُودْ آَفْتَرْنُونْ! هَاوْ كَانْ آيْ أَسِيستْ يُو تُودِي؟" },
+                            { speaker: "العميل (B)", en: "I would like to open a new savings account, please.", ar: "أود فتح حساب توفير جديد، لو سمحت.", pron: "آيْ وُودْ لَايْكْ تُو أُوبِنْ أَيْ نْيُو سِيفِينْغزْ أَكَاونْتْ..." },
+                            { speaker: "الموظف (A)", en: "Certainly. Do you have your valid ID and proof of address?", ar: "بكل تأكيد. هل معك بطاقة إثبات الهوية وإثبات محل السكن؟", pron: "سِيرْتِنْلِي. دُو يُو هَافْ يُورْ فَالِدْ آي دِي..." },
+                            { speaker: "العميل (B)", en: "Yes, here is my passport and apartment utility bill.", ar: "نعم، تفضل هذا جواز سفري وفاتورة مرافق الشقة.", pron: "يِسْ، هِيرْ إِزْ مَايْ بَاسْبُورْتْ أَنْدْ أَبَارْتْمِينْتْ..." },
+                            { speaker: "الموظف (A)", en: "Please sign this application form here, and your debit card will be ready in 3 days.", ar: "رجاءً وقّع على استمارة الطلب هنا، وستكون بطاقتك البنكية جاهزة خلال 3 أيام.", pron: "بْلِيزْ سَايْنْ ذِسْ أَبْلِيكِيشِنْ فُورْمْ هِيرْ..." }
                         ]
                     },
-                    {
-                        id: 't9', icon: 'fa-briefcase', titleAr: 'في بيئة العمل والمقابلات', titleEn: 'Work & Job Interviews',
-                        desc: 'التعريف بالخبرة، مواعيد الاجتماعات، والمهام.',
-                        dialogue: [
-                            { en: "Let me introduce myself, my name is Ahmed.", ar: "اسمحوا لي بالتعريف بنفسي، اسمي أحمد.", pron: "لِتْ مِي إِنْتْرُودْيُوسْ مَايْسِيلْفْ..." },
-                            { en: "I have five years of experience in management.", ar: "لدي خمس سنوات خبرة في مجال الإدارة.", pron: "آيْ هَافْ فَايْفْ يِيرْزْ أُوفْ إِكْسْبِيرِيَانْسْ..." },
-                            { en: "I will send you the report by email.", ar: "سأرسل لك التقرير عبر البريد الإلكتروني.", pron: "آيْ وِلْ سِينْدْ يُو ذَا رِيبُورْتْ..." }
+                    work: {
+                        titleAr: "في بيئة العمل والمقابلات الوظيفية",
+                        titleEn: "At the Workplace & Job Interview",
+                        dialogues: [
+                            { speaker: "المقابل (A)", en: "Welcome to our company! Could you please tell us briefly about your background?", ar: "أهلاً بك في شركتنا! هل يمكنك إخبارنا بإيجاز عن خلفيتك وخبراتك؟", pron: "وِيلْكَامْ تُو آوَرْ كَامْبَانِي! كُودْ يُو بْلِيزْ تِيلْ أَسْ..." },
+                            { speaker: "المتقدم (B)", en: "I have over four years of experience in project management and team leadership.", ar: "لدي خبرة تزيد عن 4 سنوات في إدارة المشاريع وقيادة فرق العمل.", pron: "آيْ هَافْ أُوفَرْ فُورْ يِيرْزْ أُوفْ إِكْسْبِيرِيَانْسْ..." },
+                            { speaker: "المقابل (A)", en: "What do you consider your greatest strength?", ar: "ما هي نقطة قوتك الكبرى برأيك؟", pron: "وَاتْ دُو يُو كُونْسِيدَرْ يُورْ غْرِيتِسْتْ سْتْرِينْغْثْ؟" },
+                            { speaker: "المتقدم (B)", en: "My ability to solve complex problems under tight deadlines.", ar: "قدرتي على حل المشكلات المعقدة تحت ضغط المواعيد النهائية.", pron: "مَايْ أَبِيلِيتِي تُو سُولْفْ كُومْبْلِكْسْ بْرُوبْلِمْزْ..." },
+                            { speaker: "المقابل (A)", en: "Impressive. We will review your application and contact you by next Monday.", ar: "رائع جداً. سنراجع طلبك ونتواصل معك بحلول يوم الإثنين القادم.", pron: "إِمْبْرِيسِيفْ. وِي وِلْ رِيفْيُو يُورْ أَبْلِيكِيشِنْ..." }
                         ]
                     },
-                    {
-                        id: 't10', icon: 'fa-shield-halved', titleAr: 'الطوارئ والشرطة والنجدة', titleEn: 'Emergency & Safety',
-                        desc: 'طلب المساعدة العاجلة، الإسعاف، والإبلاغ عن مفقودات.',
-                        dialogue: [
-                            { en: "Please call the ambulance immediately!", ar: "رجاءً اتصل بالإسعاف فورًا!", pron: "بْلِيزْ كُولْ ذِي أَمْبْيُولَانْسْ إِمِيدْيَتْلِي!" },
-                            { en: "I lost my passport and wallet.", ar: "لقد فقدت جواز سفري ومحفظتي.", pron: "آيْ لُوسْتْ مَايْ بَاسْبُورْتْ أَنْدْ وَالِيتْ" },
-                            { en: "Can you help me, please?", ar: "هل يمكنك مساعدتي، لو سمحت؟", pron: "كَانْ يُو هِيلْبْ مِي، بْلِيزْ؟" }
+                    emergency: {
+                        titleAr: "في الحالات الطارئة والاتصال بالشرطة والإسعاف",
+                        titleEn: "Emergency Situations & Calling for Help",
+                        dialogues: [
+                            { speaker: "المستغيث (B)", en: "Emergency! I need an ambulance immediately!", ar: "طوارئ! أحتاج إلى سيارة إسعاف فوراً!", pron: "إِيمِيرْجِينْسِي! آيْ نِيدْ أَنْ أَمْبْيُولَانْسْ إِمِيدْيَتْلِي!" },
+                            { speaker: "عامل الطوارئ (A)", en: "Stay calm, please. What is the exact location of the emergency?", ar: "ابقَ هادئاً لو سمحت. ما هو الموقع المحدد لحالة الطوارئ؟", pron: "سْتِي كَالمْ بْلِيزْ. وَاتْ إِزْ ذِي إِغْزَاكْتْ لُوكِيشِنْ..." },
+                            { speaker: "المستغيث (B)", en: "We are at 45 Main Street near the central park. A person has collapsed.", ar: "نحن في 45 شارع رئيسي بجانب الحديقة المركزية. شخص سقط مغشياً عليه.", pron: "وِي آرْ آتْ فُورْتِي فَايْفْ مِينْ سْتْرِيتْ..." },
+                            { speaker: "عامل الطوارئ (A)", en: "The paramedic team is on their way right now. Is the person breathing?", ar: "فريق المسعفين في طريقهم إليكم الآن. هل الشخص يتنفس؟", pron: "ذَا بَارَامِيدِيكْ تِيمْ إِزْ أُونْ ذِيرْ وِي..." }
                         ]
                     },
-                    {
-                        id: 't11', icon: 'fa-phone-volume', titleAr: 'المكالمات الهاتفية', titleEn: 'Phone Calls',
-                        desc: 'الرد بأدب، حجز المواعيد، وترك رسائل صوتية.',
-                        dialogue: [
-                            { en: "Hello, may I speak to Mr. John, please?", ar: "مرحبًا، هل يمكنني التحدث إلى السيد جون؟", pron: "هَلُو، مِي آيْ سْبِيكْ تُو مِسْتَرْ جُونْ؟" },
-                            { en: "Could you please tell him that I called?", ar: "هل يمكنك إخباره بأنني قد اتصلت به؟", pron: "كُودْ يُو بْلِيزْ تِيلْ هِمْ ذَاتْ آيْ كُولْدْ؟" },
-                            { en: "I will call back later.", ar: "سوف أعاود الاتصال في وقت لاحق.", pron: "آيْ وِلْ كُولْ بَاكْ لِيتَرْ" }
+                    housing: {
+                        titleAr: "استئجار الشقق والمنازل والسكن",
+                        titleEn: "House & Apartment Renting",
+                        dialogues: [
+                            { speaker: "المستأجر (B)", en: "Hello, I am calling about the two-bedroom apartment listed for rent.", ar: "مرحباً، أنا أتصل بخصوص الشقة المعروضة للإيجار المكونة من غرفتي نوم.", pron: "هَلُو، آيْ أَمْ كُولِينْغ أَبَاوتْ ذَا تُو بِيْدْرُومْ..." },
+                            { speaker: "المالك (A)", en: "Yes, it is still available. It has a modern kitchen and a balcony.", ar: "نعم، ما زالت متاحة. تحتوي على مطبخ حديث وشرفة واسعة.", pron: "يِسْ، إِتْ إِزْ سْتِيلْ أَفِيلَابِلْ. إِتْ هَازْ أَيْ مُودِرْنْ..." },
+                            { speaker: "المستأجر (B)", en: "What is the monthly rent, and does it include heating and water?", ar: "كم يبلغ الإيجار الشهري، وهل يشمل تكلفة التدفئة والمياه؟", pron: "وَاتْ إِزْ ذَا مَانْثْلِي رِينْتْ، أَنْدْ دَازْ إِتْ إِنْكْلُودْ..." },
+                            { speaker: "المالك (A)", en: "The rent is $1,200 per month, water and heating included. Electricity is separate.", ar: "الإيجار 1200 دولار شهرياً شاملاً الماء والتدفئة، والكهرباء منفصلة.", pron: "ذَا رِينْتْ إِزْ تْوِيلْفْ هَانْدْرِدْ دُولَارْزْ..." }
                         ]
                     },
-                    {
-                        id: 't12', icon: 'fa-house', titleAr: 'السكن واستئجار الشقق', titleEn: 'Housing & Renting',
-                        desc: 'فحص الشقق، الإيجار الشهري، وفواتير الخدمات.',
-                        dialogue: [
-                            { en: "Is this apartment available for rent?", ar: "هل هذه الشقة متاحة للإيجار؟", pron: "إِزْ ذِسْ أَبَارْتْمِنْتْ أَفِيلَابِلْ فُورْ رِينْتْ؟" },
-                            { en: "How much is the monthly rent?", ar: "كم قيمة الإيجار الشهري المطلوب؟", pron: "هَاوْ مَاتْشْ إِزْ ذَا مَانْثْلِي رِينْتْ؟" },
-                            { en: "Are utilities included in the rent?", ar: "هل الفواتير (الماء والكهرباء) مشمولة بالإيجار؟", pron: "آرْ يُوتِيلِيتِيزْ إِنْكْلُودِدْ...؟" }
-                        ]
-                    },
-                    {
-                        id: 't13', icon: 'fa-mug-hot', titleAr: 'في المقهى واللقاءات الودية', titleEn: 'Café & Social Life',
-                        desc: 'طلب المشروبات، الحلويات، والجلوس مع الأصدقاء.',
-                        dialogue: [
-                            { en: "Can I have an iced latte, please?", ar: "هل يمكنني طلب لاتيه مثلج، من فضلك؟", pron: "كَانْ آيْ هَافْ أَنْ آيْسْدْ لَاتِيه، بْلِيزْ؟" },
-                            { en: "To go or have here?", ar: "هل الطلب سفري أم للجلوس هنا؟", pron: "تُو غُو أُورْ هَافْ هِيرْ؟" },
-                            { en: "With sugar or without sugar?", ar: "هل تريده مع سكر أم بدون سكر؟", pron: "وِذْ شُوغَرْ أُورْ وِذَاوْتْ شُوغَرْ؟" }
-                        ]
-                    },
-                    {
-                        id: 't14', icon: 'fa-landmark', titleAr: 'السياحة والأماكن الأثرية', titleEn: 'Tourism & Sightseeing',
-                        desc: 'تذاكر المتاحف، مواعيد العمل، والجولات السياحية.',
-                        dialogue: [
-                            { en: "How much is the admission ticket?", ar: "كم سعر تذكرة الدخول؟", pron: "هَاوْ مَاتْشْ إِزْ ذِي أَدْمِيشِنْ تِيكِيتْ؟" },
-                            { en: "Are photos allowed inside the museum?", ar: "هل التصوير مسموح داخل المتحف؟", pron: "آرْ فُوتُوزْ أَلَاوْدْ إِنْسَايْدْ...؟" },
-                            { en: "When does the tour start?", ar: "متى تبدأ الجولة السياحية الإرشادية؟", pron: "وِينْ دَازْ ذَا تُورْ سْتَارْتْ؟" }
-                        ]
-                    },
-                    {
-                        id: 't15', icon: 'fa-clock', titleAr: 'الروتين اليومي وتنظيم المواعيد', titleEn: 'Daily Routine & Time',
-                        desc: 'الساعة، أيام الأسبوع، والتعبير عن الخطط.',
-                        dialogue: [
-                            { en: "What time is it now?", ar: "كم الساعة الآن؟", pron: "وَاتْ تَايْمْ إِزْ إِتْ نَاوْ؟" },
-                            { en: "Let us meet on Monday at 4 PM.", ar: "دعنا نلتقي يوم الإثنين في الرابعة مساءً.", pron: "لِتْ أَسْ مِيتْ أُونْ مَانْدِي آتْ فُورْ..." },
-                            { en: "I wake up early every day.", ar: "أنا أستيقظ مبكرًا كل يوم.", pron: "آيْ وِيكْ أَبْ إِيرْلِي إِفْرِي دِي" }
+                    phone: {
+                        titleAr: "المكالمات الهاتفية وحجز المواعيد الرسمية",
+                        titleEn: "Formal Phone Calls & Appointments",
+                        dialogues: [
+                            { speaker: "المتصل (B)", en: "Hello, could I speak with Dr. Wilson's secretary, please?", ar: "مرحباً، هل يمكنني التحدث مع سكرتير الدكتور ويلسون، لو سمحت؟", pron: "هَلُو، كُودْ آيْ سْبِيكْ وِذْ دَاكْتُورْ وِيلْسُونْزْ سِيكْرِيتَارِي..." },
+                            { speaker: "السكرتير (A)", en: "Speaking. How can I help you today?", ar: "معك على الخط. كيف يمكنني مساعدتك اليوم؟", pron: "سْبِيكِينْغ. هَاوْ كَانْ آيْ هِيلْبْ يُو تُودِي؟" },
+                            { speaker: "المتصل (B)", en: "I would like to reschedule my appointment from Tuesday to Thursday afternoon.", ar: "أود إعادة جدولة موعدي من يوم الثلاثاء إلى عصر يوم الخميس.", pron: "آيْ وُودْ لَايْكْ تُو رِيسْكِيدْيُولْ مَايْ أَبُويْنْتْمِينْتْ..." },
+                            { speaker: "السكرتير (A)", en: "Let me check the schedule... Yes, we have an opening on Thursday at 3:30 PM.", ar: "دعني أتحقق من الجدول... نعم، لدينا موعد شاغر يوم الخميس في الساعة 3:30 عصراً.", pron: "لِتْ مِي تْشِيكْ ذَا سْكِيدْيُولْ... يِسْ، وِي هَافْ..." },
+                            { speaker: "المتصل (B)", en: "That time works perfectly for me. Thank you!", ar: "هذا الوقت مناسب لي تماماً. شكراً جزيلاً لك!", pron: "ذَاتْ تَايْمْ وِيرْكْسْ بِيرْفِكْتْلِي فُورْ مِي. ثَانْكْ يُو!" }
                         ]
                     }
+                },
+
+                // الأبجدية الكاملة 26 حرفاً
+                alphabet: [
+                    { l: "Aa", w: "Apple (تفاحة)", p: "أَبِل" }, { l: "Bb", w: "Book (كتاب)", p: "بُوك" },
+                    { l: "Cc", w: "Car (سيارة)", p: "كَار" }, { l: "Dd", w: "Door (باب)", p: "دُور" },
+                    { l: "Ee", w: "Egg (بيضة)", p: "إِيغ" }, { l: "Ff", w: "Fish (سمكة)", p: "فِيش" },
+                    { l: "Gg", w: "Girl (فتاة)", p: "غِيرْل" }, { l: "Hh", w: "House (منزل)", p: "هَاوْس" },
+                    { l: "Ii", w: "Ice (ثلج)", p: "آيْس" }, { l: "Jj", w: "Juice (عصير)", p: "جُوس" },
+                    { l: "Kk", w: "Key (مفتاح)", p: "كِي" }, { l: "Ll", w: "Lion (أسد)", p: "لَايُون" },
+                    { l: "Mm", w: "Moon (قمر)", p: "مُون" }, { l: "Nn", w: "Night (ليل)", p: "نَايْت" },
+                    { l: "Oo", w: "Orange (برتقال)", p: "أُورِينْج" }, { l: "Pp", w: "Pen (قلم)", p: "بِين" },
+                    { l: "Qq", w: "Queen (ملكة)", p: "كْوِين" }, { l: "Rr", w: "Rain (مطر)", p: "رِين" },
+                    { l: "Ss", w: "Sun (شمس)", p: "سَان" }, { l: "Tt", w: "Tree (شجرة)", p: "تْرِي" },
+                    { l: "Uu", w: "Umbrella (مظلة)", p: "أَمْبْرِيلَا" }, { l: "Vv", w: "Van (شاحنة)", p: "فَان" },
+                    { l: "Ww", w: "Water (ماء)", p: "وَاتَرْ" }, { l: "Xx", w: "Box (صندوق)", p: "بُوكس" },
+                    { l: "Yy", w: "Yellow (أصفر)", p: "يِيلُو" }, { l: "Zz", w: "Zoo (حديقة حيوان)", p: "زُو" }
                 ],
 
-                grammar: [
-                    { titleAr: 'فعل الكينونة (Verb to Be)', desc: 'هو أساس الوصف: نستخدم am مع I (أنا)، و is مع المفرد الغائب (He, She, It)، و are مع ضمائر الجمع (We, You, They).' },
-                    { titleAr: 'أدوات التنكير (a / an)', desc: 'نضع an قبل الأسماء المبدوءة بصوت علة متحرك (مثل an apple, an umbrella)، ونضع a مع بقية الحروف الساكنة (مثل a car, a book).' },
-                    { titleAr: 'المضارع البسيط (Present Simple)', desc: 'للعادات والروتين اليومي: نضيف s للفعل مع المفرد (He speaks English)، ويبقى الفعل مجردًا مع الجمع (They speak English).' },
-                    { titleAr: 'السؤال بـ Do و Does', desc: 'نستخدم Do مع الجمع و Does مع المفرد في بداية الجملة للسؤال، ويعود الفعل دائمًا إلى صيغته الأصلية المجردة.' }
+                // الأرقام والزمان
+                numbers: [
+                    { en: "One (1)", ar: "واحد", pron: "وَان" }, { en: "Two (2)", ar: "اثنان", pron: "تُو" },
+                    { en: "Three (3)", ar: "ثلاثة", pron: "ثْرِي" }, { en: "Ten (10)", ar: "عشرة", pron: "تِين" },
+                    { en: "Sunday", ar: "الأحد", pron: "سَانْدِي" }, { en: "Monday", ar: "الإثنين", pron: "مَانْدِي" },
+                    { en: "Friday", ar: "الجمعة", pron: "فْرَايْدِي" }, { en: "Summer", ar: "الصيف", pron: "سَامَرْ" }
+                ],
+
+                // المفردات المصنفة
+                vocab: [
+                    { en: "Father", ar: "أب / والد", pron: "فَاذَرْ" }, { en: "Mother", ar: "أم / والدة", pron: "مَاذَرْ" },
+                    { en: "Water", ar: "ماء", pron: "وَاتَرْ" }, { en: "Bread", ar: "خبز", pron: "بْرِيد" },
+                    { en: "Doctor", ar: "طبيب", pron: "دَاكْتُور" }, { en: "Teacher", ar: "معلم", pron: "تِيتْشَرْ" }
                 ]
             },
 
             init() {
-                this.renderTracks();
-                this.renderGrammar();
-                this.renderEncyclopedia();
+                this.loadCategory('airport');
+                this.renderAlphabet();
+                this.renderNumbers();
+                this.renderVocab();
             },
 
             navigate(viewId) {
@@ -391,110 +453,87 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             },
 
-            renderTracks() {
-                const c = document.getElementById('tracks-grid');
-                if (!c) return;
-                c.innerHTML = this.state.tracks.map(t => `
-                    <div class="card">
-                        <div>
-                            <div class="card-icon"><i class="fa-solid ${t.icon}"></i></div>
-                            <h3 style="color:var(--primary-navy); font-size:1.15rem;">${t.titleAr}</h3>
-                            <span class="en-text" style="color:var(--accent-gold); font-weight:800; font-size:0.85rem;">${t.titleEn}</span>
-                            <p style="color:var(--text-muted); font-size:0.88rem; margin-top:0.5rem;">${t.desc}</p>
-                        </div>
-                        <button class="btn-gold" style="margin-top:1.2rem; justify-content:center;" onclick="app.openTrack('${t.id}')">
-                            <i class="fa-solid fa-play"></i> فتح المسار (${t.dialogue.length} جمل)
-                        </button>
-                    </div>
-                `).join('');
-            },
+            loadCategory(catKey) {
+                this.state.currentCategory = catKey;
+                document.querySelectorAll('#conv-category-tabs .cat-tab').forEach(b => b.classList.remove('active'));
+                event.target.classList.add('active');
 
-            openTrack(id) {
-                const track = this.state.tracks.find(t => t.id === id);
-                if (!track) return;
+                const data = this.state.conversations[catKey];
+                document.getElementById('conv-title-ar').innerText = data.titleAr;
+                document.getElementById('conv-title-en').innerText = data.titleEn;
 
-                const c = document.getElementById('lesson-detail-box');
-                c.innerHTML = `
-                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem; flex-wrap:wrap; gap:10px;">
-                        <div>
-                            <h2>${track.titleAr}</h2>
-                            <span class="en-text" style="color:var(--accent-gold); font-weight:800;">${track.titleEn}</span>
-                        </div>
-                        <button class="btn-secondary" onclick="app.navigate('life-tracks')"><i class="fa-solid fa-arrow-right"></i> العودة للمسارات</button>
-                    </div>
-                    
-                    <p style="color:var(--text-muted); margin-bottom:1.5rem;">${track.desc}</p>
-
-                    <h3 style="margin-bottom:1rem; font-size:1.1rem;"><i class="fa-solid fa-comments"></i> الجمل النموذجية المنطوقة في هذا المسار:</h3>
-
-                    ${track.dialogue.map(d => `
-                        <div class="dialogue-item">
-                            <div>
-                                <h4 class="en-text" style="color:var(--royal-blue); font-size:1.1rem;">${d.en}</h4>
-                                <p style="font-weight:700; margin-top:2px; font-size:0.95rem;">${d.ar}</p>
-                                <p style="color:var(--accent-gold); font-size:0.82rem;">نطق تقريبي: ${d.pron}</p>
+                const container = document.getElementById('dialogue-nodes-container');
+                container.innerHTML = data.dialogues.map((d, index) => {
+                    const isSpeakerA = d.speaker.includes("(A)");
+                    return `
+                        <div class="dialogue-node ${isSpeakerA ? 'speaker-a' : 'speaker-b'}">
+                            <div style="display:flex; justify-content:space-between; align-items:center;">
+                                <span class="speaker-tag">${d.speaker}</span>
+                                <button class="btn-gold" style="padding:4px 10px; font-size:0.75rem;" onclick="app.speak('${d.en.replace(/'/g, "\\'")}')">
+                                    <i class="fa-solid fa-volume-high"></i> استمع
+                                </button>
                             </div>
-                            <button class="btn-gold" style="padding:0.5rem 0.85rem;" onclick="app.speak('${d.en.replace(/'/g, "\\'")}')">
-                                <i class="fa-solid fa-volume-high"></i>
-                            </button>
+                            <div class="dialogue-en en-text">${d.en}</div>
+                            <div class="dialogue-ar">${d.ar}</div>
+                            <div class="dialogue-pron">نطق: ${d.pron}</div>
                         </div>
-                    `).join('')}
-                `;
-                this.navigate('lesson-viewer');
+                    `;
+                }).join('');
             },
 
-            renderGrammar() {
-                const c = document.getElementById('grammar-grid');
+            playEntireDialogue() {
+                const dialogues = this.state.conversations[this.state.currentCategory].dialogues;
+                let index = 0;
+                const speakNext = () => {
+                    if (index < dialogues.length) {
+                        const u = new SpeechSynthesisUtterance(dialogues[index].en);
+                        u.lang = 'en-US';
+                        u.rate = 0.85;
+                        u.onend = () => { index++; speakNext(); };
+                        window.speechSynthesis.speak(u);
+                    }
+                };
+                window.speechSynthesis.cancel();
+                speakNext();
+            },
+
+            renderAlphabet() {
+                const c = document.getElementById('alphabet-grid-box');
                 if (!c) return;
-                c.innerHTML = this.state.grammar.map(g => `
-                    <div class="card">
-                        <div>
-                            <div class="card-icon"><i class="fa-solid fa-shapes"></i></div>
-                            <h3 style="color:var(--primary-navy);">${g.titleAr}</h3>
-                            <p style="color:var(--text-muted); font-size:0.92rem; margin-top:0.6rem; line-height:1.7;">${g.desc}</p>
-                        </div>
+                c.innerHTML = this.state.alphabet.map(i => `
+                    <div class="card" style="padding:1rem; text-align:center; cursor:pointer;" onclick="app.speak('${i.l}. ${i.w}')">
+                        <h2 class="en-text" style="color:var(--royal-blue);">${i.l}</h2>
+                        <p class="en-text" style="font-weight:800; color:var(--accent-gold); font-size:0.85rem;">${i.w}</p>
+                        <p style="font-size:0.75rem; color:var(--text-muted);">${i.p}</p>
                     </div>
                 `).join('');
             },
 
-            renderEncyclopedia() {
-                const c = document.getElementById('encyclo-results');
+            renderNumbers() {
+                const c = document.getElementById('numbers-grid-box');
                 if (!c) return;
-                let allItems = [];
-                this.state.tracks.forEach(t => {
-                    t.dialogue.forEach(d => allItems.push({ ...d, trackTitle: t.titleAr }));
-                });
-                c.innerHTML = allItems.slice(0, 12).map(item => `
+                c.innerHTML = this.state.numbers.map(i => `
                     <div class="card">
-                        <div>
-                            <span style="font-size:0.75rem; background:rgba(30,64,175,0.08); color:var(--royal-blue); padding:2px 8px; border-radius:20px; font-weight:800;">${item.trackTitle}</span>
-                            <h4 class="en-text" style="color:var(--royal-blue); margin-top:0.6rem; font-size:1.05rem;">${item.en}</h4>
-                            <p style="font-weight:700; font-size:0.92rem; margin-top:2px;">${item.ar}</p>
-                        </div>
-                        <button class="btn-gold" style="margin-top:1rem; padding:0.45rem 0.8rem; justify-content:center;" onclick="app.speak('${item.en.replace(/'/g, "\\'")}')">
-                            <i class="fa-solid fa-volume-high"></i> استمع
+                        <h3 class="en-text" style="color:var(--royal-blue);">${i.en}</h3>
+                        <p style="font-weight:800; margin:4px 0;">${i.ar}</p>
+                        <p style="color:var(--accent-gold); font-size:0.85rem;">${i.pron}</p>
+                        <button class="btn-gold" style="margin-top:0.8rem; padding:0.4rem; justify-content:center;" onclick="app.speak('${i.en}')">
+                            <i class="fa-solid fa-volume-high"></i> نطق
                         </button>
                     </div>
                 `).join('');
             },
 
-            searchEncyclopedia() {
-                const q = document.getElementById('encyclo-search').value.toLowerCase().trim();
-                const c = document.getElementById('encyclo-results');
-                let allItems = [];
-                this.state.tracks.forEach(t => {
-                    t.dialogue.forEach(d => allItems.push({ ...d, trackTitle: t.titleAr }));
-                });
-                const filtered = allItems.filter(i => i.en.toLowerCase().includes(q) || i.ar.includes(q));
-                c.innerHTML = filtered.map(item => `
+            renderVocab() {
+                const c = document.getElementById('vocab-grid-box');
+                if (!c) return;
+                c.innerHTML = this.state.vocab.map(i => `
                     <div class="card">
-                        <div>
-                            <span style="font-size:0.75rem; background:rgba(30,64,175,0.08); color:var(--royal-blue); padding:2px 8px; border-radius:20px; font-weight:800;">${item.trackTitle}</span>
-                            <h4 class="en-text" style="color:var(--royal-blue); margin-top:0.6rem; font-size:1.05rem;">${item.en}</h4>
-                            <p style="font-weight:700; font-size:0.92rem; margin-top:2px;">${item.ar}</p>
-                        </div>
-                        <button class="btn-gold" style="margin-top:1rem; padding:0.45rem 0.8rem; justify-content:center;" onclick="app.speak('${item.en.replace(/'/g, "\\'")}')">
-                            <i class="fa-solid fa-volume-high"></i> استمع
+                        <h3 class="en-text" style="color:var(--royal-blue);">${i.en}</h3>
+                        <p style="font-weight:800; margin:4px 0;">${i.ar}</p>
+                        <p style="color:var(--accent-gold); font-size:0.85rem;">${i.pron}</p>
+                        <button class="btn-gold" style="margin-top:0.8rem; padding:0.4rem; justify-content:center;" onclick="app.speak('${i.en}')">
+                            <i class="fa-solid fa-volume-high"></i> نطق
                         </button>
                     </div>
                 `).join('');
