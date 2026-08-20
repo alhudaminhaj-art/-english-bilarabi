@@ -1,747 +1,1106 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English بالعربي | الموسوعة التعليمية الكبرى — البركة ديجيتال</title>
-    <!-- خطوط جوجل الرسمية الفاخرة -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- مكتبة الأيقونات FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --primary-navy: #081225;
-            --secondary-navy: #0F2344;
-            --royal-blue: #1D4ED8;
-            --royal-blue-light: #3B82F6;
-            --accent-gold: #D97706;
-            --accent-gold-light: #FBBF24;
-            --gold-gradient: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
-            --bg-light: #F8FAFC;
-            --card-light: #FFFFFF;
-            --text-main: #0F172A;
-            --text-muted: #64748B;
-            --border-color: #E2E8F0;
-            --success: #10B981;
-            --danger: #EF4444;
-            --radius-xl: 18px;
-            --radius-lg: 12px;
-            --radius-md: 8px;
-            --shadow-subtle: 0 6px 20px -2px rgba(8, 18, 37, 0.06);
-            --shadow-gold: 0 4px 15px rgba(217, 119, 6, 0.28);
-            --font-ar: 'Cairo', sans-serif;
-            --font-en: 'Plus Jakarta Sans', sans-serif;
-            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>English بالعربي — ابدأ من الصفر… وتحدّث الإنجليزية بثقة</title>
+  <meta name="description" content="منصة فخمة لتعليم الإنجليزية للمبتدئين الناطقين بالعربية. دروس، حروف، مفردات، محادثات واختبارات. إنتاج البركة ديجيتال بإشراف عبد الله أحمد.">
+  <meta name="theme-color" content="#071422">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23071422'/%3E%3Crect x='1.5' y='1.5' width='29' height='29' rx='6' fill='none' stroke='%23C6A15B' stroke-width='1.2'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Georgia, serif' font-size='16' font-weight='700' fill='%23C6A15B'%3EE%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+  <style>
+:root {
+  --navy: #071422;
+  --navy-2: #0c1e36;
+  --navy-3: #152b4a;
+  --navy-4: #1c3a5e;
+  --royal: #2a5a9e;
+  --gold: #c6a15b;
+  --gold-2: #e0c37a;
+  --ivory: #f4efe4;
+  --paper: #f7f3ea;
+  --ink: #102033;
+  --muted: #8b97a8;
+  --ok: #3d8b6e;
+  --danger: #c45c4a;
+  --bg: #071422;
+  --bg-elev: #0c1e36;
+  --bg-subtle: #152b4a;
+  --fg: #f4efe4;
+  --fg-muted: #8b97a8;
+  --line: rgba(198, 161, 91, 0.18);
+  --line-strong: rgba(198, 161, 91, 0.38);
+  --shadow: 0 18px 50px -24px rgb(7 20 34 / 0.55);
+  --font: "Cairo", "Segoe UI", system-ui, sans-serif;
+  --display: "Cormorant Garamond", "Cairo", Georgia, serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 28px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --fast: 250ms;
+  --quick: 150ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
 
-        [data-theme="dark"] {
-            --bg-light: #050B14;
-            --card-light: #0C1728;
-            --text-main: #F8FAFC;
-            --text-muted: #94A3B8;
-            --border-color: #1E2E48;
-            --shadow-subtle: 0 8px 30px rgba(0, 0, 0, 0.45);
-        }
+html.light {
+  --bg: #f7f3ea;
+  --bg-elev: #fffdf8;
+  --bg-subtle: #efe8d8;
+  --fg: #102033;
+  --fg-muted: #5d6b7c;
+  --line: rgba(16, 32, 51, 0.12);
+  --line-strong: rgba(16, 32, 51, 0.28);
+  --shadow: 0 18px 40px -24px rgb(16 32 51 / 0.18);
+}
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: var(--font-ar); -webkit-tap-highlight-color: transparent; }
-        body { background-color: var(--bg-light); color: var(--text-main); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
-        .en-text { font-family: var(--font-en); direction: ltr; display: inline-block; }
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+html {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  line-height: 1.6;
+}
+button, [role="button"] { cursor: pointer; font-family: inherit; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.2; text-wrap: balance; font-weight: 600; }
+p { text-wrap: pretty; }
+.en { font-family: var(--display); letter-spacing: 0; direction: ltr; unicode-bidi: isolate; }
+.tabular { font-variant-numeric: tabular-nums; }
 
-        /* شريط التنقل */
-        .navbar { position: sticky; top: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(14px); border-bottom: 1px solid var(--border-color); }
-        [data-theme="dark"] .navbar { background: rgba(12, 23, 40, 0.95); }
-        .nav-container { max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.2rem; }
-        .brand-logo { display: flex; align-items: center; gap: 10px; cursor: pointer; }
-        .brand-icon { width: 44px; height: 44px; background: var(--gold-gradient); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: #FFF; font-size: 1.35rem; font-weight: 900; box-shadow: var(--shadow-gold); }
-        .brand-text h1 { font-size: 1.25rem; font-weight: 900; color: var(--primary-navy); margin: 0; line-height: 1.1; }
-        [data-theme="dark"] .brand-text h1 { color: #FFF; }
-        .brand-text span { font-size: 0.72rem; color: var(--accent-gold); font-weight: 800; }
-        
-        .nav-links { display: flex; align-items: center; gap: 0.8rem; list-style: none; overflow-x: auto; scrollbar-width: none; }
-        .nav-links::-webkit-scrollbar { display: none; }
-        .nav-link { color: var(--text-main); font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: var(--transition); display: flex; align-items: center; gap: 4px; white-space: nowrap; padding: 6px 10px; border-radius: var(--radius-md); }
-        .nav-link:hover, .nav-link.active { color: var(--accent-gold); background: rgba(217,119,6,0.08); }
+.wrap { width: min(1120px, calc(100% - 32px)); margin-inline: auto; }
+.site { min-height: 100dvh; display: flex; flex-direction: column; padding-bottom: 88px; }
+header.top {
+  position: sticky; top: 0; z-index: 30;
+  backdrop-filter: blur(14px);
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  border-bottom: 1px solid var(--line);
+}
+.top-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 68px; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.mark {
+  width: 40px; height: 40px; border-radius: var(--r-md);
+  border: 1px solid var(--line-strong);
+  display: grid; place-items: center;
+  color: var(--gold); font-family: var(--display); font-size: 1.2rem; font-weight: 600;
+  background: var(--navy-2);
+}
+html.light .mark { background: var(--ink); color: var(--gold-2); }
+.brand small { display: block; color: var(--fg-muted); font-size: 11px; }
+.nav-desk { display: none; gap: 4px; }
+.nav-desk a, .icon-btn, .btn {
+  min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border-radius: var(--r-md); border: 1px solid transparent; padding: 0 14px;
+  background: transparent; color: var(--fg-muted); font-size: 14px;
+  transition: background var(--quick) var(--ease), color var(--quick) var(--ease), border-color var(--quick) var(--ease), transform var(--quick) var(--ease);
+}
+.nav-desk a:hover, .icon-btn:hover { color: var(--fg); background: var(--bg-subtle); }
+.nav-desk a.active { color: var(--gold); background: color-mix(in oklab, var(--gold) 14%, transparent); }
+.icon-btn { width: 44px; padding: 0; border-color: var(--line); color: var(--fg); }
+.btn:active { transform: scale(0.98); }
+.btn-gold { background: var(--gold); color: var(--navy); font-weight: 600; }
+.btn-gold:hover { background: var(--gold-2); }
+.btn-navy { background: var(--navy-3); color: var(--ivory); border-color: var(--line); }
+.btn-line { border-color: var(--line-strong); color: var(--gold); }
+.btn-lg { min-height: 48px; padding: 0 22px; border-radius: 14px; font-size: 16px; }
+.top-actions { display: flex; align-items: center; gap: 8px; }
 
-        .btn-gold { background: var(--gold-gradient); color: #FFF; border: none; padding: 0.55rem 1.2rem; border-radius: var(--radius-md); font-weight: 800; font-size: 0.88rem; cursor: pointer; box-shadow: var(--shadow-gold); display: inline-flex; align-items: center; gap: 6px; transition: var(--transition); }
-        .btn-gold:hover { transform: translateY(-2px); }
-        .btn-secondary { background: var(--card-light); color: var(--text-main); border: 1px solid var(--border-color); padding: 0.55rem 1rem; border-radius: var(--radius-md); font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+main { flex: 1; }
+.hero { padding: 56px 0 40px; border-bottom: 1px solid var(--line); position: relative; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 0%, color-mix(in oklab, var(--royal) 22%, transparent), transparent 52%),
+    linear-gradient(180deg, color-mix(in oklab, var(--navy-3) 35%, transparent), transparent);
+  pointer-events: none;
+}
+html.light .hero::before { background: radial-gradient(ellipse at 80% 0%, rgba(42,90,158,.08), transparent 55%); }
+.hero-grid { position: relative; display: grid; gap: 36px; }
+.kicker { color: var(--gold); font-size: 12px; letter-spacing: 0.22em; }
+.hero h1 { font-size: clamp(1.9rem, 4vw, 3.1rem); margin: 14px 0 0; }
+.lead { color: var(--fg-muted); max-width: 42rem; margin-top: 14px; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+.panel {
+  border: 1px solid var(--line);
+  background: var(--bg-elev);
+  border-radius: var(--r-xl);
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.hero-card { min-height: 220px; display: flex; flex-direction: column; justify-content: space-between; }
+.hero-card .path { color: var(--gold); font-size: 1.4rem; }
+.muted { color: var(--fg-muted); }
+.tiny { font-size: 12px; color: var(--fg-muted); }
 
-        /* منطقة الشاشات */
-        #app-viewport { flex: 1; display: flex; flex-direction: column; }
-        .view-section { display: none; padding: 2rem 1.2rem; max-width: 1440px; margin: 0 auto; width: 100%; animation: fadeIn 0.3s ease; }
-        .view-section.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+section.block { padding: 56px 0; }
+section.alt { background: var(--bg-elev); border-block: 1px solid var(--line); }
+.grid-3 { display: grid; gap: 14px; }
+.grid-4 { display: grid; gap: 12px; }
+.card {
+  border: 1px solid var(--line);
+  background: var(--bg-elev);
+  border-radius: 22px;
+  padding: 18px;
+}
+section.alt .card, .hero-card { background: var(--bg); }
+.card h3 { margin: 10px 0 6px; font-size: 1.05rem; }
+.ico {
+  width: 36px; height: 36px; color: var(--gold);
+}
+.ico svg { width: 22px; height: 22px; }
+.stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; text-align: center; }
+.stats b { display: block; color: var(--gold); font-family: var(--display); font-size: 2rem; font-weight: 600; }
+details.faq {
+  border: 1px solid var(--line); background: var(--bg-elev); border-radius: 22px; padding: 16px 18px;
+}
+details.faq summary { cursor: pointer; font-weight: 600; list-style: none; }
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq p { margin: 8px 0 0; color: var(--fg-muted); font-size: 14px; }
 
-        /* تبويبات الأقسام */
-        .category-tabs { display: flex; gap: 0.5rem; overflow-x: auto; padding: 0.5rem 0 1.2rem; justify-content: flex-start; scrollbar-width: none; }
-        .category-tabs::-webkit-scrollbar { display: none; }
-        .cat-tab { padding: 0.6rem 1.2rem; border-radius: 50px; background: var(--card-light); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 800; font-size: 0.85rem; cursor: pointer; white-space: nowrap; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
-        .cat-tab.active, .cat-tab:hover { background: var(--royal-blue); color: #FFF; border-color: var(--royal-blue); }
+.bottom-nav {
+  position: fixed; inset-inline: 0; bottom: 0; z-index: 40;
+  background: color-mix(in oklab, var(--bg) 94%, transparent);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--line);
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+}
+.bottom-nav a {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  min-height: 52px; justify-content: center;
+  color: var(--fg-muted); font-size: 10px; border-radius: 12px;
+}
+.bottom-nav a.active { color: var(--gold); }
+.bottom-nav svg { width: 20px; height: 20px; }
 
-        /* الكروت والشبكات */
-        .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.2rem; margin-top: 1rem; }
-        .card { background: var(--card-light); border: 1px solid var(--border-color); border-radius: var(--radius-xl); padding: 1.5rem; box-shadow: var(--shadow-subtle); display: flex; flex-direction: column; justify-content: space-between; transition: var(--transition); }
-        .card:hover { transform: translateY(-4px); border-color: var(--accent-gold); }
+.page { padding: 28px 0 40px; }
+.page h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin: 6px 0 8px; }
+.filters { display: flex; gap: 8px; overflow: auto; padding-bottom: 8px; margin: 16px 0; }
+.chip {
+  flex: 0 0 auto; min-height: 40px; padding: 0 14px; border-radius: 999px;
+  border: 1px solid var(--line); background: transparent; color: var(--fg-muted); font-size: 13px;
+}
+.chip.on { background: color-mix(in oklab, var(--gold) 16%, transparent); color: var(--gold); border-color: var(--line-strong); }
 
-        .alpha-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 1rem; margin-top: 1rem; }
-        .alpha-card { background: var(--card-light); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 1rem; text-align: center; cursor: pointer; transition: var(--transition); }
-        .alpha-card:hover { border-color: var(--accent-gold); transform: scale(1.04); background: rgba(217,119,6,0.03); }
+.letters { display: grid; grid-template-columns: repeat(auto-fill, minmax(92px, 1fr)); gap: 8px; }
+.letter {
+  border: 1px solid var(--line); background: var(--bg-elev); border-radius: 18px;
+  padding: 12px 8px; text-align: center; min-height: 96px;
+}
+.letter b { display: block; font-family: var(--display); font-size: 1.6rem; color: var(--gold); }
+.words { display: grid; gap: 10px; }
+.word {
+  border: 1px solid var(--line); background: var(--bg-elev); border-radius: 22px; padding: 16px;
+  display: grid; gap: 8px;
+}
+.word-top { display: flex; justify-content: space-between; align-items: start; gap: 8px; }
+.speak, .save {
+  width: 44px; height: 44px; border-radius: 12px; border: 1px solid var(--line);
+  background: transparent; color: var(--gold); display: grid; place-items: center;
+}
+.save.on { background: color-mix(in oklab, var(--gold) 16%, transparent); }
+.search {
+  width: 100%; min-height: 48px; border-radius: 14px; border: 1px solid var(--line);
+  background: var(--bg-elev); color: var(--fg); padding: 0 16px; font: inherit;
+}
 
-        /* البطاقات التعليمية التفاعلية */
-        .flashcard-box { perspective: 1000px; max-width: 480px; margin: 1.5rem auto; min-height: 250px; }
-        .flashcard-inner { position: relative; width: 100%; height: 250px; transform-style: preserve-3d; transition: transform 0.5s; cursor: pointer; }
-        .flashcard-inner.flipped { transform: rotateY(180deg); }
-        .flashcard-side { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: var(--radius-xl); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; border: 2px solid var(--accent-gold); box-shadow: var(--shadow-subtle); text-align: center; }
-        .flashcard-front { background: var(--card-light); color: var(--text-main); }
-        .flashcard-back { background: var(--secondary-navy); color: #FFF; transform: rotateY(180deg); }
+.unit { margin-bottom: 18px; }
+.unit h2 { font-size: 1.15rem; margin-bottom: 8px; }
+.lesson-row {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  border: 1px solid var(--line); background: var(--bg-elev); border-radius: 18px;
+  padding: 12px 14px; margin-bottom: 8px; text-align: start; width: 100%; color: inherit;
+}
+.lesson-row.locked { opacity: 0.55; }
+.badge {
+  font-size: 11px; color: var(--gold); border: 1px solid var(--line-strong);
+  border-radius: 999px; padding: 2px 8px;
+}
 
-        /* الجداول التفاعلية */
-        .table-responsive { overflow-x: auto; margin-top: 1rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); }
-        .custom-table { width: 100%; border-collapse: collapse; background: var(--card-light); }
-        .custom-table th, .custom-table td { padding: 0.9rem 1.1rem; text-align: right; border-bottom: 1px solid var(--border-color); font-size: 0.9rem; }
-        .custom-table th { background: rgba(30, 64, 175, 0.06); color: var(--royal-blue); font-weight: 800; }
-        .custom-table tr:hover { background: rgba(217, 119, 6, 0.03); }
+.obj { margin: 0; padding: 0 18px; color: var(--fg-muted); }
+.ex { border: 1px solid var(--line); border-radius: 16px; padding: 12px; margin: 8px 0; }
+.q { margin: 14px 0; padding: 16px; border: 1px solid var(--line); border-radius: 18px; background: var(--bg-elev); }
+.opts { display: grid; gap: 8px; margin-top: 10px; }
+.opt {
+  min-height: 44px; text-align: start; border-radius: 12px; border: 1px solid var(--line);
+  background: transparent; color: var(--fg); padding: 8px 12px;
+}
+.opt.ok { border-color: var(--ok); background: color-mix(in oklab, var(--ok) 16%, transparent); }
+.opt.bad { border-color: var(--danger); background: color-mix(in oklab, var(--danger) 14%, transparent); }
+.field {
+  width: 100%; min-height: 48px; margin-top: 10px; border-radius: 12px; border: 1px solid var(--line);
+  background: var(--bg); color: var(--fg); padding: 0 12px; font: inherit;
+}
+.feedback { margin-top: 8px; font-size: 14px; }
+.feedback.ok { color: var(--ok); }
+.feedback.bad { color: var(--danger); }
+.row-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 
-        /* التذييل الرسمي */
-        .footer { background: var(--primary-navy); color: #FFF; margin-top: auto; border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 3rem 1.2rem 1.5rem; }
-        .footer-grid { max-width: 1440px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
-        .footer-bottom { max-width: 1440px; margin: 1.2rem auto 0; display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; color: #94A3B8; flex-wrap: wrap; gap: 1rem; }
+.dialogue { display: grid; gap: 10px; }
+.line { border: 1px solid var(--line); border-radius: 18px; padding: 12px 14px; background: var(--bg-elev); }
+.line b { color: var(--gold); font-size: 12px; }
 
-        @media (max-width: 900px) { .nav-links { display: none; } }
-    </style>
+.progress-bar { height: 8px; background: var(--bg-subtle); border-radius: 99px; overflow: hidden; }
+.progress-bar span { display: block; height: 100%; background: var(--gold); border-radius: inherit; }
+
+table.g { width: 100%; border-collapse: collapse; font-size: 14px; margin: 12px 0; }
+table.g th, table.g td { border-bottom: 1px solid var(--line); padding: 8px 6px; text-align: start; }
+.good { color: var(--ok); } .bad { color: var(--danger); }
+
+.toast {
+  position: fixed; bottom: 96px; inset-inline: 16px; margin-inline: auto; width: max-content; max-width: calc(100% - 32px);
+  background: var(--ink); color: var(--ivory); border: 1px solid var(--gold);
+  padding: 10px 16px; border-radius: 14px; z-index: 60; font-size: 14px;
+}
+
+.cert {
+  border: 2px solid var(--gold); border-radius: 24px; padding: 28px 20px; text-align: center;
+  background: linear-gradient(180deg, var(--bg-elev), var(--bg));
+}
+.cert h2 { font-family: var(--display); font-size: 2rem; color: var(--gold); }
+
+.rate { display: flex; gap: 6px; }
+.rate button { min-height: 36px; padding: 0 10px; border-radius: 10px; border: 1px solid var(--line); background: transparent; color: var(--fg-muted); font-size: 12px; }
+.rate button.on { color: var(--gold); border-color: var(--line-strong); }
+
+footer.site-foot { border-top: 1px solid var(--line); padding: 28px 0 24px; margin-top: auto; color: var(--fg-muted); font-size: 13px; }
+footer.site-foot .cols { display: grid; gap: 18px; }
+footer.site-foot a { display: block; padding: 4px 0; color: var(--fg-muted); }
+footer.site-foot a:hover { color: var(--gold); }
+
+@media (min-width: 800px) {
+  .nav-desk { display: flex; }
+  .bottom-nav { display: none; }
+  .site { padding-bottom: 0; }
+  .hero-grid { grid-template-columns: 1.15fr 0.85fr; align-items: center; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .stats { grid-template-columns: repeat(4, 1fr); }
+  .words { grid-template-columns: 1fr 1fr; }
+  footer.site-foot .cols { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+  </style>
 </head>
 <body>
+<!--
+  English بالعربي — ملف واحد لـ GitHub Pages
+  1) احفظ هذا الملف باسم index.html
+  2) ارفعه إلى مستودع GitHub
+  3) Settings → Pages → Deploy from branch → / (root)
+  إنتاج البركة ديجيتال — إشراف: عبد الله أحمد
+-->
+  <div id="app"></div>
+  <script>window.DATA = {"words":[{"id":"hello","en":"hello","ar":"مرحبًا","phonetic":"هَلو","exampleEn":"Hello, I am Ali.","exampleAr":"مرحبًا، أنا علي.","topicId":"greetings","levelId":"pre-a1"},{"id":"hi","en":"hi","ar":"أهلًا","phonetic":"هاي","exampleEn":"Hi, Sara.","exampleAr":"أهلًا يا سارة.","topicId":"greetings","levelId":"pre-a1"},{"id":"good-morning","en":"good morning","ar":"صباح الخير","phonetic":"غود مورنِنغ","exampleEn":"Good morning, teacher.","exampleAr":"صباح الخير يا أستاذ.","topicId":"greetings","levelId":"pre-a1"},{"id":"good-night","en":"good night","ar":"تصبح على خير","phonetic":"غود نايت","exampleEn":"Good night, Mom.","exampleAr":"تصبحين على خير يا أمي.","topicId":"greetings","levelId":"pre-a1"},{"id":"goodbye","en":"goodbye","ar":"مع السلامة","phonetic":"غودباي","exampleEn":"Goodbye, my friend.","exampleAr":"مع السلامة يا صديقي.","topicId":"greetings","levelId":"pre-a1"},{"id":"please","en":"please","ar":"من فضلك","phonetic":"بليز","exampleEn":"Water, please.","exampleAr":"ماء من فضلك.","topicId":"greetings","levelId":"pre-a1"},{"id":"thanks","en":"thank you","ar":"شكرًا","phonetic":"ثَنك يو","exampleEn":"Thank you very much.","exampleAr":"شكرًا جزيلًا.","topicId":"greetings","levelId":"pre-a1"},{"id":"sorry","en":"sorry","ar":"آسف","phonetic":"سوري","exampleEn":"I am sorry.","exampleAr":"أنا آسف.","topicId":"greetings","levelId":"pre-a1"},{"id":"yes","en":"yes","ar":"نعم","phonetic":"يَس","exampleEn":"Yes, I understand.","exampleAr":"نعم، أنا أفهم.","topicId":"greetings","levelId":"pre-a1"},{"id":"no","en":"no","ar":"لا","phonetic":"نو","exampleEn":"No, thank you.","exampleAr":"لا، شكرًا.","topicId":"greetings","levelId":"pre-a1"},{"id":"how-are-you","en":"How are you?","ar":"كيف حالك؟","phonetic":"هاو آر يو","exampleEn":"How are you today?","exampleAr":"كيف حالك اليوم؟","topicId":"greetings","levelId":"pre-a1"},{"id":"fine","en":"I am fine","ar":"أنا بخير","phonetic":"آي أم فاين","exampleEn":"I am fine, thank you.","exampleAr":"أنا بخير، شكرًا.","topicId":"greetings","levelId":"pre-a1"},{"id":"mother","en":"mother","ar":"أم","phonetic":"مذر","exampleEn":"This is my mother.","exampleAr":"هذه أمي.","topicId":"family","levelId":"pre-a1"},{"id":"father","en":"father","ar":"أب","phonetic":"فاذر","exampleEn":"My father is kind.","exampleAr":"أبي لطيف.","topicId":"family","levelId":"pre-a1"},{"id":"brother","en":"brother","ar":"أخ","phonetic":"برذر","exampleEn":"I have one brother.","exampleAr":"لدي أخ واحد.","topicId":"family","levelId":"pre-a1"},{"id":"sister","en":"sister","ar":"أخت","phonetic":"سستر","exampleEn":"My sister is young.","exampleAr":"أختي صغيرة.","topicId":"family","levelId":"pre-a1"},{"id":"son","en":"son","ar":"ابن","phonetic":"سَن","exampleEn":"He is my son.","exampleAr":"هو ابني.","topicId":"family","levelId":"a1"},{"id":"daughter","en":"daughter","ar":"ابنة","phonetic":"دوتر","exampleEn":"She is my daughter.","exampleAr":"هي ابنتي.","topicId":"family","levelId":"a1"},{"id":"friend","en":"friend","ar":"صديق","phonetic":"فرند","exampleEn":"He is my friend.","exampleAr":"هو صديقي.","topicId":"family","levelId":"pre-a1"},{"id":"family","en":"family","ar":"أسرة","phonetic":"فاميلي","exampleEn":"I love my family.","exampleAr":"أحب أسرتي.","topicId":"family","levelId":"pre-a1"},{"id":"name","en":"name","ar":"اسم","phonetic":"نِيم","exampleEn":"My name is Omar.","exampleAr":"اسمي عمر.","topicId":"family","levelId":"pre-a1"},{"id":"child","en":"child","ar":"طفل","phonetic":"تشايلد","exampleEn":"The child is happy.","exampleAr":"الطفل سعيد.","topicId":"family","levelId":"a1"},{"id":"house","en":"house","ar":"بيت","phonetic":"هاوس","exampleEn":"This is my house.","exampleAr":"هذا بيتي.","topicId":"home","levelId":"pre-a1"},{"id":"room","en":"room","ar":"غرفة","phonetic":"روم","exampleEn":"The room is big.","exampleAr":"الغرفة كبيرة.","topicId":"home","levelId":"pre-a1"},{"id":"door","en":"door","ar":"باب","phonetic":"دور","exampleEn":"Open the door.","exampleAr":"افتح الباب.","topicId":"home","levelId":"pre-a1"},{"id":"window","en":"window","ar":"نافذة","phonetic":"وِندو","exampleEn":"The window is open.","exampleAr":"النافذة مفتوحة.","topicId":"home","levelId":"pre-a1"},{"id":"bed","en":"bed","ar":"سرير","phonetic":"بد","exampleEn":"I sleep in my bed.","exampleAr":"أنام في سريري.","topicId":"home","levelId":"pre-a1"},{"id":"table","en":"table","ar":"طاولة","phonetic":"تَيبل","exampleEn":"The book is on the table.","exampleAr":"الكتاب على الطاولة.","topicId":"home","levelId":"pre-a1"},{"id":"chair","en":"chair","ar":"كرسي","phonetic":"تشر","exampleEn":"Sit on the chair.","exampleAr":"اجلس على الكرسي.","topicId":"home","levelId":"pre-a1"},{"id":"kitchen","en":"kitchen","ar":"مطبخ","phonetic":"كِتشن","exampleEn":"Mom is in the kitchen.","exampleAr":"أمي في المطبخ.","topicId":"home","levelId":"a1"},{"id":"bathroom","en":"bathroom","ar":"حمّام","phonetic":"باث روم","exampleEn":"Where is the bathroom?","exampleAr":"أين الحمّام؟","topicId":"home","levelId":"a1"},{"id":"garden","en":"garden","ar":"حديقة","phonetic":"غاردِن","exampleEn":"The garden is beautiful.","exampleAr":"الحديقة جميلة.","topicId":"home","levelId":"a1"},{"id":"water","en":"water","ar":"ماء","phonetic":"ووتر","exampleEn":"I drink water.","exampleAr":"أشرب الماء.","topicId":"food","levelId":"pre-a1"},{"id":"bread","en":"bread","ar":"خبز","phonetic":"برد","exampleEn":"We eat bread.","exampleAr":"نأكل الخبز.","topicId":"food","levelId":"pre-a1"},{"id":"rice","en":"rice","ar":"أرز","phonetic":"رايس","exampleEn":"Rice is hot.","exampleAr":"الأرز ساخن.","topicId":"food","levelId":"pre-a1"},{"id":"milk","en":"milk","ar":"حليب","phonetic":"مِلك","exampleEn":"The baby drinks milk.","exampleAr":"الطفل يشرب الحليب.","topicId":"food","levelId":"pre-a1"},{"id":"tea","en":"tea","ar":"شاي","phonetic":"تي","exampleEn":"Would you like tea?","exampleAr":"هل تريد شايًا؟","topicId":"food","levelId":"pre-a1"},{"id":"coffee","en":"coffee","ar":"قهوة","phonetic":"كوفي","exampleEn":"I like coffee.","exampleAr":"أحب القهوة.","topicId":"food","levelId":"a1"},{"id":"apple","en":"apple","ar":"تفاحة","phonetic":"أبِل","exampleEn":"This apple is red.","exampleAr":"هذه التفاحة حمراء.","topicId":"food","levelId":"pre-a1"},{"id":"chicken","en":"chicken","ar":"دجاج","phonetic":"تِشكن","exampleEn":"I eat chicken.","exampleAr":"آكل الدجاج.","topicId":"food","levelId":"a1"},{"id":"breakfast","en":"breakfast","ar":"فطور","phonetic":"بركْفست","exampleEn":"Breakfast is at seven.","exampleAr":"الفطور في السابعة.","topicId":"food","levelId":"a1"},{"id":"lunch","en":"lunch","ar":"غداء","phonetic":"لنش","exampleEn":"Lunch is ready.","exampleAr":"الغداء جاهز.","topicId":"food","levelId":"a1"},{"id":"dinner","en":"dinner","ar":"عشاء","phonetic":"دِنر","exampleEn":"We have dinner together.","exampleAr":"نتناول العشاء معًا.","topicId":"food","levelId":"a1"},{"id":"delicious","en":"delicious","ar":"لذيذ","phonetic":"دِلِشس","exampleEn":"This food is delicious.","exampleAr":"هذا الطعام لذيذ.","topicId":"food","levelId":"a1"},{"id":"head","en":"head","ar":"رأس","phonetic":"هد","exampleEn":"My head hurts.","exampleAr":"رأسي يؤلمني.","topicId":"health","levelId":"a1"},{"id":"eye","en":"eye","ar":"عين","phonetic":"آي","exampleEn":"She has brown eyes.","exampleAr":"عيناها بنيتان.","topicId":"health","levelId":"a1"},{"id":"hand","en":"hand","ar":"يد","phonetic":"هاند","exampleEn":"Raise your hand.","exampleAr":"ارفع يدك.","topicId":"health","levelId":"pre-a1"},{"id":"foot","en":"foot","ar":"قدم","phonetic":"فوت","exampleEn":"My foot is tired.","exampleAr":"قدمي متعبة.","topicId":"health","levelId":"a1"},{"id":"doctor","en":"doctor","ar":"طبيب","phonetic":"دَكتر","exampleEn":"I need a doctor.","exampleAr":"أحتاج إلى طبيب.","topicId":"health","levelId":"a1"},{"id":"hospital","en":"hospital","ar":"مستشفى","phonetic":"هوسْبتل","exampleEn":"The hospital is near.","exampleAr":"المستشفى قريب.","topicId":"health","levelId":"a1"},{"id":"medicine","en":"medicine","ar":"دواء","phonetic":"مَدسن","exampleEn":"Take this medicine.","exampleAr":"خذ هذا الدواء.","topicId":"health","levelId":"a2"},{"id":"pain","en":"pain","ar":"ألم","phonetic":"بين","exampleEn":"I have pain here.","exampleAr":"لدي ألم هنا.","topicId":"health","levelId":"a2"},{"id":"healthy","en":"healthy","ar":"صحي","phonetic":"هلثي","exampleEn":"I want to be healthy.","exampleAr":"أريد أن أكون بصحة جيدة.","topicId":"health","levelId":"a2"},{"id":"shirt","en":"shirt","ar":"قميص","phonetic":"شرت","exampleEn":"This shirt is new.","exampleAr":"هذا القميص جديد.","topicId":"clothes","levelId":"a1"},{"id":"dress","en":"dress","ar":"فستان","phonetic":"درس","exampleEn":"The dress is blue.","exampleAr":"الفستان أزرق.","topicId":"clothes","levelId":"a1"},{"id":"shoes","en":"shoes","ar":"حذاء","phonetic":"شوز","exampleEn":"My shoes are black.","exampleAr":"حذائي أسود.","topicId":"clothes","levelId":"a1"},{"id":"hat","en":"hat","ar":"قبعة","phonetic":"هات","exampleEn":"He wears a hat.","exampleAr":"يرتدي قبعة.","topicId":"clothes","levelId":"a1"},{"id":"coat","en":"coat","ar":"معطف","phonetic":"كوت","exampleEn":"Wear your coat.","exampleAr":"ارتدِ معطفك.","topicId":"clothes","levelId":"a1"},{"id":"bag","en":"bag","ar":"حقيبة","phonetic":"باغ","exampleEn":"Where is my bag?","exampleAr":"أين حقيبتي؟","topicId":"clothes","levelId":"pre-a1"},{"id":"red","en":"red","ar":"أحمر","phonetic":"رد","exampleEn":"The apple is red.","exampleAr":"التفاحة حمراء.","topicId":"colors","levelId":"pre-a1"},{"id":"blue","en":"blue","ar":"أزرق","phonetic":"بلو","exampleEn":"The sky is blue.","exampleAr":"السماء زرقاء.","topicId":"colors","levelId":"pre-a1"},{"id":"green","en":"green","ar":"أخضر","phonetic":"غرين","exampleEn":"The tree is green.","exampleAr":"الشجرة خضراء.","topicId":"colors","levelId":"pre-a1"},{"id":"yellow","en":"yellow","ar":"أصفر","phonetic":"يلو","exampleEn":"The sun is yellow.","exampleAr":"الشمس صفراء.","topicId":"colors","levelId":"pre-a1"},{"id":"black","en":"black","ar":"أسود","phonetic":"بلاك","exampleEn":"The cat is black.","exampleAr":"القطة سوداء.","topicId":"colors","levelId":"pre-a1"},{"id":"white","en":"white","ar":"أبيض","phonetic":"وايت","exampleEn":"The wall is white.","exampleAr":"الجدار أبيض.","topicId":"colors","levelId":"pre-a1"},{"id":"gold","en":"gold","ar":"ذهبي","phonetic":"غولد","exampleEn":"The ring is gold.","exampleAr":"الخاتم ذهبي.","topicId":"colors","levelId":"a1"},{"id":"one","en":"one","ar":"واحد","phonetic":"ون","exampleEn":"I have one book.","exampleAr":"لدي كتاب واحد.","topicId":"numbers","levelId":"pre-a1"},{"id":"two","en":"two","ar":"اثنان","phonetic":"تو","exampleEn":"Two cups of tea.","exampleAr":"كأسان من الشاي.","topicId":"numbers","levelId":"pre-a1"},{"id":"three","en":"three","ar":"ثلاثة","phonetic":"ثري","exampleEn":"Three children.","exampleAr":"ثلاثة أطفال.","topicId":"numbers","levelId":"pre-a1"},{"id":"five","en":"five","ar":"خمسة","phonetic":"فايف","exampleEn":"Five minutes.","exampleAr":"خمس دقائق.","topicId":"numbers","levelId":"pre-a1"},{"id":"ten","en":"ten","ar":"عشرة","phonetic":"تن","exampleEn":"I have ten fingers.","exampleAr":"لدي عشر أصابع.","topicId":"numbers","levelId":"pre-a1"},{"id":"twenty","en":"twenty","ar":"عشرون","phonetic":"توينتي","exampleEn":"It costs twenty dollars.","exampleAr":"سعره عشرون دولارًا.","topicId":"numbers","levelId":"a1"},{"id":"today","en":"today","ar":"اليوم","phonetic":"تودي","exampleEn":"Today is Friday.","exampleAr":"اليوم الجمعة.","topicId":"time","levelId":"pre-a1"},{"id":"tomorrow","en":"tomorrow","ar":"غدًا","phonetic":"تمورو","exampleEn":"See you tomorrow.","exampleAr":"أراك غدًا.","topicId":"time","levelId":"a1"},{"id":"yesterday","en":"yesterday","ar":"أمس","phonetic":"يستردي","exampleEn":"I was busy yesterday.","exampleAr":"كنت مشغولًا أمس.","topicId":"time","levelId":"a2"},{"id":"morning","en":"morning","ar":"صباح","phonetic":"مورنِنغ","exampleEn":"In the morning I pray.","exampleAr":"في الصباح أصلّي.","topicId":"time","levelId":"pre-a1"},{"id":"night","en":"night","ar":"ليل","phonetic":"نايت","exampleEn":"Good night.","exampleAr":"تصبح على خير.","topicId":"time","levelId":"pre-a1"},{"id":"hour","en":"hour","ar":"ساعة","phonetic":"آور","exampleEn":"Wait one hour.","exampleAr":"انتظر ساعة واحدة.","topicId":"time","levelId":"a1"},{"id":"week","en":"week","ar":"أسبوع","phonetic":"ويك","exampleEn":"This week is busy.","exampleAr":"هذا الأسبوع مزدحم.","topicId":"time","levelId":"a1"},{"id":"month","en":"month","ar":"شهر","phonetic":"منث","exampleEn":"Ramadan is a month.","exampleAr":"رمضان شهر.","topicId":"time","levelId":"a1"},{"id":"year","en":"year","ar":"سنة","phonetic":"يِير","exampleEn":"Happy New Year.","exampleAr":"سنة جديدة سعيدة.","topicId":"time","levelId":"a1"},{"id":"sun","en":"sun","ar":"شمس","phonetic":"سَن","exampleEn":"The sun is hot.","exampleAr":"الشمس حارة.","topicId":"weather","levelId":"pre-a1"},{"id":"rain","en":"rain","ar":"مطر","phonetic":"رِين","exampleEn":"It is raining.","exampleAr":"إنها تمطر.","topicId":"weather","levelId":"a1"},{"id":"hot","en":"hot","ar":"حار","phonetic":"هوت","exampleEn":"It is hot today.","exampleAr":"الجو حار اليوم.","topicId":"weather","levelId":"pre-a1"},{"id":"cold","en":"cold","ar":"بارد","phonetic":"كولد","exampleEn":"It is cold at night.","exampleAr":"الجو بارد ليلًا.","topicId":"weather","levelId":"pre-a1"},{"id":"wind","en":"wind","ar":"ريح","phonetic":"وِند","exampleEn":"The wind is strong.","exampleAr":"الريح قوية.","topicId":"weather","levelId":"a1"},{"id":"cloud","en":"cloud","ar":"سحابة","phonetic":"كلاود","exampleEn":"There is a cloud.","exampleAr":"هناك سحابة.","topicId":"weather","levelId":"a1"},{"id":"city","en":"city","ar":"مدينة","phonetic":"سيتي","exampleEn":"Nouakchott is a city.","exampleAr":"نواكشوط مدينة.","topicId":"city","levelId":"a1"},{"id":"street","en":"street","ar":"شارع","phonetic":"ستريت","exampleEn":"This street is quiet.","exampleAr":"هذا الشارع هادئ.","topicId":"city","levelId":"a1"},{"id":"school","en":"school","ar":"مدرسة","phonetic":"سكول","exampleEn":"The school is big.","exampleAr":"المدرسة كبيرة.","topicId":"city","levelId":"pre-a1"},{"id":"mosque","en":"mosque","ar":"مسجد","phonetic":"مسجد","exampleEn":"The mosque is near.","exampleAr":"المسجد قريب.","topicId":"city","levelId":"pre-a1"},{"id":"market","en":"market","ar":"سوق","phonetic":"ماركت","exampleEn":"I go to the market.","exampleAr":"أذهب إلى السوق.","topicId":"city","levelId":"a1"},{"id":"park","en":"park","ar":"حديقة عامة","phonetic":"بارك","exampleEn":"Children play in the park.","exampleAr":"الأطفال يلعبون في الحديقة.","topicId":"city","levelId":"a1"},{"id":"restaurant","en":"restaurant","ar":"مطعم","phonetic":"رِستورنت","exampleEn":"This restaurant is good.","exampleAr":"هذا المطعم جيد.","topicId":"city","levelId":"a1"},{"id":"car","en":"car","ar":"سيارة","phonetic":"كار","exampleEn":"The car is new.","exampleAr":"السيارة جديدة.","topicId":"transport","levelId":"pre-a1"},{"id":"bus","en":"bus","ar":"حافلة","phonetic":"بس","exampleEn":"I take the bus.","exampleAr":"أستقل الحافلة.","topicId":"transport","levelId":"a1"},{"id":"taxi","en":"taxi","ar":"سيارة أجرة","phonetic":"تاكسي","exampleEn":"Call a taxi, please.","exampleAr":"اطلب تاكسي من فضلك.","topicId":"transport","levelId":"a1"},{"id":"train","en":"train","ar":"قطار","phonetic":"ترين","exampleEn":"The train is late.","exampleAr":"القطار متأخر.","topicId":"transport","levelId":"a2"},{"id":"plane","en":"plane","ar":"طائرة","phonetic":"بلين","exampleEn":"The plane is fast.","exampleAr":"الطائرة سريعة.","topicId":"transport","levelId":"a2"},{"id":"airport","en":"airport","ar":"مطار","phonetic":"إيربورت","exampleEn":"Where is the airport?","exampleAr":"أين المطار؟","topicId":"transport","levelId":"a2"},{"id":"ticket","en":"ticket","ar":"تذكرة","phonetic":"تِكت","exampleEn":"I need a ticket.","exampleAr":"أحتاج إلى تذكرة.","topicId":"transport","levelId":"a2"},{"id":"passport","en":"passport","ar":"جواز سفر","phonetic":"باسبورت","exampleEn":"Here is my passport.","exampleAr":"هذا جواز سفري.","topicId":"travel","levelId":"a2"},{"id":"suitcase","en":"suitcase","ar":"حقيبة سفر","phonetic":"سوْتكيس","exampleEn":"My suitcase is heavy.","exampleAr":"حقيبة سفري ثقيلة.","topicId":"travel","levelId":"a2"},{"id":"hotel","en":"hotel","ar":"فندق","phonetic":"هوتل","exampleEn":"The hotel is clean.","exampleAr":"الفندق نظيف.","topicId":"travel","levelId":"a2"},{"id":"reservation","en":"reservation","ar":"حجز","phonetic":"رِزرفيشن","exampleEn":"I have a reservation.","exampleAr":"لدي حجز.","topicId":"travel","levelId":"a2"},{"id":"map","en":"map","ar":"خريطة","phonetic":"ماب","exampleEn":"Look at the map.","exampleAr":"انظر إلى الخريطة.","topicId":"travel","levelId":"a2"},{"id":"shop","en":"shop","ar":"متجر","phonetic":"شوب","exampleEn":"The shop is open.","exampleAr":"المتجر مفتوح.","topicId":"shopping","levelId":"a1"},{"id":"price","en":"price","ar":"سعر","phonetic":"برايس","exampleEn":"What is the price?","exampleAr":"ما السعر؟","topicId":"shopping","levelId":"a1"},{"id":"money","en":"money","ar":"مال","phonetic":"مَني","exampleEn":"I do not have money.","exampleAr":"ليس معي مال.","topicId":"shopping","levelId":"a1"},{"id":"cheap","en":"cheap","ar":"رخيص","phonetic":"تشيب","exampleEn":"This is cheap.","exampleAr":"هذا رخيص.","topicId":"shopping","levelId":"a1"},{"id":"expensive","en":"expensive","ar":"غالٍ","phonetic":"إكسبِنسف","exampleEn":"It is expensive.","exampleAr":"إنه غالٍ.","topicId":"shopping","levelId":"a1"},{"id":"buy","en":"buy","ar":"يشتري","phonetic":"باي","exampleEn":"I want to buy this.","exampleAr":"أريد أن أشتري هذا.","topicId":"shopping","levelId":"a1"},{"id":"open","en":"open","ar":"مفتوح","phonetic":"أوبن","exampleEn":"Are you open?","exampleAr":"هل أنتم مفتوحون؟","topicId":"shopping","levelId":"a1"},{"id":"closed","en":"closed","ar":"مغلق","phonetic":"كلوزد","exampleEn":"The shop is closed.","exampleAr":"المتجر مغلق.","topicId":"shopping","levelId":"a1"},{"id":"work","en":"work","ar":"عمل","phonetic":"وورك","exampleEn":"I go to work.","exampleAr":"أذهب إلى العمل.","topicId":"work","levelId":"a1"},{"id":"office","en":"office","ar":"مكتب","phonetic":"أوفِس","exampleEn":"She is in the office.","exampleAr":"هي في المكتب.","topicId":"work","levelId":"a2"},{"id":"teacher","en":"teacher","ar":"معلم","phonetic":"تيتشَر","exampleEn":"My teacher is patient.","exampleAr":"معلمي صبور.","topicId":"work","levelId":"a1"},{"id":"student","en":"student","ar":"طالب","phonetic":"ستيودنت","exampleEn":"I am a student.","exampleAr":"أنا طالب.","topicId":"work","levelId":"pre-a1"},{"id":"job","en":"job","ar":"وظيفة","phonetic":"جوب","exampleEn":"I need a job.","exampleAr":"أحتاج إلى وظيفة.","topicId":"work","levelId":"a2"},{"id":"meeting","en":"meeting","ar":"اجتماع","phonetic":"ميتنغ","exampleEn":"The meeting is at ten.","exampleAr":"الاجتماع في العاشرة.","topicId":"work","levelId":"a2"},{"id":"phone","en":"phone","ar":"هاتف","phonetic":"فون","exampleEn":"This is my phone.","exampleAr":"هذا هاتفي.","topicId":"tech","levelId":"pre-a1"},{"id":"computer","en":"computer","ar":"حاسوب","phonetic":"كمبيوتر","exampleEn":"I use a computer.","exampleAr":"أستخدم حاسوبًا.","topicId":"tech","levelId":"a1"},{"id":"internet","en":"internet","ar":"إنترنت","phonetic":"إنترنِت","exampleEn":"The internet is slow.","exampleAr":"الإنترنت بطيء.","topicId":"tech","levelId":"a2"},{"id":"message","en":"message","ar":"رسالة","phonetic":"مَسِج","exampleEn":"Send me a message.","exampleAr":"أرسل لي رسالة.","topicId":"tech","levelId":"a1"},{"id":"photo","en":"photo","ar":"صورة","phonetic":"فوتو","exampleEn":"Take a photo.","exampleAr":"التقط صورة.","topicId":"tech","levelId":"a1"},{"id":"football","en":"football","ar":"كرة قدم","phonetic":"فوتبول","exampleEn":"I play football.","exampleAr":"ألعب كرة القدم.","topicId":"sports","levelId":"a1"},{"id":"run","en":"run","ar":"يجري","phonetic":"رَن","exampleEn":"I run every morning.","exampleAr":"أجري كل صباح.","topicId":"sports","levelId":"a1"},{"id":"swim","en":"swim","ar":"يسبح","phonetic":"سوِم","exampleEn":"Can you swim?","exampleAr":"هل تستطيع السباحة؟","topicId":"sports","levelId":"a2"},{"id":"game","en":"game","ar":"لعبة","phonetic":"غيم","exampleEn":"This game is fun.","exampleAr":"هذه اللعبة ممتعة.","topicId":"sports","levelId":"a1"},{"id":"tree","en":"tree","ar":"شجرة","phonetic":"تري","exampleEn":"The tree is tall.","exampleAr":"الشجرة طويلة.","topicId":"nature","levelId":"pre-a1"},{"id":"flower","en":"flower","ar":"زهرة","phonetic":"فلاور","exampleEn":"The flower is pretty.","exampleAr":"الزهرة جميلة.","topicId":"nature","levelId":"pre-a1"},{"id":"sea","en":"sea","ar":"بحر","phonetic":"سي","exampleEn":"The sea is blue.","exampleAr":"البحر أزرق.","topicId":"nature","levelId":"a1"},{"id":"cat","en":"cat","ar":"قطة","phonetic":"كات","exampleEn":"The cat is small.","exampleAr":"القطة صغيرة.","topicId":"nature","levelId":"pre-a1"},{"id":"dog","en":"dog","ar":"كلب","phonetic":"دوغ","exampleEn":"The dog is friendly.","exampleAr":"الكلب ودود.","topicId":"nature","levelId":"pre-a1"},{"id":"bird","en":"bird","ar":"طائر","phonetic":"بِرد","exampleEn":"A bird is singing.","exampleAr":"طائر يغرد.","topicId":"nature","levelId":"pre-a1"},{"id":"happy","en":"happy","ar":"سعيد","phonetic":"هابي","exampleEn":"I am happy today.","exampleAr":"أنا سعيد اليوم.","topicId":"feelings","levelId":"pre-a1"},{"id":"sad","en":"sad","ar":"حزين","phonetic":"ساد","exampleEn":"She looks sad.","exampleAr":"تبدو حزينة.","topicId":"feelings","levelId":"a1"},{"id":"tired","en":"tired","ar":"متعب","phonetic":"تايرد","exampleEn":"I am tired.","exampleAr":"أنا متعب.","topicId":"feelings","levelId":"a1"},{"id":"hungry","en":"hungry","ar":"جائع","phonetic":"هنغري","exampleEn":"I am hungry.","exampleAr":"أنا جائع.","topicId":"feelings","levelId":"a1"},{"id":"thirsty","en":"thirsty","ar":"عطشان","phonetic":"ثِرستي","exampleEn":"I am thirsty.","exampleAr":"أنا عطشان.","topicId":"feelings","levelId":"a1"},{"id":"love","en":"love","ar":"يحب","phonetic":"لَف","exampleEn":"I love my family.","exampleAr":"أحب أسرتي.","topicId":"feelings","levelId":"a1"},{"id":"left","en":"left","ar":"يسار","phonetic":"لفت","exampleEn":"Turn left.","exampleAr":"انعطف يسارًا.","topicId":"directions","levelId":"a2"},{"id":"right","en":"right","ar":"يمين","phonetic":"رايت","exampleEn":"Turn right.","exampleAr":"انعطف يمينًا.","topicId":"directions","levelId":"a2"},{"id":"straight","en":"straight","ar":"مباشرة","phonetic":"ستريت","exampleEn":"Go straight.","exampleAr":"سر مباشرة.","topicId":"directions","levelId":"a2"},{"id":"near","en":"near","ar":"قريب","phonetic":"نِير","exampleEn":"The bank is near.","exampleAr":"المصرف قريب.","topicId":"directions","levelId":"a1"},{"id":"far","en":"far","ar":"بعيد","phonetic":"فار","exampleEn":"The airport is far.","exampleAr":"المطار بعيد.","topicId":"directions","levelId":"a1"},{"id":"here","en":"here","ar":"هنا","phonetic":"هير","exampleEn":"Come here, please.","exampleAr":"تعال هنا من فضلك.","topicId":"directions","levelId":"pre-a1"},{"id":"there","en":"there","ar":"هناك","phonetic":"ذَير","exampleEn":"The book is there.","exampleAr":"الكتاب هناك.","topicId":"directions","levelId":"pre-a1"},{"id":"menu","en":"menu","ar":"قائمة الطعام","phonetic":"مِنيو","exampleEn":"Can I see the menu?","exampleAr":"هل يمكنني رؤية القائمة؟","topicId":"restaurant","levelId":"a1"},{"id":"waiter","en":"waiter","ar":"نادل","phonetic":"ويتر","exampleEn":"Excuse me, waiter.","exampleAr":"عفوًا يا نادل.","topicId":"restaurant","levelId":"a2"},{"id":"bill","en":"bill","ar":"فاتورة","phonetic":"بِل","exampleEn":"The bill, please.","exampleAr":"الفاتورة من فضلك.","topicId":"restaurant","levelId":"a2"},{"id":"juice","en":"juice","ar":"عصير","phonetic":"جوس","exampleEn":"Orange juice, please.","exampleAr":"عصير برتقال من فضلك.","topicId":"restaurant","levelId":"a1"},{"id":"i","en":"I","ar":"أنا","phonetic":"آي","exampleEn":"I am a student.","exampleAr":"أنا طالب.","topicId":"grammar","levelId":"a1"},{"id":"you","en":"you","ar":"أنت","phonetic":"يو","exampleEn":"You are kind.","exampleAr":"أنت لطيف.","topicId":"grammar","levelId":"a1"},{"id":"he","en":"he","ar":"هو","phonetic":"هي","exampleEn":"He is a teacher.","exampleAr":"هو معلم.","topicId":"grammar","levelId":"a1"},{"id":"she","en":"she","ar":"هي","phonetic":"شي","exampleEn":"She is my sister.","exampleAr":"هي أختي.","topicId":"grammar","levelId":"a1"},{"id":"we","en":"we","ar":"نحن","phonetic":"وي","exampleEn":"We are friends.","exampleAr":"نحن أصدقاء.","topicId":"grammar","levelId":"a1"},{"id":"they","en":"they","ar":"هم","phonetic":"ذي","exampleEn":"They are at home.","exampleAr":"هم في البيت.","topicId":"grammar","levelId":"a1"},{"id":"pray","en":"pray","ar":"يصلّي","phonetic":"بري","exampleEn":"I pray in the morning.","exampleAr":"أصلّي في الصباح.","topicId":"prayer","levelId":"a1"},{"id":"prayer","en":"prayer","ar":"صلاة","phonetic":"برير","exampleEn":"It is time for prayer.","exampleAr":"حان وقت الصلاة.","topicId":"prayer","levelId":"a1"},{"id":"bank","en":"bank","ar":"مصرف","phonetic":"بانك","exampleEn":"The bank is closed.","exampleAr":"المصرف مغلق.","topicId":"money","levelId":"a1"},{"id":"card","en":"card","ar":"بطاقة","phonetic":"كارد","exampleEn":"I pay by card.","exampleAr":"أدفع بالبطاقة.","topicId":"money","levelId":"a1"},{"id":"cash","en":"cash","ar":"نقد","phonetic":"كاش","exampleEn":"Do you take cash?","exampleAr":"هل تقبلون النقد؟","topicId":"money","levelId":"a1"},{"id":"help","en":"help","ar":"مساعدة","phonetic":"هِلب","exampleEn":"Can you help me?","exampleAr":"هل تساعدني؟","topicId":"emergency","levelId":"pre-a1"},{"id":"police","en":"police","ar":"شرطة","phonetic":"بوليس","exampleEn":"Call the police.","exampleAr":"اتصل بالشرطة.","topicId":"emergency","levelId":"a2"},{"id":"fire","en":"fire","ar":"حريق","phonetic":"فاير","exampleEn":"There is a fire.","exampleAr":"هناك حريق.","topicId":"emergency","levelId":"a2"},{"id":"wake","en":"wake up","ar":"يستيقظ","phonetic":"ويك أب","exampleEn":"I wake up at six.","exampleAr":"أستيقظ في السادسة.","topicId":"daily","levelId":"a1"},{"id":"sleep","en":"sleep","ar":"ينام","phonetic":"سليب","exampleEn":"I sleep early.","exampleAr":"أنام مبكرًا.","topicId":"daily","levelId":"pre-a1"},{"id":"wash","en":"wash","ar":"يغسل","phonetic":"ووش","exampleEn":"Wash your hands.","exampleAr":"اغسل يديك.","topicId":"daily","levelId":"a1"},{"id":"eid","en":"Eid","ar":"عيد","phonetic":"عيد","exampleEn":"Eid Mubarak.","exampleAr":"عيد مبارك.","topicId":"holidays","levelId":"a1"},{"id":"visit","en":"visit","ar":"يزور","phonetic":"فِزِت","exampleEn":"We visit family.","exampleAr":"نزور الأسرة.","topicId":"holidays","levelId":"a1"},{"id":"book","en":"book","ar":"كتاب","phonetic":"بوك","exampleEn":"Open your book.","exampleAr":"افتح كتابك.","topicId":"school","levelId":"pre-a1"},{"id":"homework","en":"homework","ar":"واجب","phonetic":"هوم وورك","exampleEn":"I have homework.","exampleAr":"لدي واجب.","topicId":"school","levelId":"a1"},{"id":"exam","en":"exam","ar":"اختبار","phonetic":"إجزام","exampleEn":"The exam is today.","exampleAr":"الاختبار اليوم.","topicId":"school","levelId":"a2"},{"id":"neighbor","en":"neighbor","ar":"جار","phonetic":"نِيبَر","exampleEn":"He is my neighbor.","exampleAr":"هو جاري.","topicId":"community","levelId":"a1"},{"id":"salt","en":"salt","ar":"ملح","phonetic":"سولت","exampleEn":"Add some salt.","exampleAr":"أضف بعض الملح.","topicId":"kitchen","levelId":"a1"},{"id":"oil","en":"oil","ar":"زيت","phonetic":"أويل","exampleEn":"Use a little oil.","exampleAr":"استخدم قليلًا من الزيت.","topicId":"kitchen","levelId":"a1"},{"id":"cook","en":"cook","ar":"يطبخ","phonetic":"كوك","exampleEn":"I cook rice.","exampleAr":"أطبخ الأرز.","topicId":"kitchen","levelId":"a1"},{"id":"ready","en":"ready","ar":"جاهز","phonetic":"رِدي","exampleEn":"The food is ready.","exampleAr":"الطعام جاهز.","topicId":"kitchen","levelId":"pre-a1"}],"letters":[["A","a","/eɪ/","إي","apple","تفاحة"],["B","b","/biː/","بي","book","كتاب"],["C","c","/siː/","سي","cat","قطة"],["D","d","/diː/","دي","door","باب"],["E","e","/iː/","إي","egg","بيضة"],["F","f","/ɛf/","إف","family","أسرة"],["G","g","/dʒiː/","جي","garden","حديقة"],["H","h","/eɪtʃ/","إيتش","house","بيت"],["I","i","/aɪ/","آي","ice","ثلج"],["J","j","/dʒeɪ/","جاي","juice","عصير"],["K","k","/keɪ/","كاي","kitchen","مطبخ"],["L","l","/ɛl/","إل","lamp","مصباح"],["M","m","/ɛm/","إم","mother","أم"],["N","n","/ɛn/","إن","name","اسم"],["O","o","/oʊ/","أو","open","يفتح"],["P","p","/piː/","بي","pen","قلم"],["Q","q","/kjuː/","كيو","queen","ملكة"],["R","r","/ɑːr/","آر","red","أحمر"],["S","s","/ɛs/","إس","sun","شمس"],["T","t","/tiː/","تي","table","طاولة"],["U","u","/juː/","يو","umbrella","مظلة"],["V","v","/viː/","في","voice","صوت"],["W","w","/ˈdʌbəl.juː/","دَبل يو","water","ماء"],["X","x","/ɛks/","إكس","box","صندوق"],["Y","y","/waɪ/","واي","yellow","أصفر"],["Z","z","/ziː/","زي","zoo","حديقة حيوان"]],"days":[["Saturday","السبت"],["Sunday","الأحد"],["Monday","الإثنين"],["Tuesday","الثلاثاء"],["Wednesday","الأربعاء"],["Thursday","الخميس"],["Friday","الجمعة"]],"months":[["January","يناير"],["February","فبراير"],["March","مارس"],["April","أبريل"],["May","مايو"],["June","يونيو"],["July","يوليو"],["August","أغسطس"],["September","سبتمبر"],["October","أكتوبر"],["November","نوفمبر"],["December","ديسمبر"]],"units":[{"id":"u1","levelId":"pre-a1","order":1,"titleAr":"الحروف والأصوات","titleEn":"Letters & sounds","blurbAr":"تعرّف على الحروف الإنجليزية وصوت كل حرف."},{"id":"u2","levelId":"pre-a1","order":2,"titleAr":"الأرقام والألوان والوقت","titleEn":"Numbers, colors, time","blurbAr":"عدّ، صف الألوان، وسمّ أيام الأسبوع."},{"id":"u3","levelId":"pre-a1","order":3,"titleAr":"التحيات والحياة اليومية","titleEn":"Greetings & daily life","blurbAr":"ابدأ حديثك بثقة في البيت والشارع."},{"id":"u4","levelId":"a1","order":4,"titleAr":"القواعد الأولى","titleEn":"First grammar","blurbAr":"الضمائر وفعل الكينونة والمضارع البسيط."},{"id":"u5","levelId":"a1","order":5,"titleAr":"الأسرة والبيت والطعام","titleEn":"Family, home, food","blurbAr":"صف عالمك القريب بجمل صحيحة."},{"id":"u6","levelId":"a2","order":6,"titleAr":"الماضي والمستقبل","titleEn":"Past & future","blurbAr":"احكِ ما حدث وخطّط لما سيأتي."},{"id":"u7","levelId":"a2","order":7,"titleAr":"السفر والعمل والصحة","titleEn":"Travel, work, health","blurbAr":"محادثات الحياة العملية في السفر والعمل والعيادة."}],"lessons":[{"id":"l1","unitId":"u1","levelId":"pre-a1","order":1,"minutes":12,"titleAr":"الحروف من A إلى M","titleEn":"The alphabet A–M","objectives":["تمييز الحروف الكبيرة والصغيرة من A إلى M","نطق اسم كل حرف","ربط الحرف بكلمة مصوّرة"],"explanationAr":"الإنجليزية لها 26 حرفًا. نبدأ بالنصف الأول. لكل حرف شكل كبير Capital وشكل صغير small. نتعلم اسم الحرف أولًا، ثم صوته داخل الكلمة.","examples":[{"en":"A a — apple","ar":"حرف A في كلمة تفاحة","phonetic":"أبِل"},{"en":"B b — book","ar":"حرف B في كلمة كتاب","phonetic":"بوك"},{"en":"C c — cat","ar":"حرف C في كلمة قطة","phonetic":"كات"},{"en":"M m — mother","ar":"حرف M في كلمة أم","phonetic":"مذر"}],"wordIds":["apple","mother","house","cat","name"],"culturalNote":"الحروف الكبيرة تُستخدم في بداية الجملة وفي أسماء الأعلام: Ali, Friday, Nouakchott.","summaryAr":"تعلّمت 13 حرفًا وربطتها بكلمات يومية. كرّر النطق يوميًا بصوت مرتفع.","exercises":[{"id":"l1-1","type":"mcq","promptAr":"ما الحرف الأول في كلمة apple؟","options":["A","E","I","O"],"correct":"A","explanationAr":"apple تبدأ بحرف A."},{"id":"l1-2","type":"mcq","promptAr":"ما الحرف الأول في كلمة mother؟","options":["N","M","W","H"],"correct":"M","explanationAr":"mother تبدأ بـ M."},{"id":"l1-3","type":"tf","promptAr":"الحرف الكبير والصغير لهما الاسم نفسه.","options":["صح","خطأ"],"correct":"صح","explanationAr":"A و a كلاهما يُنطقان إي."},{"id":"l1-4","type":"fill","promptAr":"أكمل: C c — ____","promptEn":"C c — ___","correct":"cat","explanationAr":"كلمة cat تبدأ بـ C."},{"id":"l1-5","type":"order","promptAr":"رتّب الحروف الأولى أبجديًا","options":["A","B","C"],"correct":"A B C","explanationAr":"الترتيب الإنجليزي يبدأ A ثم B ثم C."}]},{"id":"l2","unitId":"u1","levelId":"pre-a1","order":2,"minutes":12,"titleAr":"الحروف من N إلى Z","titleEn":"The alphabet N–Z","objectives":["إكمال بقية الحروف","قراءة الأبجدية كاملة","تمييز أصوات S و Z و W"],"explanationAr":"نكمل الأبجدية. انتبه لحرف W فهو دَبل يو أي U مزدوجة، وحرف Q نادر في بداية الكلمات. حرف X يظهر غالبًا في وسط الكلمة مثل box.","examples":[{"en":"S s — sun","ar":"حرف S في شمس","phonetic":"سَن"},{"en":"T t — table","ar":"حرف T في طاولة","phonetic":"تيبل"},{"en":"W w — water","ar":"حرف W في ماء","phonetic":"ووتر"},{"en":"Z z — zoo","ar":"حرف Z في حديقة الحيوان","phonetic":"زو"}],"wordIds":["name","sun","table","water","yes"],"culturalNote":"في أمريكا يُنطق Z زي /ziː/، وفي بريطانيا زِد /zɛd/.","summaryAr":"الآن تستطيع قراءة الأبجدية كاملة. هذا أساس كل قراءة لاحقة.","exercises":[{"id":"l2-1","type":"mcq","promptAr":"ما نطق حرف W؟","options":["دَبل يو","في","يو","وي"],"correct":"دَبل يو","explanationAr":"W اسمه double U."},{"id":"l2-2","type":"mcq","promptAr":"كلمة water تبدأ بـ","options":["V","U","W","M"],"correct":"W","explanationAr":"water تبدأ بـ W."},{"id":"l2-3","type":"tf","promptAr":"حرف Q شائع جدًا في بداية الكلمات اليومية.","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"حرف Q نادر، ويأتي غالبًا مع U: queen."},{"id":"l2-4","type":"fill","promptAr":"أكمل: S s — ____","correct":"sun","explanationAr":"sun مثال شائع لحرف S."},{"id":"l2-5","type":"order","promptAr":"رتّب: X Y Z","options":["X","Y","Z"],"correct":"X Y Z","explanationAr":"آخر ثلاثة حروف في الأبجدية."}]},{"id":"l3","unitId":"u1","levelId":"pre-a1","order":3,"minutes":14,"titleAr":"أصوات الحروف","titleEn":"Letter sounds","objectives":["الفرق بين اسم الحرف وصوته","سماع الصوت الأول في الكلمة","نطق قصير وواضح"],"explanationAr":"اسم الحرف غير صوته. حرف A اسمه إي، لكن صوته في apple قصير /æ/. هذا أهم سرّ للقراءة. نستمع للصوت الأول ثم نكرره.","examples":[{"en":"sun starts with /s/","ar":"sun تبدأ بصوت س","phonetic":"سَن"},{"en":"cat starts with /k/","ar":"cat تبدأ بصوت ك","phonetic":"كات"},{"en":"house starts with /h/","ar":"house تبدأ بصوت هـ","phonetic":"هاوس"}],"wordIds":["sun","cat","house","water","red"],"culturalNote":"حرف C قد يُنطق كـ في cat أو سـ في city. في هذا المستوى نركز على الصوت الشائع.","summaryAr":"إذا سمعت الصوت الأول، اقتربت من قراءة الكلمة كاملة.","exercises":[{"id":"l3-1","type":"listen","promptAr":"استمع واختر الكلمة","options":["sun","run","fun","gun"],"correct":"sun","explanationAr":"الصوت الأول /s/ ثم an.","audioText":"sun"},{"id":"l3-2","type":"mcq","promptAr":"الصوت الأول في cat هو","options":["/k/","/s/","/tʃ/","/ʃ/"],"correct":"/k/","explanationAr":"C في cat تُنطق كـ."},{"id":"l3-3","type":"tf","promptAr":"اسم الحرف هو نفسه صوته دائمًا.","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"اسم A إي، وصوته في apple قصير."},{"id":"l3-4","type":"fill","promptAr":"house تبدأ بحرف ____","correct":"h","explanationAr":"house تبدأ بـ H."}]},{"id":"l4","unitId":"u2","levelId":"pre-a1","order":4,"minutes":12,"titleAr":"الأرقام من 1 إلى 20","titleEn":"Numbers 1–20","objectives":["عدّ من واحد إلى عشرين","استخدام الرقم في جملة","فهم الأسعار البسيطة"],"explanationAr":"الأرقام أساس الوقت والسعر والعمر. من 1 إلى 12 أشكال خاصة، ثم thirteen إلى nineteen تنتهي بـ teen، وtwenty تعني عشرين.","examples":[{"en":"I have two brothers.","ar":"لدي أخوان."},{"en":"It is five o'clock.","ar":"الساعة الخامسة."},{"en":"Ten and ten is twenty.","ar":"عشرة وعشرة تساوي عشرين."}],"wordIds":["one","two","three","five","ten","twenty"],"culturalNote":"رقم الهاتف يُقرأ رقمًا رقمًا: two, five, seven…","summaryAr":"أصبح بإمكانك العدّ وذكر عمرك والسعر التقريبي.","exercises":[{"id":"l4-v0","type":"mcq","promptAr":"ما معنى «one»؟","options":["أهلًا","صباح الخير","مرحبًا","واحد"],"correct":"واحد","explanationAr":"«one» تعني واحد."},{"id":"l4-v1","type":"mcq","promptAr":"ما معنى «two»؟","options":["اثنان","تصبح على خير","مع السلامة","من فضلك"],"correct":"اثنان","explanationAr":"«two» تعني اثنان."},{"id":"l4-v2","type":"mcq","promptAr":"ما معنى «three»؟","options":["آسف","ثلاثة","شكرًا","نعم"],"correct":"ثلاثة","explanationAr":"«three» تعني ثلاثة."},{"id":"l4-v3","type":"mcq","promptAr":"ما معنى «five»؟","options":["أنا بخير","خمسة","كيف حالك؟","لا"],"correct":"خمسة","explanationAr":"«five» تعني خمسة."},{"id":"l4-l0","type":"listen","promptAr":"استمع واختر الكلمة","options":["one","two","three","five"],"correct":"one","explanationAr":"سمعت: one.","audioText":"one"},{"id":"l4-t","type":"translate","promptAr":"ترجم إلى الإنجليزية: لدي كتاب واحد","correct":"I have one book","explanationAr":"I have + رقم + اسم."}]},{"id":"l5","unitId":"u2","levelId":"pre-a1","order":5,"minutes":10,"titleAr":"الألوان","titleEn":"Colors","objectives":["حفظ ستة ألوان أساسية","وصف شيء بلونه","وضع اللون قبل الاسم"],"explanationAr":"في الإنجليزية يأتي اللون قبل الاسم: a red apple وليس apple red. هذا عكس العربية. احفظ الترتيب: صفة ثم اسم.","examples":[{"en":"a red apple","ar":"تفاحة حمراء"},{"en":"The sky is blue.","ar":"السماء زرقاء."},{"en":"I like green.","ar":"أحب الأخضر."}],"wordIds":["red","blue","green","yellow","black","white"],"culturalNote":"الولايات المتحدة تكتب color، وبريطانيا colour. نستخدم الإملاء الأمريكي في هذه المنصة.","summaryAr":"ستة ألوان تكفي لوصف معظم ما حولك في البيت والشارع.","exercises":[{"id":"l5-v0","type":"mcq","promptAr":"ما معنى «red»؟","options":["أحمر","أهلًا","صباح الخير","مرحبًا"],"correct":"أحمر","explanationAr":"«red» تعني أحمر."},{"id":"l5-v1","type":"mcq","promptAr":"ما معنى «blue»؟","options":["أزرق","تصبح على خير","مع السلامة","من فضلك"],"correct":"أزرق","explanationAr":"«blue» تعني أزرق."},{"id":"l5-v2","type":"mcq","promptAr":"ما معنى «green»؟","options":["آسف","أخضر","شكرًا","نعم"],"correct":"أخضر","explanationAr":"«green» تعني أخضر."},{"id":"l5-v3","type":"mcq","promptAr":"ما معنى «yellow»؟","options":["أصفر","أنا بخير","كيف حالك؟","لا"],"correct":"أصفر","explanationAr":"«yellow» تعني أصفر."},{"id":"l5-l0","type":"listen","promptAr":"استمع واختر الكلمة","options":["red","blue","green","yellow"],"correct":"red","explanationAr":"سمعت: red.","audioText":"red"},{"id":"l5-o","type":"order","promptAr":"رتّب: تفاحة حمراء بالإنجليزية","options":["a","red","apple"],"correct":"a red apple","explanationAr":"اللون قبل الاسم."}]},{"id":"l6","unitId":"u2","levelId":"pre-a1","order":6,"minutes":12,"titleAr":"أيام الأسبوع والأشهر","titleEn":"Days and months","objectives":["حفظ أيام الأسبوع","معرفة الأشهر","استخدام today و tomorrow"],"explanationAr":"الأسبوع يبدأ عند كثير من الجداول الإنجليزية بيوم Sunday، لكن في العالم العربي يبدأ غالبًا بالسبت أو الأحد. المهم أن تحفظ الأسماء. كلها تُكتب بحرف كبير.","examples":[{"en":"Today is Friday.","ar":"اليوم الجمعة."},{"en":"See you on Saturday.","ar":"أراك يوم السبت."},{"en":"Ramadan is in March this year.","ar":"رمضان في مارس هذه السنة. (مثال)"}],"wordIds":["today","morning","night","week","month","year"],"culturalNote":"on Friday وليس in Friday. مع الأيام نستخدم on، ومع الشهور in.","summaryAr":"أصبحت قادرًا على تحديد اليوم والشهر في حديثك.","exercises":[{"id":"l6-1","type":"mcq","promptAr":"ما مقابل Friday؟","options":["الجمعة","السبت","الأحد","الخميس"],"correct":"الجمعة","explanationAr":"Friday هو الجمعة."},{"id":"l6-2","type":"tf","promptAr":"نكتب days بحرف صغير في منتصف الجملة إذا كانت اسم يوم؟","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"أسماء الأيام تُكتب بحرف كبير دائمًا: Friday."},{"id":"l6-3","type":"fill","promptAr":"_____ is Friday.","correct":"Today","explanationAr":"Today is Friday جملة شائعة."},{"id":"l6-4","type":"mcq","promptAr":"نستخدم مع الأيام","options":["on","in","at","by"],"correct":"on","explanationAr":"on Monday / on Friday."}]},{"id":"l7","unitId":"u3","levelId":"pre-a1","order":7,"minutes":14,"titleAr":"التحيات والتعارف","titleEn":"Greetings","objectives":["إلقاء التحية حسب الوقت","السؤال عن الاسم والحال","الرد بلطف"],"explanationAr":"التحية باب كل محادثة. Hello عامة، Hi أقرب للأصدقاء، Good morning للصباح. بعدها اسأل How are you؟ وأجب I am fine, thank you.","examples":[{"en":"Hello, my name is Ali.","ar":"مرحبًا، اسمي علي."},{"en":"How are you?","ar":"كيف حالك؟"},{"en":"Nice to meet you.","ar":"سعيد بلقائك."}],"wordIds":["hello","hi","good-morning","goodbye","please","thanks","how-are-you","fine"],"dialogue":[{"speaker":"Ali","en":"Hello! My name is Ali.","ar":"مرحبًا! اسمي علي."},{"speaker":"Sara","en":"Hi Ali. I am Sara. Nice to meet you.","ar":"أهلًا علي. أنا سارة. سعيدة بلقائك."},{"speaker":"Ali","en":"How are you?","ar":"كيف حالك؟"},{"speaker":"Sara","en":"I am fine, thank you. And you?","ar":"أنا بخير شكرًا. وأنت؟"}],"culturalNote":"المصافحة شائعة في التعارف الرسمي. مع الأصدقاء تكفي ابتسامة وHi.","summaryAr":"أصبحت تملك حوار تعارف كاملًا من أربع جمل.","exercises":[{"id":"l7-v0","type":"mcq","promptAr":"ما معنى «hello»؟","options":["أهلًا","تصبح على خير","صباح الخير","مرحبًا"],"correct":"مرحبًا","explanationAr":"«hello» تعني مرحبًا."},{"id":"l7-v1","type":"mcq","promptAr":"ما معنى «thank you»؟","options":["تصبح على خير","شكرًا","مع السلامة","من فضلك"],"correct":"شكرًا","explanationAr":"«thank you» تعني شكرًا."},{"id":"l7-v2","type":"mcq","promptAr":"ما معنى «please»؟","options":["آسف","لا","من فضلك","نعم"],"correct":"من فضلك","explanationAr":"«please» تعني من فضلك."},{"id":"l7-v3","type":"mcq","promptAr":"ما معنى «goodbye»؟","options":["أم","أنا بخير","كيف حالك؟","مع السلامة"],"correct":"مع السلامة","explanationAr":"«goodbye» تعني مع السلامة."},{"id":"l7-l0","type":"listen","promptAr":"استمع واختر الكلمة","options":["hello","thank you","please","goodbye"],"correct":"hello","explanationAr":"سمعت: hello.","audioText":"hello"},{"id":"l7-o","type":"order","promptAr":"رتّب جملة التعارف","options":["My","name","is","Ali"],"correct":"My name is Ali","explanationAr":"My name is + الاسم."}]},{"id":"l8","unitId":"u3","levelId":"pre-a1","order":8,"minutes":12,"titleAr":"كلمات يومية أساسية","titleEn":"Everyday words","objectives":["yes/no/please/sorry","here و there","وصف بسيط بالمشاعر"],"explanationAr":"كلمات قصيرة تُنقذك كل ساعة: نعم، لا، من فضلك، آسف، هنا، هناك. أضف I am happy / I am tired لتصف حالك.","examples":[{"en":"Yes, please.","ar":"نعم من فضلك."},{"en":"No, thank you.","ar":"لا، شكرًا."},{"en":"I am sorry.","ar":"أنا آسف."}],"wordIds":["yes","no","please","sorry","here","there","happy","student"],"summaryAr":"هذه الكلمات تعمل في البيت والمتجر والمدرسة.","exercises":[{"id":"l8-v0","type":"mcq","promptAr":"ما معنى «yes»؟","options":["أهلًا","صباح الخير","مرحبًا","نعم"],"correct":"نعم","explanationAr":"«yes» تعني نعم."},{"id":"l8-v1","type":"mcq","promptAr":"ما معنى «no»؟","options":["تصبح على خير","لا","مع السلامة","من فضلك"],"correct":"لا","explanationAr":"«no» تعني لا."},{"id":"l8-v2","type":"mcq","promptAr":"ما معنى «please»؟","options":["آسف","لا","من فضلك","نعم"],"correct":"من فضلك","explanationAr":"«please» تعني من فضلك."},{"id":"l8-v3","type":"mcq","promptAr":"ما معنى «sorry»؟","options":["آسف","أم","أنا بخير","كيف حالك؟"],"correct":"آسف","explanationAr":"«sorry» تعني آسف."},{"id":"l8-l0","type":"listen","promptAr":"استمع واختر الكلمة","options":["yes","no","please","sorry"],"correct":"yes","explanationAr":"سمعت: yes.","audioText":"yes"}]},{"id":"l9","unitId":"u4","levelId":"a1","order":9,"minutes":16,"titleAr":"الضمائر","titleEn":"Pronouns","objectives":["I you he she we they","اختيار الضمير الصحيح","ربطه بالفعل"],"explanationAr":"الضمير يغنينا عن تكرار الاسم. I للمتكلم، you للمخاطب (مفردًا وجمعًا)، he للمذكر، she للمؤنث، we للجماعة التي أنت منها، they للغائبين.","examples":[{"en":"I am a student.","ar":"أنا طالب."},{"en":"She is my sister.","ar":"هي أختي."},{"en":"They are at home.","ar":"هم في البيت."}],"wordIds":["i","you","he","she","we","they"],"culturalNote":"you تُستخدم للمفرد والجمع وللرسمي وغير الرسمي. لا توجد أنتُم منفصلة.","summaryAr":"ست ألفاظ تفتح لك آلاف الجمل.","exercises":[{"id":"l9-1","type":"mcq","promptAr":"ما ضمير «هي»؟","options":["he","she","they","we"],"correct":"she","explanationAr":"she للمؤنث الغائب."},{"id":"l9-2","type":"fill","promptAr":"___ am a teacher.","correct":"I","explanationAr":"مع am نستخدم I فقط."},{"id":"l9-3","type":"tf","promptAr":"you تُستخدم للمفرد فقط.","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"you للمفرد والجمع."},{"id":"l9-4","type":"mcq","promptAr":"Ali is a boy. ___ is kind.","options":["She","He","They","I"],"correct":"He","explanationAr":"Ali مذكر فنستخدم he."},{"id":"l9-5","type":"order","promptAr":"رتّب","options":["They","are","friends"],"correct":"They are friends","explanationAr":"ضمير + are + خبر."}]},{"id":"l10","unitId":"u4","levelId":"a1","order":10,"minutes":16,"titleAr":"فعل الكينونة am / is / are","titleEn":"Verb to be","objectives":["مطابقة am/is/are مع الضمير","النفي بـ not","السؤال بقلب الترتيب"],"explanationAr":"فعل الكينونة يربط الاسم بوصفه. I am، he/she/it is، you/we/they are. للنفي: I am not. للسؤال: Are you ready؟","examples":[{"en":"I am happy.","ar":"أنا سعيد."},{"en":"He is not here.","ar":"هو ليس هنا."},{"en":"Are you a student?","ar":"هل أنت طالب؟"}],"wordIds":["i","he","she","we","happy","student"],"culturalNote":"في الكلام السريع نسمع I'm / he's / they're. تعلم المختصر بعد الجملة الكاملة.","summaryAr":"إذا أتقنت am/is/are فقد أتقنت نصف جمل المبتدئين.","exercises":[{"id":"l10-1","type":"mcq","promptAr":"She ___ a teacher.","options":["am","is","are","be"],"correct":"is","explanationAr":"مع she نستخدم is."},{"id":"l10-2","type":"fill","promptAr":"They ___ friends.","correct":"are","explanationAr":"they تأخذ are."},{"id":"l10-3","type":"tf","promptAr":"I is a student جملة صحيحة.","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"الصحيح I am a student."},{"id":"l10-4","type":"order","promptAr":"رتّب السؤال","options":["Are","you","ready"],"correct":"Are you ready","explanationAr":"الفعل قبل الضمير في السؤال."},{"id":"l10-5","type":"translate","promptAr":"ترجم: أنا لست متعبًا","correct":"I am not tired","explanationAr":"النفي: am not."}]},{"id":"l11","unitId":"u4","levelId":"a1","order":11,"minutes":16,"titleAr":"المضارع البسيط","titleEn":"Present simple","objectives":["وصف العادات","إضافة s مع he/she","do/does في السؤال والنفي"],"explanationAr":"المضارع البسيط للحقيقة والعادات. I work، she works. في النفي: I do not work / she does not work. في السؤال: Do you work؟","examples":[{"en":"I drink tea every morning.","ar":"أشرب الشاي كل صباح."},{"en":"He works in an office.","ar":"يعمل في مكتب."},{"en":"Do you live here?","ar":"هل تسكن هنا؟"}],"wordIds":["work","tea","morning","school","love"],"culturalNote":"every day / always / usually علامات هذا الزمن.","summaryAr":"بهذا الزمن تصف يومك ودراستك وعملك.","exercises":[{"id":"l11-1","type":"mcq","promptAr":"He ___ tea.","options":["drink","drinks","drinking","drank"],"correct":"drinks","explanationAr":"مع he نضيف s."},{"id":"l11-2","type":"tf","promptAr":"Do she work here؟ سؤال صحيح.","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"الصحيح Does she work here?"},{"id":"l11-3","type":"fill","promptAr":"I ___ football on Friday.","correct":"play","explanationAr":"مع I الفعل بدون s."},{"id":"l11-4","type":"order","promptAr":"رتّب","options":["Do","you","live","here"],"correct":"Do you live here","explanationAr":"Do + الضمير + الفعل."}]},{"id":"l12","unitId":"u5","levelId":"a1","order":12,"minutes":14,"titleAr":"الأسرة","titleEn":"Family","objectives":["تسمية أفراد الأسرة","استخدام my","تقديم الأسرة للآخرين"],"explanationAr":"ضع my قبل صلة القرابة: my father. للجمع: I have two sisters. للتعريف: This is my mother.","examples":[{"en":"This is my father.","ar":"هذا أبي."},{"en":"I have one brother.","ar":"لدي أخ واحد."},{"en":"We love our family.","ar":"نحن نحب أسرتنا."}],"wordIds":["mother","father","brother","sister","family","friend","name","child"],"dialogue":[{"speaker":"Omar","en":"This is my family.","ar":"هذه أسرتي."},{"speaker":"Lina","en":"Who is she?","ar":"من هذه؟"},{"speaker":"Omar","en":"She is my sister, Nour.","ar":"هي أختي نور."}],"summaryAr":"تستطيع الآن تقديم أسرتك بجمل قصيرة صحيحة.","exercises":[{"id":"l12-v0","type":"mcq","promptAr":"ما معنى «mother»؟","options":["أم","أهلًا","صباح الخير","مرحبًا"],"correct":"أم","explanationAr":"«mother» تعني أم."},{"id":"l12-v1","type":"mcq","promptAr":"ما معنى «father»؟","options":["أب","تصبح على خير","مع السلامة","من فضلك"],"correct":"أب","explanationAr":"«father» تعني أب."},{"id":"l12-v2","type":"mcq","promptAr":"ما معنى «brother»؟","options":["آسف","أخ","شكرًا","نعم"],"correct":"أخ","explanationAr":"«brother» تعني أخ."},{"id":"l12-v3","type":"mcq","promptAr":"ما معنى «sister»؟","options":["أخت","أنا بخير","كيف حالك؟","لا"],"correct":"أخت","explanationAr":"«sister» تعني أخت."},{"id":"l12-l0","type":"listen","promptAr":"استمع واختر الكلمة","options":["mother","father","brother","sister"],"correct":"mother","explanationAr":"سمعت: mother.","audioText":"mother"}]},{"id":"l13","unitId":"u5","levelId":"a1","order":13,"minutes":14,"titleAr":"الطعام والبيت","titleEn":"Food and home","objectives":["طلب طعام بسيط","وصف البيت","I'm hungry / thirsty"],"explanationAr":"في البيت نسمي الغرف. على المائدة نطلب بأدب: Water, please. نصف الحالة: I am hungry.","examples":[{"en":"The kitchen is small.","ar":"المطبخ صغير."},{"en":"I am hungry.","ar":"أنا جائع."},{"en":"Tea, please.","ar":"شاي من فضلك."}],"wordIds":["house","kitchen","water","bread","tea","breakfast","hungry","thirsty"],"culturalNote":"من الأدب في الضيافة العربية تقديم الشاي أو القهوة فورًا. بالإنجليزية يكفي Would you like some tea?","summaryAr":"جمل البيت والمائدة أكثر الجمل استعمالًا في اليوم.","exercises":[{"id":"l13-v0","type":"mcq","promptAr":"ما معنى «water»؟","options":["أهلًا","صباح الخير","ماء","مرحبًا"],"correct":"ماء","explanationAr":"«water» تعني ماء."},{"id":"l13-v1","type":"mcq","promptAr":"ما معنى «bread»؟","options":["تصبح على خير","خبز","مع السلامة","من فضلك"],"correct":"خبز","explanationAr":"«bread» تعني خبز."},{"id":"l13-v2","type":"mcq","promptAr":"ما معنى «tea»؟","options":["آسف","شاي","شكرًا","نعم"],"correct":"شاي","explanationAr":"«tea» تعني شاي."},{"id":"l13-v3","type":"mcq","promptAr":"ما معنى «house»؟","options":["أنا بخير","بيت","كيف حالك؟","لا"],"correct":"بيت","explanationAr":"«house» تعني بيت."},{"id":"l13-l0","type":"listen","promptAr":"استمع واختر الكلمة","options":["water","bread","tea","house"],"correct":"water","explanationAr":"سمعت: water.","audioText":"water"}]},{"id":"l14","unitId":"u5","levelId":"a1","order":14,"minutes":12,"titleAr":"محادثة يومية في البيت","titleEn":"A day at home","objectives":["ربط التحيات بالبيت","وصف روتين قصير","استخدام please و thank you"],"explanationAr":"نجمع ما سبق في مشهد واحد: صباح، فطور، خروج إلى المدرسة أو العمل، ثم العودة.","examples":[{"en":"Good morning. Breakfast is ready.","ar":"صباح الخير. الفطور جاهز."},{"en":"Where is my bag?","ar":"أين حقيبتي؟"}],"wordIds":["good-morning","breakfast","bag","school","work","goodbye"],"dialogue":[{"speaker":"Mom","en":"Good morning. Breakfast is ready.","ar":"صباح الخير. الفطور جاهز."},{"speaker":"Ali","en":"Thank you. Where is my bag?","ar":"شكرًا. أين حقيبتي؟"},{"speaker":"Mom","en":"It is on the chair.","ar":"إنها على الكرسي."},{"speaker":"Ali","en":"I am late. Goodbye!","ar":"أنا متأخر. مع السلامة!"}],"summaryAr":"مشهد كامل من أربع جمل يغطي صباحك.","exercises":[{"id":"l14-1","type":"mcq","promptAr":"أين الحقيبة في الحوار؟","options":["on the chair","on the bed","in the car","at school"],"correct":"on the chair","explanationAr":"الأم قالت: on the chair."},{"id":"l14-2","type":"order","promptAr":"رتّب","options":["Breakfast","is","ready"],"correct":"Breakfast is ready","explanationAr":"الفطور جاهز."},{"id":"l14-3","type":"tf","promptAr":"Goodbye تُقال عند اللقاء.","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"Goodbye عند المغادرة."}]},{"id":"l15","unitId":"u6","levelId":"a2","order":15,"minutes":16,"premium":true,"titleAr":"الماضي البسيط","titleEn":"Past simple","objectives":["was/were","الأفعال المنتظمة ed","yesterday و last week"],"explanationAr":"الماضي البسيط يحكي حدثًا انتهى. I was tired yesterday. I visited my uncle last week. الأفعال المنتظمة تأخذ ed، والشائعة لها أشكال خاصة: go → went، eat → ate.","examples":[{"en":"I was at home yesterday.","ar":"كنت في البيت أمس."},{"en":"She visited her mother.","ar":"زارت أمها."},{"en":"We went to the market.","ar":"ذهبنا إلى السوق."}],"wordIds":["yesterday","house","market","tired"],"summaryAr":"أصبح بإمكانك حكاية يوم مضى بجملتين أو ثلاث.","exercises":[{"id":"l15-1","type":"mcq","promptAr":"Yesterday I ___ at school.","options":["am","was","were","be"],"correct":"was","explanationAr":"مع I في الماضي was."},{"id":"l15-2","type":"fill","promptAr":"go في الماضي: ____","correct":"went","explanationAr":"go → went فعل غير منتظم."},{"id":"l15-3","type":"tf","promptAr":"They was happy جملة صحيحة.","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"مع they نستخدم were."},{"id":"l15-4","type":"order","promptAr":"رتّب","options":["I","went","to","the","market"],"correct":"I went to the market","explanationAr":"went ماضي go."}]},{"id":"l16","unitId":"u6","levelId":"a2","order":16,"minutes":14,"premium":true,"titleAr":"المستقبل الأساسي","titleEn":"Going to & will","objectives":["التعبير عن خطة","will للقرار اللحظي","tomorrow"],"explanationAr":"للخطة المسبقة: I am going to travel. للوعد أو القرار الآن: I will help you. كلاهما صحيح في المستوى الأساسي.","examples":[{"en":"I am going to study tonight.","ar":"سأنهي الدراسة الليلة. / أنوي الدراسة."},{"en":"I will call you tomorrow.","ar":"سأتصل بك غدًا."}],"wordIds":["tomorrow","work","phone"],"summaryAr":"خطّط لغدك بجملة going to، وعد بجملة will.","exercises":[{"id":"l16-1","type":"mcq","promptAr":"خطة مسبقة:","options":["I am going to travel","I traveling","I is travel","I travels"],"correct":"I am going to travel","explanationAr":"be + going to + الفعل."},{"id":"l16-2","type":"fill","promptAr":"I ___ call you tomorrow.","correct":"will","explanationAr":"will + الفعل بدون to."},{"id":"l16-3","type":"tf","promptAr":"I will to go جملة صحيحة.","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"لا نضع to بعد will."}]},{"id":"l17","unitId":"u7","levelId":"a2","order":17,"minutes":16,"premium":true,"titleAr":"السفر والمطار","titleEn":"Travel and airport","objectives":["كلمات الجواز والتذكرة","سؤال عن البوابة","حجز الفندق"],"explanationAr":"في المطار تحتاج جملًا قصيرة واضحة: Here is my passport. Where is gate 4? I have a reservation.","examples":[{"en":"Here is my passport.","ar":"هذا جواز سفري."},{"en":"I need a ticket to Casablanca.","ar":"أحتاج تذكرة إلى الدار البيضاء."}],"wordIds":["passport","ticket","airport","plane","hotel","reservation","suitcase"],"dialogue":[{"speaker":"Officer","en":"Passport, please.","ar":"الجواز من فضلك."},{"speaker":"You","en":"Here it is.","ar":"تفضل."},{"speaker":"Officer","en":"Where are you going?","ar":"إلى أين تذهب؟"},{"speaker":"You","en":"To Casablanca. I have a ticket.","ar":"إلى الدار البيضاء. لدي تذكرة."}],"culturalNote":"في المطار تكلّم ببطء ووضوح، وأخرج الجواز قبل وصولك للموظف.","summaryAr":"أربع جمل تنقذك في أي منفذ جوي.","exercises":[{"id":"l17-v0","type":"mcq","promptAr":"ما معنى «passport»؟","options":["أهلًا","جواز سفر","صباح الخير","مرحبًا"],"correct":"جواز سفر","explanationAr":"«passport» تعني جواز سفر."},{"id":"l17-v1","type":"mcq","promptAr":"ما معنى «ticket»؟","options":["تذكرة","تصبح على خير","مع السلامة","من فضلك"],"correct":"تذكرة","explanationAr":"«ticket» تعني تذكرة."},{"id":"l17-v2","type":"mcq","promptAr":"ما معنى «airport»؟","options":["آسف","شكرًا","مطار","نعم"],"correct":"مطار","explanationAr":"«airport» تعني مطار."},{"id":"l17-v3","type":"mcq","promptAr":"ما معنى «hotel»؟","options":["أنا بخير","فندق","كيف حالك؟","لا"],"correct":"فندق","explanationAr":"«hotel» تعني فندق."},{"id":"l17-l0","type":"listen","promptAr":"استمع واختر الكلمة","options":["passport","ticket","airport","hotel"],"correct":"passport","explanationAr":"سمعت: passport.","audioText":"passport"}]},{"id":"l18","unitId":"u7","levelId":"a2","order":18,"minutes":16,"premium":true,"titleAr":"التسوق والصحة والعمل","titleEn":"Shopping, health, work","objectives":["السؤال عن السعر","وصف ألم بسيط للطبيب","تقديم وظيفتك"],"explanationAr":"ثلاث ساحات عملية: المتجر How much is this؟ العيادة I have a headache. العمل I am a teacher / I work in an office.","examples":[{"en":"How much is this shirt?","ar":"بكم هذا القميص؟"},{"en":"I have a headache.","ar":"لدي صداع."},{"en":"I work in an office.","ar":"أعمل في مكتب."}],"wordIds":["price","cheap","expensive","doctor","hospital","office","job","meeting"],"summaryAr":"بهذا الدرس تختم المسار الأساسي وأنت قادر على قضاء حاجة في السوق والعيادة والعمل.","exercises":[{"id":"l18-1","type":"mcq","promptAr":"بكم هذا؟","options":["How much is this?","How many is this?","What price you?","How cost?"],"correct":"How much is this?","explanationAr":"How much للسعر."},{"id":"l18-2","type":"translate","promptAr":"ترجم: أحتاج إلى طبيب","correct":"I need a doctor","explanationAr":"need + اسم."},{"id":"l18-3","type":"fill","promptAr":"I work ___ an office.","correct":"in","explanationAr":"in an office."},{"id":"l18-4","type":"tf","promptAr":"How many is this? سؤال مناسب للسعر.","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"How many للعدد، How much للسعر."}]}],"talks":[{"id":"c-meet","titleAr":"التعارف","titleEn":"Meeting someone","sceneAr":"لقاء أول في دورة لغة.","levelId":"pre-a1","topicId":"greetings","lines":[{"speaker":"Maha","en":"Hello. My name is Maha.","ar":"مرحبًا. اسمي مها."},{"speaker":"Yusuf","en":"Hi Maha. I am Yusuf. Nice to meet you.","ar":"أهلًا مها. أنا يوسف. سعيد بلقائك."},{"speaker":"Maha","en":"Nice to meet you too. Are you a student?","ar":"وأنا كذلك. هل أنت طالب؟"},{"speaker":"Yusuf","en":"Yes. I am a beginner.","ar":"نعم. أنا مبتدئ."}]},{"id":"c-home","titleAr":"في المنزل","titleEn":"At home","sceneAr":"صباح أسرة قبل الخروج.","levelId":"a1","topicId":"home","lines":[{"speaker":"Mom","en":"Good morning. Breakfast is ready.","ar":"صباح الخير. الفطور جاهز."},{"speaker":"Child","en":"Thank you. Where is my bag?","ar":"شكرًا. أين حقيبتي؟"},{"speaker":"Mom","en":"It is near the door.","ar":"إنها قرب الباب."}]},{"id":"c-restaurant","titleAr":"في المطعم","titleEn":"At the restaurant","sceneAr":"طلب طعام بسيط.","levelId":"a1","topicId":"restaurant","lines":[{"speaker":"Waiter","en":"Good evening. A table for two?","ar":"مساء الخير. طاولة لشخصين؟"},{"speaker":"Guest","en":"Yes, please. The menu, please.","ar":"نعم من فضلك. القائمة لو سمحت."},{"speaker":"Waiter","en":"Would you like tea or juice?","ar":"هل تريد شايًا أم عصيرًا؟"},{"speaker":"Guest","en":"Tea, please. And the bill later.","ar":"شاي من فضلك. والفاتورة لاحقًا."}]},{"id":"c-shop","titleAr":"في المتجر","titleEn":"At the shop","sceneAr":"شراء قميص.","levelId":"a1","topicId":"shopping","lines":[{"speaker":"Buyer","en":"Excuse me. How much is this shirt?","ar":"عفوًا. بكم هذا القميص؟"},{"speaker":"Seller","en":"It is twenty dollars.","ar":"بعشرين دولارًا."},{"speaker":"Buyer","en":"That's expensive. Do you have a cheaper one?","ar":"هذا غالٍ. هل عندك أرخص؟"},{"speaker":"Seller","en":"Yes. This one is ten dollars.","ar":"نعم. هذا بعشرة."}]},{"id":"c-airport","titleAr":"في المطار","titleEn":"At the airport","sceneAr":"التفتيش وجواز السفر.","levelId":"a2","topicId":"travel","lines":[{"speaker":"Officer","en":"Passport, please.","ar":"الجواز من فضلك."},{"speaker":"Traveler","en":"Here you are.","ar":"تفضل."},{"speaker":"Officer","en":"Where are you flying today?","ar":"إلى أين تطير اليوم؟"},{"speaker":"Traveler","en":"To Istanbul. Here is my ticket.","ar":"إلى إسطنبول. هذه تذكرتي."}]},{"id":"c-hotel","titleAr":"في الفندق","titleEn":"At the hotel","sceneAr":"تسجيل الوصول.","levelId":"a2","topicId":"travel","lines":[{"speaker":"Guest","en":"Good evening. I have a reservation.","ar":"مساء الخير. لدي حجز."},{"speaker":"Clerk","en":"Your name, please?","ar":"اسمك من فضلك؟"},{"speaker":"Guest","en":"Abdullah Ahmed.","ar":"عبد الله أحمد."},{"speaker":"Clerk","en":"Welcome. Your room is on the second floor.","ar":"مرحبًا. غرفتك في الطابق الثاني."}]},{"id":"c-doctor","titleAr":"عند الطبيب","titleEn":"At the doctor","sceneAr":"وصف ألم بسيط.","levelId":"a2","topicId":"health","lines":[{"speaker":"Doctor","en":"What is the problem?","ar":"ما المشكلة؟"},{"speaker":"Patient","en":"I have a headache and I am tired.","ar":"لدي صداع وأنا متعب."},{"speaker":"Doctor","en":"I will give you medicine. Rest at home.","ar":"سأعطيك دواءً. ارتَح في البيت."},{"speaker":"Patient","en":"Thank you, doctor.","ar":"شكرًا يا دكتور."}]},{"id":"c-school","titleAr":"في المدرسة","titleEn":"At school","sceneAr":"بداية الحصة.","levelId":"a1","topicId":"work","lines":[{"speaker":"Teacher","en":"Good morning, class. Open your books.","ar":"صباح الخير يا طلاب. افتحوا كتبكم."},{"speaker":"Student","en":"Excuse me. I do not understand.","ar":"عفوًا. أنا لا أفهم."},{"speaker":"Teacher","en":"That is okay. Listen again.","ar":"لا بأس. استمع مرة أخرى."}]},{"id":"c-work","titleAr":"في العمل","titleEn":"At work","sceneAr":"اجتماع قصير.","levelId":"a2","topicId":"work","lines":[{"speaker":"Manager","en":"Good morning. Are you ready for the meeting?","ar":"صباح الخير. هل أنت مستعد للاجتماع؟"},{"speaker":"Employee","en":"Yes. I have the papers.","ar":"نعم. الأوراق معي."},{"speaker":"Manager","en":"Great. Let's start.","ar":"ممتاز. لنبدأ."}]},{"id":"c-dir","titleAr":"السؤال عن الطريق","titleEn":"Asking the way","sceneAr":"في شارع المدينة.","levelId":"a2","topicId":"directions","lines":[{"speaker":"Visitor","en":"Excuse me, where is the mosque?","ar":"عفوًا، أين المسجد؟"},{"speaker":"Local","en":"Go straight, then turn left. It is near the market.","ar":"سر مباشرة ثم يسارًا. إنه قرب السوق."},{"speaker":"Visitor","en":"Thank you very much.","ar":"شكرًا جزيلًا."}]},{"id":"c-phone","titleAr":"مكالمة هاتفية","titleEn":"A phone call","sceneAr":"اتصال بسيط لتحديد موعد.","levelId":"a1","topicId":"tech","lines":[{"speaker":"A","en":"Hello, this is Omar.","ar":"مرحبًا، أنا عمر."},{"speaker":"B","en":"Hi Omar. Can I call you later?","ar":"أهلًا عمر. هل يمكن أن أتصل لاحقًا؟"},{"speaker":"A","en":"Yes. Call me at five, please.","ar":"نعم. اتصل بي في الخامسة من فضلك."}]},{"id":"c-weather","titleAr":"الحديث عن الطقس","titleEn":"Talking about weather","sceneAr":"حديث عابر في الشارع.","levelId":"a1","topicId":"weather","lines":[{"speaker":"A","en":"It's hot today.","ar":"الجو حار اليوم."},{"speaker":"B","en":"Yes. Drink water, please.","ar":"نعم. اشرب ماءً من فضلك."},{"speaker":"A","en":"I will. Thank you.","ar":"سأفعل. شكرًا."}]}],"grammar":[{"id":"g-pronouns","titleAr":"الضمائر","titleEn":"Pronouns","levelId":"a1","explanationAr":"الضمائر تختصر الأسماء. احفظ الجدول ثم درّب نفسك على استبدال الاسم بضمير.","table":{"headers":["ضمير","المعنى","مثال"],"rows":[["I","أنا","I am Ali."],["you","أنت / أنتم","You are kind."],["he","هو","He is a teacher."],["she","هي","She is my mother."],["we","نحن","We are friends."],["they","هم","They are here."]]},"good":[{"en":"She is a doctor.","ar":"هي طبيبة."}],"bad":[{"en":"She am a doctor.","ar":"خطأ شائع","why":"مع she نستخدم is لا am."}],"exercises":[{"id":"gp-1","type":"mcq","promptAr":"ضمير «نحن»","options":["we","they","he","I"],"correct":"we","explanationAr":"we = نحن."},{"id":"gp-2","type":"fill","promptAr":"___ is my father. (هو)","correct":"He","explanationAr":"He للمذكر."}]},{"id":"g-be","titleAr":"فعل الكينونة","titleEn":"To be","levelId":"a1","explanationAr":"am مع I، is مع he/she/it، are مع you/we/they. هذا الفعل لا يُترجم دائمًا بكلمة «يكون»، بل يربط المبتدأ بالخبر.","table":{"headers":["ضمير","إثبات","نفي","سؤال"],"rows":[["I","I am","I am not","Am I?"],["he/she","he is","he is not","Is he?"],["you/we/they","you are","you are not","Are you?"]]},"good":[{"en":"They are ready.","ar":"هم جاهزون."}],"bad":[{"en":"They is ready.","ar":"خطأ","why":"they تأخذ are."}],"exercises":[{"id":"gb-1","type":"mcq","promptAr":"You ___ my friend.","options":["am","is","are","be"],"correct":"are","explanationAr":"you + are."},{"id":"gb-2","type":"tf","promptAr":"Is she your sister؟ سؤال صحيح.","options":["صح","خطأ"],"correct":"صح","explanationAr":"Is + she في السؤال."}]},{"id":"g-articles","titleAr":"أدوات التنكير والتعريف","titleEn":"A / an / the","levelId":"a1","explanationAr":"a قبل صوت ساكن: a book. an قبل صوت صوتي: an apple, an hour. the للشيء المعروف لدى السامع.","good":[{"en":"I need an umbrella.","ar":"أحتاج مظلة."}],"bad":[{"en":"I need a apple.","ar":"خطأ","why":"apple تبدأ بصوت صوتي فاستخدم an."}],"exercises":[{"id":"ga-1","type":"mcq","promptAr":"___ apple","options":["a","an","the a","some a"],"correct":"an","explanationAr":"apple صوت صوتي."},{"id":"ga-2","type":"fill","promptAr":"Open ___ door. (الباب المعروف)","correct":"the","explanationAr":"the للمعرفة."}]},{"id":"g-present","titleAr":"المضارع البسيط","titleEn":"Present simple","levelId":"a1","explanationAr":"للعادات والحقائق. أضف s مع he/she/it. في السؤال والنفي استخدم do/does.","table":{"headers":["ضمير","إثبات","نفي"],"rows":[["I/you/we/they","I work","I do not work"],["he/she/it","she works","she does not work"]]},"good":[{"en":"He lives in Nouakchott.","ar":"يسكن في نواكشوط."}],"bad":[{"en":"He live in Nouakchott.","ar":"خطأ","why":"مع he نحتاج lives."}],"exercises":[{"id":"gs-1","type":"mcq","promptAr":"She ___ English every day.","options":["study","studies","studying","studied"],"correct":"studies","explanationAr":"he/she + s."},{"id":"gs-2","type":"order","promptAr":"رتّب","options":["Does","he","work","here"],"correct":"Does he work here","explanationAr":"Does مع he."}]},{"id":"g-past","titleAr":"الماضي البسيط","titleEn":"Past simple","levelId":"a2","explanationAr":"was/were للكينونة. الأفعال المنتظمة + ed. احفظ الشائعة: went, ate, saw, had, did.","good":[{"en":"I went to school yesterday.","ar":"ذهبت إلى المدرسة أمس."}],"bad":[{"en":"I goed to school.","ar":"خطأ","why":"ماضي go هو went لا goed."}],"exercises":[{"id":"gpa-1","type":"mcq","promptAr":"ماضي go","options":["goed","went","goes","going"],"correct":"went","explanationAr":"فعل غير منتظم."},{"id":"gpa-2","type":"fill","promptAr":"They ___ happy yesterday. (كانوا)","correct":"were","explanationAr":"they + were."}]}],"placement":[{"id":"p1","type":"mcq","promptAr":"ما الحرف الأول في كلمة Book؟","options":["B","P","D","R"],"correct":"B","explanationAr":"Book تبدأ بـ B."},{"id":"p2","type":"listen","promptAr":"استمع واختر","options":["hello","water","table","green"],"correct":"hello","explanationAr":"سمعت hello.","audioText":"hello"},{"id":"p3","type":"mcq","promptAr":"معنى thank you","options":["شكرًا","مرحبًا","آسف","من فضلك"],"correct":"شكرًا","explanationAr":"thank you = شكرًا."},{"id":"p4","type":"tf","promptAr":"A و a اسمهما مختلف.","options":["صح","خطأ"],"correct":"خطأ","explanationAr":"الكبير والصغير لهما الاسم نفسه."},{"id":"p5","type":"mcq","promptAr":"She ___ a teacher.","options":["am","is","are","be"],"correct":"is","explanationAr":"she + is."},{"id":"p6","type":"fill","promptAr":"ترجم المعنى: ماء","correct":"water","explanationAr":"water تعني ماء."},{"id":"p7","type":"mcq","promptAr":"How much is this؟ يُستخدم لـ","options":["السعر","الوقت","العمر","المكان"],"correct":"السعر","explanationAr":"How much للسعر."},{"id":"p8","type":"order","promptAr":"رتّب","options":["My","name","is","Ali"],"correct":"My name is Ali","explanationAr":"تعارف أساسي."},{"id":"p9","type":"mcq","promptAr":"ماضي go","options":["goed","went","goes","gone"],"correct":"went","explanationAr":"went مستوى A2."},{"id":"p10","type":"mcq","promptAr":"I ___ going to travel tomorrow.","options":["am","is","are","be"],"correct":"am","explanationAr":"I am going to…"},{"id":"p11","type":"tf","promptAr":"you تُستخدم للمفرد والجمع.","options":["صح","خطأ"],"correct":"صح","explanationAr":"you للجميع."},{"id":"p12","type":"mcq","promptAr":"Excuse me, where is the bank؟ موضوع الجملة:","options":["الاتجاهات","الطعام","الألوان","الأرقام"],"correct":"الاتجاهات","explanationAr":"سؤال عن المكان."}],"levels":[{"id":"pre-a1","titleAr":"تمهيدي","titleEn":"Pre-A1","blurb":"الحروف، الأرقام، الألوان، والتحيات."},{"id":"a1","titleAr":"أساسي","titleEn":"A1","blurb":"الضمائر، فعل الكينونة، الأسرة والبيت والطعام."},{"id":"a2","titleAr":"متوسّط أول","titleEn":"A2","blurb":"الماضي والمستقبل والسفر والعمل والصحة."}],"topics":[{"id":"greetings","titleAr":"التحيات والتعارف","titleEn":"Greetings","blurbAr":"أول ما تحتاجه في أي لقاء: السلام، السؤال عن الحال، والشكر.","phrases":[{"en":"Nice to meet you.","ar":"سعيد بلقائك."},{"en":"What's your name?","ar":"ما اسمك؟"}],"noteAr":"في الإنجليزية الأمريكية نقول Hi بسهولة مع الأصدقاء، وGood morning في الصباح."},{"id":"family","titleAr":"الأسرة والأشخاص","titleEn":"Family","blurbAr":"أسماء أفراد الأسرة، والأصدقاء، والتعريف بالنفس.","phrases":[{"en":"This is my family.","ar":"هذه أسرتي."},{"en":"I have two sisters.","ar":"لدي أختان."}],"noteAr":"نستخدم my قبل صلة القرابة: my mother, my brother."},{"id":"home","titleAr":"المنزل","titleEn":"Home","blurbAr":"غرف البيت والأثاث الأساسي الذي تراه كل يوم.","phrases":[{"en":"Come in, please.","ar":"تفضل بالدخول."},{"en":"Make yourself at home.","ar":"اجعل نفسك مرتاحًا."}],"noteAr":"house هو المبنى، وhome هو المكان الذي تشعر فيه بالأمان."},{"id":"food","titleAr":"الطعام والشراب","titleEn":"Food","blurbAr":"وجبات اليوم، الماء والشاي، ووصف الطعام.","phrases":[{"en":"I'm hungry.","ar":"أنا جائع."},{"en":"Would you like some tea?","ar":"هل تريد بعض الشاي؟"}],"noteAr":"في أمريكا يقولون takeout للطعام الجاهز، وفي بريطانيا takeaway."},{"id":"health","titleAr":"الجسم والصحة","titleEn":"Health","blurbAr":"أجزاء الجسم، الطبيب، والمستشفى.","phrases":[{"en":"I don't feel well.","ar":"لا أشعر أنني بخير."},{"en":"I need a doctor.","ar":"أحتاج إلى طبيب."}],"noteAr":"عند الطبيب نقول I have a headache وليس I have headache."},{"id":"clothes","titleAr":"الملابس","titleEn":"Clothes","blurbAr":"ما نرتديه في البيت والعمل والسفر.","phrases":[{"en":"This fits well.","ar":"هذا يناسبني."},{"en":"What size is this?","ar":"ما مقاس هذا؟"}],"noteAr":"pants في أمريكا تعني بنطالًا، وفي بريطانيا قد تعني لباسًا داخليًا. يقول البريطانيون trousers."},{"id":"colors","titleAr":"الألوان","titleEn":"Colors","blurbAr":"الألوان الأساسية لوصف الأشياء من حولك.","phrases":[{"en":"What color is it?","ar":"ما لونه؟"},{"en":"I like blue.","ar":"أحب الأزرق."}],"noteAr":"اللون يأتي بعد الاسم في العربية، وقبل الاسم في الإنجليزية: a red apple."},{"id":"numbers","titleAr":"الأرقام والكميات","titleEn":"Numbers","blurbAr":"العدّ والأسعار والكميات البسيطة.","phrases":[{"en":"How much is this?","ar":"بكم هذا؟"},{"en":"I need two tickets.","ar":"أحتاج تذكرتين."}],"noteAr":"في الأمريكي يقولون one hundred twenty، وفي البريطاني one hundred and twenty."},{"id":"time","titleAr":"الوقت والتقويم","titleEn":"Time","blurbAr":"اليوم، الغد، الساعة، والأسبوع.","phrases":[{"en":"What time is it?","ar":"كم الساعة؟"},{"en":"See you tomorrow.","ar":"أراك غدًا."}],"noteAr":"أيام الأسبوع تُكتب بحرف كبير: Friday, Saturday."},{"id":"weather","titleAr":"الطقس والفصول","titleEn":"Weather","blurbAr":"الحر والبرد والمطر والشمس.","phrases":[{"en":"It's hot today.","ar":"الجو حار اليوم."},{"en":"It's raining.","ar":"إنها تمطر."}],"noteAr":"لا نقول The weather is raining. الصحيح: It is raining."},{"id":"city","titleAr":"المدينة والأماكن","titleEn":"The city","blurbAr":"المدرسة، المسجد، السوق، والحديقة.","phrases":[{"en":"Where is the mosque?","ar":"أين المسجد؟"},{"en":"It's next to the school.","ar":"إنه بجانب المدرسة."}],"noteAr":"نستخدم the مع الأماكن المعروفة: the market, the airport."},{"id":"transport","titleAr":"المواصلات","titleEn":"Transport","blurbAr":"السيارة، الحافلة، التاكسي، والطائرة.","phrases":[{"en":"How do I get there?","ar":"كيف أصل إلى هناك؟"},{"en":"Take the bus.","ar":"استقل الحافلة."}],"noteAr":"by car / by bus بدون the. لكن on the bus عند الركوب."},{"id":"travel","titleAr":"السفر والمطار والفندق","titleEn":"Travel","blurbAr":"الجواز، التذكرة، الحجز، والغرفة.","phrases":[{"en":"I have a reservation.","ar":"لدي حجز."},{"en":"Where is my gate?","ar":"أين بوابة رحلتي؟"}],"noteAr":"في المطار يقولون boarding pass لبطاقة الصعود."},{"id":"shopping","titleAr":"التسوق والمال","titleEn":"Shopping","blurbAr":"السعر، الرخيص والغالي، والشراء.","phrases":[{"en":"How much is this?","ar":"بكم هذا؟"},{"en":"That's too expensive.","ar":"هذا غالٍ جدًا."}],"noteAr":"في المتاجر الأمريكية قد تُسأل: cash or card؟"},{"id":"work","titleAr":"العمل والمهن","titleEn":"Work","blurbAr":"الوظيفة، المكتب، المعلم، والطالب.","phrases":[{"en":"What do you do?","ar":"ماذا تعمل؟"},{"en":"I work in an office.","ar":"أعمل في مكتب."}],"noteAr":"What do you do? سؤال شائع عن المهنة، وليس عن الفعل الآن."},{"id":"tech","titleAr":"التقنية والتواصل","titleEn":"Technology","blurbAr":"الهاتف، الرسالة، والحاسوب.","phrases":[{"en":"Can you hear me?","ar":"هل تسمعني؟"},{"en":"I'll send you a message.","ar":"سأرسل لك رسالة."}],"noteAr":"call تعني اتصالًا هاتفيًا، وtext تعني رسالة قصيرة."},{"id":"sports","titleAr":"الرياضة","titleEn":"Sports","blurbAr":"اللعب، الجري، وكرة القدم.","phrases":[{"en":"Let's play football.","ar":"لنلعب كرة القدم."},{"en":"Good game!","ar":"لعبة رائعة!"}],"noteAr":"football في معظم العالم كرة قدم، وفي أمريكا قد تعني كرة القدم الأمريكية. يقولون soccer للكرة العالمية."},{"id":"nature","titleAr":"الطبيعة والحيوانات","titleEn":"Nature","blurbAr":"الشجر، البحر، القطة، والطائر.","phrases":[{"en":"What a beautiful sea.","ar":"يا له من بحر جميل."},{"en":"I like cats.","ar":"أحب القطط."}],"noteAr":"مع الحيوانات الأليفة نستخدم he/she أحيانًا إذا عرفناها."},{"id":"feelings","titleAr":"المشاعر","titleEn":"Feelings","blurbAr":"السعادة، التعب، الجوع، والشكر.","phrases":[{"en":"I'm happy to see you.","ar":"سعيد برؤيتك."},{"en":"Don't worry.","ar":"لا تقلق."}],"noteAr":"I am happy وليس I have happy."},{"id":"directions","titleAr":"الاتجاهات والخرائط","titleEn":"Directions","blurbAr":"يمين ويسار، قريب وبعيد، وهنا وهناك.","phrases":[{"en":"Excuse me, where is the bank?","ar":"عفوًا، أين المصرف؟"},{"en":"Go straight, then turn left.","ar":"سر مباشرة ثم انعطف يسارًا."}],"noteAr":"Excuse me بداية مهذبة لطلب المساعدة من غريب."},{"id":"restaurant","titleAr":"المطعم","titleEn":"Restaurant","blurbAr":"طلب الطعام، القائمة، والفاتورة.","phrases":[{"en":"A table for two, please.","ar":"طاولة لشخصين من فضلك."},{"en":"The bill, please.","ar":"الفاتورة من فضلك."}],"noteAr":"في أمريكا يُتوقع إكرامية tip حوالي 15–20٪. في بلدان أخرى قد تكون اختيارية."},{"id":"prayer","titleAr":"الصلاة والمسجد","titleEn":"Prayer","blurbAr":"الوضوء، الصلاة، والجمعة بلغة بسيطة تحترم السياق.","phrases":[{"en":"It is time for prayer.","ar":"حان وقت الصلاة."},{"en":"Where is the mosque?","ar":"أين المسجد؟"}],"noteAr":"Friday prayer تُسمى Friday prayer أو Jumu'ah. كلمة mosque مفهومة في العالم كله."},{"id":"money","titleAr":"المال والبنك","titleEn":"Money & bank","blurbAr":"الحساب، البطاقة، والصراف.","phrases":[{"en":"I need to change money.","ar":"أحتاج إلى صرف مال."},{"en":"Where is the ATM?","ar":"أين جهاز الصراف؟"}],"noteAr":"ATM جهاز الصراف. cash نقدًا، card بطاقة."},{"id":"emergency","titleAr":"الطوارئ","titleEn":"Emergencies","blurbAr":"طلب المساعدة، الشرطة، والإسعاف.","phrases":[{"en":"Help me, please.","ar":"ساعدني من فضلك."},{"en":"Call a doctor.","ar":"اتصل بطبيب."}],"noteAr":"في كثير من البلدان رقم الطوارئ 112 أو 911. احفظ: I need help."},{"id":"daily","titleAr":"الروتين اليومي","titleEn":"Daily routine","blurbAr":"الاستيقاظ، الأكل، العمل، والنوم.","phrases":[{"en":"I wake up at six.","ar":"أستيقظ في السادسة."},{"en":"I go to bed early.","ar":"أنام مبكرًا."}],"noteAr":"at six للساعة، in the morning للجزء من اليوم."},{"id":"holidays","titleAr":"المناسبات والأعياد","titleEn":"Holidays","blurbAr":"التهنئة، العيد، والزيارة.","phrases":[{"en":"Eid Mubarak.","ar":"عيد مبارك."},{"en":"Happy New Year.","ar":"سنة جديدة سعيدة."}],"noteAr":"يمكن قول Eid Mubarak بالإنجليزية كما هي. Blessed Eid أيضًا مقبولة."},{"id":"school","titleAr":"الدراسة والاختبارات","titleEn":"School","blurbAr":"الحصة، الواجب، والامتحان.","phrases":[{"en":"I have homework.","ar":"لدي واجب."},{"en":"The exam is on Monday.","ar":"الامتحان يوم الإثنين."}],"noteAr":"homework غير معدود في هذا المعنى: I have homework وليس homeworks."},{"id":"community","titleAr":"الجيران والمجتمع","titleEn":"Community","blurbAr":"الجار، المساعدة، والحي.","phrases":[{"en":"This is my neighbor.","ar":"هذا جاري."},{"en":"Can I help you?","ar":"هل أستطيع مساعدتك؟"}],"noteAr":"neighbor الإملاء الأمريكي، neighbour البريطاني."},{"id":"kitchen","titleAr":"المطبخ والطبخ","titleEn":"Cooking","blurbAr":"الملح، الزيت، والطبخ البسيط.","phrases":[{"en":"Add a little salt.","ar":"أضف قليلًا من الملح."},{"en":"The food is ready.","ar":"الطعام جاهز."}],"noteAr":"cook يطبخ، cooker في البريطانية قد تعني الموقد. في الأمريكية stove."}],"faqs":[{"q":"هل المنصة مناسبة للمبتدئ الكامل؟","a":"نعم. يمكنك تجاوز اختبار المستوى والبدء من الحروف. كل درس مشروح بالعربية الفصحى السهلة."},{"q":"هل أحتاج حسابًا؟","a":"لا على GitHub Pages. تقدّمك يُحفظ في متصفحك. احفظ نسخة من الملف إن غيّرت الجهاز."},{"q":"هل النطق أمريكي أم بريطاني؟","a":"نعتمد الإنجليزية الأمريكية أساسًا، وننبّه إلى الفروق البريطانية المهمة داخل الدرس."},{"q":"هل يعمل على الهاتف؟","a":"نعم. التصميم متجاوب، والنطق يعمل من مكبر الصوت في المتصفح."},{"q":"كيف أرفع الملف إلى GitHub؟","a":"أنشئ مستودعًا، ارفع هذا الملف باسم index.html، ثم من Settings → Pages اختر الفرع والجذر."}]};</script>
+  <script>
+/* English بالعربي — single-file GitHub Pages app */
+(function () {
+  const DATA = window.DATA;
+  const KEY = "english-arabi-v1";
+  const $ = (sel, root) => (root || document).querySelector(sel);
+  const $$ = (sel, root) => Array.from((root || document).querySelectorAll(sel));
 
-    <!-- الشريط العلوي -->
-    <header class="navbar">
-        <div class="nav-container">
-            <div class="brand-logo" onclick="app.navigate('home')">
-                <div class="brand-icon">EN</div>
-                <div class="brand-text">
-                    <h1>English بالعربي</h1>
-                    <span>البركة ديجيتال • تَعَلَّمْ بِذَكَاء… وَانْطَلِقْ بِثِقَة</span>
-                </div>
-            </div>
+  const svg = {
+    home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1z"/></svg>',
+    book: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5A2.5 2.5 0 0 1 6.5 8H20"/></svg>',
+    type: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7V5h16v2M12 5v14M8 19h8"/></svg>',
+    chat: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 6h14v10H8l-3 3z"/></svg>',
+    user: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="3.2"/><path d="M5 19c1.4-3 4-4.5 7-4.5S17.6 16 19 19"/></svg>',
+    sun: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3.5"/><path d="M12 3v2M12 19v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M3 12h2M19 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
+    moon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 14.5A7 7 0 1 1 9.5 5 5.5 5.5 0 0 0 17 14.5z"/></svg>',
+    play: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 6v12l10-6z"/></svg>',
+    star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 2.4 6.6H21l-5.4 4 2.1 6.4L12 16.8 6.3 20l2.1-6.4L3 9.6h6.6z"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m5 12 5 5 9-10"/></svg>',
+    lock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
+  };
 
-            <ul class="nav-links">
-                <li><a class="nav-link active" onclick="app.navigate('home')"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
-                <li><a class="nav-link" onclick="app.navigate('alphabet')"><i class="fa-solid fa-font"></i> الحروف والأصوات</a></li>
-                <li><a class="nav-link" onclick="app.navigate('numbers-math')"><i class="fa-solid fa-calculator"></i> الأرقام والزمان</a></li>
-                <li><a class="nav-link" onclick="app.navigate('vocab-vault')"><i class="fa-solid fa-book-atlas"></i> خزانة الكلمات</a></li>
-                <li><a class="nav-link" onclick="app.navigate('sentences-life')"><i class="fa-solid fa-earth-americas"></i> جمل مواقف الحياة</a></li>
-                <li><a class="nav-link" onclick="app.navigate('grammar-lab')"><i class="fa-solid fa-shapes"></i> النحو والأفعال</a></li>
-                <li><a class="nav-link" onclick="app.navigate('idioms')"><i class="fa-solid fa-quote-right"></i> التعبيرات الشائعة</a></li>
-                <li><a class="nav-link" onclick="app.navigate('flashcards')"><i class="fa-solid fa-layer-group"></i> البطاقات والاختبارات</a></li>
-            </ul>
+  function load() {
+    try {
+      return JSON.parse(localStorage.getItem(KEY) || "null") || seed();
+    } catch {
+      return seed();
+    }
+  }
+  function seed() {
+    return {
+      name: "",
+      theme: "dark",
+      completed: [],
+      saved: [],
+      xp: 0,
+      streak: 0,
+      lastDay: "",
+      mistakes: [],
+      scores: {},
+      rate: 0.85,
+    };
+  }
+  function save() {
+    localStorage.setItem(KEY, JSON.stringify(P));
+  }
+  let P = load();
 
-            <div class="nav-actions">
-                <button class="btn-gold" onclick="app.navigate('sentences-life')"><i class="fa-solid fa-book-open"></i> استكشف الأقسام</button>
-            </div>
+  function today() {
+    return new Date().toISOString().slice(0, 10);
+  }
+  function touchStreak() {
+    const d = today();
+    if (P.lastDay === d) return;
+    const y = new Date();
+    y.setDate(y.getDate() - 1);
+    const ys = y.toISOString().slice(0, 10);
+    P.streak = P.lastDay === ys ? P.streak + 1 : 1;
+    P.lastDay = d;
+    save();
+  }
+
+  let rate = P.rate || 0.85;
+  function speak(text, lang) {
+    if (!window.speechSynthesis || !text) return;
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = lang || "en-US";
+    u.rate = rate;
+    speechSynthesis.speak(u);
+  }
+
+  function toast(msg) {
+    let el = $(".toast");
+    if (!el) {
+      el = document.createElement("div");
+      el.className = "toast";
+      el.id = "toast";
+      document.body.appendChild(el);
+    }
+    el.textContent = msg;
+    el.hidden = false;
+    clearTimeout(toast.t);
+    toast.t = setTimeout(() => (el.hidden = true), 2200);
+  }
+
+  function applyTheme() {
+    document.documentElement.classList.toggle("light", P.theme === "light");
+  }
+
+  function parseHash() {
+    const h = (location.hash || "#/home").replace(/^#\/?/, "");
+    const [view, id] = h.split("/");
+    return { view: view || "home", id: id || "" };
+  }
+  function go(view, id) {
+    location.hash = id ? `#/${view}/${id}` : `#/${view}`;
+  }
+
+  function shuffle(arr) {
+    return [...arr].sort(() => Math.random() - 0.5);
+  }
+  function wordById(id) {
+    return DATA.words.find((w) => w.id === id);
+  }
+  function isDone(id) {
+    return P.completed.includes(id);
+  }
+  function locked(lesson) {
+    const prev = DATA.lessons.find((l) => l.order === lesson.order - 1);
+    return prev ? !isDone(prev.id) : false;
+  }
+
+  const NAV = [
+    { id: "home", label: "الرئيسية", icon: "home" },
+    { id: "learn", label: "الدروس", icon: "book" },
+    { id: "vocab", label: "كلمات", icon: "type" },
+    { id: "talks", label: "محادثة", icon: "chat" },
+    { id: "me", label: "تقدمي", icon: "user" },
+  ];
+
+  function header() {
+    const { view } = parseHash();
+    return `
+      <header class="top">
+        <div class="wrap top-inner">
+          <a class="brand" data-go="home">
+            <span class="mark">E</span>
+            <span><b>English بالعربي</b><small>البركة ديجيتال</small></span>
+          </a>
+          <nav class="nav-desk">
+            ${NAV.map((n) => `<a data-go="${n.id}" class="${view === n.id ? "active" : ""}">${n.label}</a>`).join("")}
+            <a data-go="alphabet">الحروف</a>
+            <a data-go="grammar">القواعد</a>
+          </nav>
+          <div class="top-actions">
+            <button class="icon-btn" data-act="theme" aria-label="السمة">${P.theme === "light" ? svg.moon : svg.sun}</button>
+          </div>
         </div>
-    </header>
-
-    <!-- منطقة الشاشات التفاعلية -->
-    <main id="app-viewport">
-
-        <!-- 1. الرئيسية والموجز الموسوعي -->
-        <section id="view-home" class="view-section active">
-            <div style="text-align:center; max-width:950px; margin:1.5rem auto;">
-                <div style="background:rgba(217, 119, 6, 0.12); color:var(--accent-gold); padding:0.4rem 1.2rem; border-radius:50px; font-weight:800; font-size:0.88rem; display:inline-block; margin-bottom:1rem;">
-                    <i class="fa-solid fa-shield-halved"></i> الموسوعة الكبرى لتعليم الإنجليزية من الصفر • إشراف: عبد الله أحمد
-                </div>
-                <h2 style="font-size:2.8rem; font-weight:900; color:var(--primary-navy); line-height:1.25;">
-                    موسوعة تعليمية ضخمة ومتكاملة في شتى مناحي اللغة
-                </h2>
-                <p style="color:var(--text-muted); font-size:1.15rem; margin:1.2rem 0 2rem; line-height:1.8;">
-                    تضم المنصة أكثر من 8 أقسام ومكتبات معرفية شاملة؛ تشمل الحروف والصوتيات، الأرقام والزمان، مئات المفردات المصنفة، جداول تصريف الأفعال والقواعد، تعبيرات الحياة والمواقف اليومية، وبطاقات التدريب التفاعلية مع النطق الصوتي الفوري.
-                </p>
-                <div style="display:flex; justify-content:center; gap:0.8rem; flex-wrap:wrap;">
-                    <button class="btn-gold" style="padding:0.8rem 1.6rem;" onclick="app.navigate('alphabet')"><i class="fa-solid fa-font"></i> الحروف والأصوات (A-Z)</button>
-                    <button class="btn-secondary" style="padding:0.8rem 1.6rem;" onclick="app.navigate('vocab-vault')"><i class="fa-solid fa-book-atlas"></i> خزانة المفردات (8 مجالات)</button>
-                    <button class="btn-secondary" style="padding:0.8rem 1.6rem;" onclick="app.navigate('sentences-life')"><i class="fa-solid fa-comments"></i> جمل مواقف الحياة (8 أبواب)</button>
-                    <button class="btn-secondary" style="padding:0.8rem 1.6rem;" onclick="app.navigate('grammar-lab')"><i class="fa-solid fa-shapes"></i> النحو وتصريف الأفعال</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. موسوعة الحروف والصوتيات (Alphabet & Phonics) -->
-        <section id="view-alphabet" class="view-section">
-            <div style="text-align:center; margin-bottom:1.5rem;">
-                <h2 style="font-size:2.2rem; font-weight:900;">الأبجدية الإنجليزية والصوتيات (A to Z)</h2>
-                <p style="color:var(--text-muted);">26 درساً للحروف مع أمثلة النطق، الحروف الصوتية المتحركة (Vowels)، والحروف الساكنة</p>
-            </div>
-            <div class="category-tabs">
-                <button class="cat-tab active" onclick="app.filterAlphabet('all')">جميع الحروف (26)</button>
-                <button class="cat-tab" onclick="app.filterAlphabet('vowels')">حروف العلة المتحركة (Vowels: A, E, I, O, U)</button>
-                <button class="cat-tab" onclick="app.filterAlphabet('consonants')">الحروف الساكنة (Consonants)</button>
-            </div>
-            <div class="alpha-grid" id="alphabet-grid-container"></div>
-        </section>
-
-        <!-- 3. موسوعة الأرقام والزمان والحساب (Numbers & Time) -->
-        <section id="view-numbers-math" class="view-section">
-            <div style="text-align:center; margin-bottom:1.5rem;">
-                <h2 style="font-size:2.2rem; font-weight:900;">الأرقام والزمان والعمليات الحسابية</h2>
-                <p style="color:var(--text-muted);">الأعداد من 1 إلى 100، الأرقام الترتيبية، التوقيت، وأيام وشهور وفصول السنة</p>
-            </div>
-            <div class="category-tabs">
-                <button class="cat-tab active" onclick="app.filterNumbersTab('cardinal')">الأرقام الأساسية (1-100)</button>
-                <button class="cat-tab" onclick="app.filterNumbersTab('ordinal')">الأرقام الترتيبية (1st, 2nd...)</button>
-                <button class="cat-tab" onclick="app.filterNumbersTab('days')">أيام الأسبوع (Days)</button>
-                <button class="cat-tab" onclick="app.filterNumbersTab('months')">أشهر العام (Months)</button>
-                <button class="cat-tab" onclick="app.filterNumbersTab('seasons')">فصول السنة والطقس (Seasons)</button>
-                <button class="cat-tab" onclick="app.filterNumbersTab('math')">العمليات الحسابية (Math)</button>
-            </div>
-            <div class="cards-grid" id="numbers-data-container"></div>
-        </section>
-
-        <!-- 4. خزانة المفردات المصنفة (Vocabulary Vault) -->
-        <section id="view-vocab-vault" class="view-section">
-            <div style="text-align:center; margin-bottom:1.5rem;">
-                <h2 style="font-size:2.2rem; font-weight:900;">خزانة المفردات الكبرى (8 مجالات مصنفة)</h2>
-                <p style="color:var(--text-muted);">كلمات أساسية مدعومة بالنطق والترجمة والأمثلة</p>
-            </div>
-            <div class="category-tabs">
-                <button class="cat-tab active" onclick="app.filterVocab('colors')">الألوان (Colors)</button>
-                <button class="cat-tab" onclick="app.filterVocab('family')">العائلة والقرابة (Family)</button>
-                <button class="cat-tab" onclick="app.filterVocab('body')">أجزاء الجسم (Body)</button>
-                <button class="cat-tab" onclick="app.filterVocab('food')">الأطعمة والمشروبات (Food)</button>
-                <button class="cat-tab" onclick="app.filterVocab('clothes')">الملابس والإكسسوارات (Clothes)</button>
-                <button class="cat-tab" onclick="app.filterVocab('jobs')">المهن والوظائف (Jobs)</button>
-                <button class="cat-tab" onclick="app.filterVocab('house')">المنزل والأثاث (House)</button>
-                <button class="cat-tab" onclick="app.filterVocab('animals')">الحيوانات والطبيعة (Animals)</button>
-            </div>
-            <div class="cards-grid" id="vocab-cards-container"></div>
-        </section>
-
-        <!-- 5. موسوعة جمل الحياة اليومية المكثفة (Real-Life Sentences) -->
-        <section id="view-sentences-life" class="view-section">
-            <div style="text-align:center; margin-bottom:1.5rem;">
-                <h2 style="font-size:2.2rem; font-weight:900;">موسوعة جمل الحياة الواقعية المكثفة</h2>
-                <p style="color:var(--text-muted);">8 أبواب حياتية شاملة تغطي المطار، الفنادق، المطاعم، والمستشفيات مع النطق الفوري</p>
-            </div>
-            <div class="category-tabs">
-                <button class="cat-tab active" onclick="app.filterLifeCategory('airport')"><i class="fa-solid fa-plane-departure"></i> المطار والسفر</button>
-                <button class="cat-tab" onclick="app.filterLifeCategory('hotel')"><i class="fa-solid fa-hotel"></i> الفندق والإقامة</button>
-                <button class="cat-tab" onclick="app.filterLifeCategory('restaurant')"><i class="fa-solid fa-utensils"></i> المطاعم وطلب الطعام</button>
-                <button class="cat-tab" onclick="app.filterLifeCategory('shopping')"><i class="fa-solid fa-bag-shopping"></i> التسوق والأسعار</button>
-                <button class="cat-tab" onclick="app.filterLifeCategory('hospital')"><i class="fa-solid fa-user-doctor"></i> المستشفى والصيدلية</button>
-                <button class="cat-tab" onclick="app.filterLifeCategory('directions')"><i class="fa-solid fa-map-location-dot"></i> الاتجاهات والمواصلات</button>
-                <button class="cat-tab" onclick="app.filterLifeCategory('work')"><i class="fa-solid fa-briefcase"></i> بيئة العمل والمقابلات</button>
-                <button class="cat-tab" onclick="app.filterLifeCategory('daily')"><i class="fa-solid fa-comments"></i> الروتين والمحادثات اليومية</button>
-            </div>
-            <div class="cards-grid" id="life-sentences-container"></div>
-        </section>
-
-        <!-- 6. مختبر النحو وتصريف الأفعال (Grammar & Conjugation) -->
-        <section id="view-grammar-lab" class="view-section">
-            <div style="text-align:center; margin-bottom:1.5rem;">
-                <h2 style="font-size:2.2rem; font-weight:900;">مختبر النحو وجداول تصريف الأفعال الشاملة</h2>
-                <p style="color:var(--text-muted);">جداول الضمائر، أدوات التعريف والتنكير، وأشهر الأفعال المنتظمة والشاذة</p>
-            </div>
-            <div class="card" style="margin-bottom:1.5rem;">
-                <h3 style="color:var(--royal-blue); margin-bottom:0.5rem;"><i class="fa-solid fa-shapes"></i> جدول الضمائر الإنجليزية الشامل (Pronouns)</h3>
-                <div class="table-responsive">
-                    <table class="custom-table">
-                        <thead>
-                            <tr>
-                                <th>ضمير الفاعل (Subject)</th>
-                                <th>ضمير المفعول (Object)</th>
-                                <th>صفة الملكية (Possessive)</th>
-                                <th>ضمير الملكية (Pronoun)</th>
-                                <th>المعنى بالعربية</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr><td><strong>I</strong></td><td>me</td><td>my</td><td>mine</td><td>أنا / ياء المتكلم</td></tr>
-                            <tr><td><strong>You</strong></td><td>you</td><td>your</td><td>yours</td><td>أنتَ / أنتِ / أنتم</td></tr>
-                            <tr><td><strong>He</strong></td><td>him</td><td>his</td><td>his</td><td>هو (للمذكر الغائب)</td></tr>
-                            <tr><td><strong>She</strong></td><td>her</td><td>her</td><td>hers</td><td>هي (للمؤنث الغائب)</td></tr>
-                            <tr><td><strong>It</strong></td><td>it</td><td>its</td><td>its</td><td>هو / هي (لغير العاقل)</td></tr>
-                            <tr><td><strong>We</strong></td><td>us</td><td>our</td><td>ours</td><td>نحن</td></tr>
-                            <tr><td><strong>They</strong></td><td>them</td><td>their</td><td>theirs</td><td>هم / هن</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <div class="card">
-                <h3 style="color:var(--accent-gold); margin-bottom:0.5rem;"><i class="fa-solid fa-table"></i> تصريف أهم الأفعال الشائعة (Infinitive / Past / Past Participle)</h3>
-                <div class="table-responsive">
-                    <table class="custom-table" id="verbs-table-body">
-                        <thead>
-                            <tr>
-                                <th>المصدر (Base)</th>
-                                <th>الماضي البسيط (Past)</th>
-                                <th>التصريف الثالث (P.P)</th>
-                                <th>المعنى بالعربية</th>
-                                <th>نطق صوتي</th>
-                            </tr>
-                        </thead>
-                        <tbody><!-- تعبئة ديناميكية --></tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. مختبر التعبيرات والمصطلحات الشائعة (Idioms & Expressions) -->
-        <section id="view-idioms" class="view-section">
-            <div style="text-align:center; margin-bottom:1.5rem;">
-                <h2 style="font-size:2.2rem; font-weight:900;">التعبيرات الشائعة والأمثال (Idioms & Phrases)</h2>
-                <p style="color:var(--text-muted);">أشهر التعبيرات الاصطلاحية المستخدمة يومياً لتحدث الإنجليزية بطلاقة مثل أهلها</p>
-            </div>
-            <div class="cards-grid" id="idioms-container"></div>
-        </section>
-
-        <!-- 8. البطاقات التعليمية والاختبارات التفاعلية (Flashcards & Quiz) -->
-        <section id="view-flashcards" class="view-section">
-            <div style="text-align:center; margin-bottom:1.5rem;">
-                <h2 style="font-size:2.2rem; font-weight:900;">البطاقات التعليمية والاختبارات الذكية</h2>
-                <p style="color:var(--text-muted);">انقر على البطاقة لتقليبها ومعرفة الترجمة مع النطق الصوتي الفوري</p>
-            </div>
-
-            <div class="flashcard-box" onclick="app.flipFlashcard()">
-                <div class="flashcard-inner" id="flashcard-element">
-                    <div class="flashcard-side flashcard-front">
-                        <span style="font-size:0.8rem; background:rgba(30,64,175,0.08); color:var(--royal-blue); padding:4px 12px; border-radius:20px; font-weight:800; margin-bottom:1rem;">انقر للقلب</span>
-                        <h2 class="en-text" id="fc-word" style="font-size:2.4rem; color:var(--royal-blue);">Perseverance</h2>
-                        <p style="color:var(--text-muted); margin-top:6px;">[ النطق متاح ]</p>
-                    </div>
-                    <div class="flashcard-side flashcard-back">
-                        <span style="font-size:0.8rem; background:rgba(217,119,6,0.2); color:var(--accent-gold-light); padding:4px 12px; border-radius:20px; font-weight:800; margin-bottom:1rem;">الترجمة والمعنى</span>
-                        <h2 id="fc-trans" style="font-size:2.2rem; color:#FFF;">المُثَابَرَة والإِصْرَار</h2>
-                        <p style="color:#CBD5E1; margin-top:6px;" id="fc-pron">نطق: بِيرْسِيفِيرَانْس</p>
-                    </div>
-                </div>
-            </div>
-
-            <div style="display:flex; justify-content:center; gap:10px; margin-top:1rem;">
-                <button class="btn-secondary" onclick="app.prevFlashcard()"><i class="fa-solid fa-arrow-right"></i> السابقة</button>
-                <button class="btn-gold" onclick="app.speakCurrentFlashcard()"><i class="fa-solid fa-volume-high"></i> نطق</button>
-                <button class="btn-secondary" onclick="app.nextFlashcard()">التالية <i class="fa-solid fa-arrow-left"></i></button>
-            </div>
-        </section>
-
-        <!-- 9. عن المنصة والهوية الرسمية -->
-        <section id="view-about" class="view-section">
-            <div class="card" style="max-width:850px; margin:0 auto; padding:2.5rem;">
-                <h2 style="color:var(--primary-navy); margin-bottom:0.5rem;">البركة ديجيتال | Barakah Digital</h2>
-                <span style="color:var(--accent-gold); font-weight:800; font-size:1.1rem;">«تَعَلَّمْ بِذَكَاء… وَانْطَلِقْ بِثِقَة»</span>
-                <p style="margin:1.5rem 0; line-height:1.9; font-size:1.05rem;">
-                    منصة رقمية تعليمية شاملة، تهدف إلى إتاحة المعرفة بأسلوب عصري وموثوق وسهل الاستخدام. تقدم برامج تعليمية في اللغات والعلوم والتقنية والمهارات المهنية والتنمية المعرفية، من خلال محتوى يجمع بين الشرح المبسط، والمواد الصوتية والمرئية، والتطبيقات العملية، والاختبارات التفاعلية، ضمن مسارات متدرجة تناسب مختلف المستويات.
-                </p>
-                <div style="background:var(--bg-light); border-right:4px solid var(--royal-blue); padding:1.2rem; border-radius:var(--radius-md);">
-                    <h3 style="color:var(--royal-blue); font-size:1.1rem; margin-bottom:0.3rem;">أكاديمية اللغة الإنجليزية — English Academy</h3>
-                    <p style="font-size:0.95rem; color:var(--text-muted);">أول البرامج التعليمية المتخصصة المقدمة عبر منصة البركة ديجيتال • المشرف العام: <strong>أ/ عبد الله أحمد</strong></p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- التذييل الرسمي المعتمد -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div>
-                <h3 style="margin-bottom:0.8rem;">English بالعربي</h3>
-                <p style="color:#94A3B8; font-size:0.9rem; line-height:1.8;">
-                    <strong>البركة ديجيتال:</strong> منصة تعليمية شاملة تتيح المعرفة الموثوقة للمبتدئين.
-                    <br><span style="color:#FBBF24; font-weight:700;">«تَعَلَّمْ بِذَكَاء… وَانْطَلِقْ بِثِقَة»</span>
-                </p>
-            </div>
-            <div>
-                <h4 style="margin-bottom:0.8rem; color:#FFF;">أبواب الموسوعة</h4>
-                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:5px;">الأبجدية والصوتيات (26 حرفاً)</p>
-                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:5px;">خزانة الكلمات والأرقام والزمان</p>
-                <p style="color:#94A3B8; font-size:0.85rem;">مختبر النحو وتصاريف الأفعال</p>
-            </div>
-            <div>
-                <h4 style="margin-bottom:0.8rem; color:#FFF;">الإشراف والاعتماد</h4>
-                <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:5px;">المشرف العام: <strong>عبد الله أحمد</strong></p>
-                <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:5px;">التطوير الموسوعي: <strong>البركة ديجيتال</strong></p>
-                <p style="color:var(--accent-gold-light); font-size:0.85rem; margin-top:8px;">محتوى مدقق وموثق بالكامل © 2026</p>
-            </div>
+      </header>`;
+  }
+  function bottom() {
+    const { view } = parseHash();
+    return `<nav class="bottom-nav">${NAV.map(
+      (n) => `<a data-go="${n.id}" class="${view === n.id || (n.id === "learn" && view === "lesson") ? "active" : ""}">${svg[n.icon]}<span>${n.label}</span></a>`,
+    ).join("")}</nav>`;
+  }
+  function footer() {
+    return `
+      <footer class="site-foot">
+        <div class="wrap cols">
+          <div>
+            <div class="brand"><span class="mark">E</span><span><b>English بالعربي</b><small>ابدأ من الصفر… وتحدّث الإنجليزية بثقة</small></span></div>
+            <p class="tiny" style="margin-top:12px">جميع الحقوق محفوظة لمنصة English بالعربي<br>إنتاج البركة ديجيتال — إشراف: عبد الله أحمد</p>
+          </div>
+          <div><b>تعلّم</b><a data-go="alphabet">الحروف</a><a data-go="learn">المسار</a><a data-go="vocab">المفردات</a><a data-go="grammar">القواعد</a></div>
+          <div><b>مهارات</b><a data-go="talks">المحادثات</a><a data-go="quiz">تحديد المستوى</a><a data-go="me">الإنجازات</a></div>
+          <div><b>المنصة</b><a data-go="about">عن المنصة</a></div>
         </div>
-        <div class="footer-bottom">
-            <div>جميع الحقوق محفوظة لمنصة English بالعربي | أكاديمية اللغة الإنجليزية</div>
-            <div>إنتاج وتطوير: البركة ديجيتال • إشراف: عبد الله أحمد</div>
+      </footer>`;
+  }
+
+  function viewHome() {
+    const feats = [
+      { t: "دروس قصيرة متدرجة", b: "من الحروف إلى المحادثة وفق Pre-A1 ثم A1 ثم A2.", i: "book" },
+      { t: "شرح بالعربية", b: "كل قاعدة ومثال مشروح بالفصحى السهلة مع نطق تقريبي.", i: "type" },
+      { t: "نطق صوتي فوري", b: "استمع للكلمة والجملة بسرعة مناسبة، وأعد التشغيل متى شئت.", i: "play" },
+      { t: "تمارين واختبارات", b: "اختيار، ترتيب، إملاء، واستماع مع تصحيح فوري بالعربية.", i: "check" },
+      { t: "محادثات يومية", b: "التعارف، البيت، المطعم، المطار، والعيادة بجمل جاهزة.", i: "chat" },
+      { t: "تتبع وشهادات", b: "نقاط وسلسلة أيام. شهادة رقمية بإشراف عبد الله أحمد.", i: "star" },
+    ];
+    return `
+      <section class="hero"><div class="wrap hero-grid">
+        <div>
+          <p class="kicker">البركة ديجيتال · إشراف عبد الله أحمد</p>
+          <h1>تعلّم الإنجليزية من الصفر وبأسلوب عربي مبسّط</h1>
+          <p class="lead">منصة جاهزة للعمل من ملف واحد. دروس، حروف، مفردات، محادثات واختبارات — تقدّمك يُحفظ على هذا الجهاز.</p>
+          <div class="cta">
+            <button class="btn btn-gold btn-lg" data-go="learn">ابدأ مجانًا</button>
+            <button class="btn btn-line btn-lg" data-go="quiz">اختبار تحديد المستوى</button>
+          </div>
+          <p class="tiny" style="margin-top:14px">ابدأ من الصفر… وتحدّث الإنجليزية بثقة</p>
         </div>
-    </footer>
+        <div class="panel hero-card">
+          <p class="kicker">المسار</p>
+          <p class="path en">Pre-A1 → A1 → A2</p>
+          <p class="muted">مسار أوروبي واضح للمبتدئ. ${DATA.lessons.length} درسًا · ${DATA.words.length} كلمة · ${DATA.talks.length} محادثة</p>
+          <button class="btn btn-navy" data-go="alphabet">ابدأ بالحروف</button>
+        </div>
+      </div></section>
+      <section class="block"><div class="wrap">
+        <p class="kicker">لماذا المنصة</p>
+        <h2>كل ما يحتاجه المبتدئ… بلا ازدحام</h2>
+        <div class="grid-3" style="margin-top:22px">${feats
+          .map((f) => `<article class="card"><div class="ico">${svg[f.i]}</div><h3>${f.t}</h3><p class="muted">${f.b}</p></article>`)
+          .join("")}</div>
+      </div></section>
+      <section class="block alt"><div class="wrap">
+        <p class="kicker">المسار التعليمي</p>
+        <h2>ثلاث درجات حتى المحادثة اليومية</h2>
+        <div class="grid-3" style="margin-top:22px">${DATA.levels
+          .map(
+            (lv, i) =>
+              `<article class="card"><p class="en tiny">${lv.titleEn}</p><h3>${lv.titleAr}</h3><p class="muted">${lv.blurb}</p><p class="tiny">${DATA.units.filter((u) => u.levelId === lv.id).length} وحدات · ${DATA.lessons.filter((l) => l.levelId === lv.id).length} دروس</p><span class="en" style="float:left;font-size:3rem;color:var(--gold);opacity:.12">${i + 1}</span></article>`,
+          )
+          .join("")}</div>
+        <div class="cta"><button class="btn btn-line" data-go="learn">عرض خريطة التعلم</button></div>
+      </div></section>
+      <section class="block"><div class="wrap">
+        <p class="kicker">مهارات</p>
+        <h2>ابدأ من أي باب</h2>
+        <div class="grid-4" style="margin-top:22px">
+          <a class="card" data-go="alphabet"><h3>الحروف والنطق</h3><p class="muted">الأبجدية كاملة مع الصوت.</p></a>
+          <a class="card" data-go="vocab"><h3>المفردات</h3><p class="muted">${DATA.words.length} كلمة مصنّفة حسب الحياة.</p></a>
+          <a class="card" data-go="grammar"><h3>القواعد</h3><p class="muted">شرح عربي وجداول وتمارين.</p></a>
+          <a class="card" data-go="talks"><h3>المحادثات</h3><p class="muted">مشاهد يومية من التعارف حتى الهاتف.</p></a>
+        </div>
+      </div></section>
+      <section class="block alt"><div class="wrap"><div class="stats">
+        <div><b class="tabular">${DATA.topics.length}</b><span class="tiny">موضوعًا من مناحي الحياة</span></div>
+        <div><b class="tabular">${DATA.words.length}</b><span class="tiny">كلمة أساسية مترجمة</span></div>
+        <div><b class="tabular">${DATA.lessons.length}</b><span class="tiny">درسًا متدرجًا</span></div>
+        <div><b class="tabular">${DATA.talks.length}</b><span class="tiny">محادثة يومية</span></div>
+      </div></div></section>
+      <section class="block"><div class="wrap">
+        <p class="kicker">أسئلة شائعة</p>
+        <h2>قبل أن تبدأ</h2>
+        <div style="display:grid;gap:10px;margin-top:18px">${DATA.faqs
+          .map((f) => `<details class="faq"><summary>${f.q}</summary><p>${f.a}</p></details>`)
+          .join("")}</div>
+      </div></section>
+      <section class="block alt"><div class="wrap" style="text-align:center">
+        <p class="kicker">جاهز؟</p>
+        <h2>ابدأ من الصفر اليوم</h2>
+        <p class="lead" style="margin-inline:auto">اختر اسمك في لوحة التقدم، ثم افتح الحروف أو اختبر مستواك في دقائق.</p>
+        <div class="cta" style="justify-content:center">
+          <button class="btn btn-gold btn-lg" data-go="learn">ابدأ التعلم</button>
+          <button class="btn btn-navy btn-lg" data-go="about">عن المنصة</button>
+        </div>
+      </div></section>`;
+  }
 
-    <!-- محرك البيانات الموسوعية الشاملة -->
-    <script>
-        const app = {
-            state: {
-                currentFcIndex: 0,
-                
-                // 1. الأبجدية الكاملة 26 حرفاً
-                alphabet: [
-                    { l: "Aa", type: "vowel", w: "Apple", ar: "تفاحة", p: "أَبِل" },
-                    { l: "Bb", type: "consonant", w: "Book", ar: "كتاب", p: "بُوك" },
-                    { l: "Cc", type: "consonant", w: "Car", ar: "سيارة", p: "كَار" },
-                    { l: "Dd", type: "consonant", w: "Door", ar: "باب", p: "دُور" },
-                    { l: "Ee", type: "vowel", w: "Elephant", ar: "فيل", p: "إِلِيفَانْت" },
-                    { l: "Ff", type: "consonant", w: "Fish", ar: "سمكة", p: "فِيش" },
-                    { l: "Gg", type: "consonant", w: "Garden", ar: "حديقة", p: "غَارْدِن" },
-                    { l: "Hh", type: "consonant", w: "House", ar: "منزل", p: "هَاوْس" },
-                    { l: "Ii", type: "vowel", w: "Island", ar: "جزيرة", p: "آيْلَانْد" },
-                    { l: "Jj", type: "consonant", w: "Juice", ar: "عصير", p: "جُوس" },
-                    { l: "Kk", type: "consonant", w: "King", ar: "ملك", p: "كِينْغ" },
-                    { l: "Ll", type: "consonant", w: "Lemon", ar: "ليمون", p: "لِيمُون" },
-                    { l: "Mm", type: "consonant", w: "Moon", ar: "قمر", p: "مُون" },
-                    { l: "Nn", type: "consonant", w: "Night", ar: "ليل", p: "نَايْت" },
-                    { l: "Oo", type: "vowel", w: "Orange", ar: "برتقال", p: "أُورِينْج" },
-                    { l: "Pp", type: "consonant", w: "Pen", ar: "قلم حبر", p: "بِين" },
-                    { l: "Qq", type: "consonant", w: "Queen", ar: "ملكة", p: "كْوِين" },
-                    { l: "Rr", type: "consonant", w: "River", ar: "نهر", p: "رِيفَرْ" },
-                    { l: "Ss", type: "consonant", w: "Sun", ar: "شمس", p: "سَان" },
-                    { l: "Tt", type: "consonant", w: "Tree", ar: "شجرة", p: "تْرِي" },
-                    { l: "Uu", type: "vowel", w: "Umbrella", ar: "مظلة", p: "أَمْبْرِيلَا" },
-                    { l: "Vv", type: "consonant", w: "Village", ar: "قرية", p: "فِيلِيج" },
-                    { l: "Ww", type: "consonant", w: "Water", ar: "ماء", p: "وَاتَرْ" },
-                    { l: "Xx", type: "consonant", w: "Box", ar: "صندوق", p: "بُوكس" },
-                    { l: "Yy", type: "consonant", w: "Yellow", ar: "أصفر", p: "يِيلُو" },
-                    { l: "Zz", type: "consonant", w: "Zoo", ar: "حديقة حيوان", p: "زُو" }
-                ],
+  function viewLearn() {
+    const units = DATA.units;
+    return `<div class="page wrap">
+      <p class="kicker">خريطة التعلم</p>
+      <h1>المسار من الحروف إلى المحادثة</h1>
+      <p class="muted">يُفتح الدرس التالي بعد إكمال الحالي. تقدّمك محفوظ على هذا الجهاز.</p>
+      ${units
+        .map((u) => {
+          const ls = DATA.lessons.filter((l) => l.unitId === u.id);
+          return `<section class="unit" style="margin-top:22px">
+            <p class="tiny en">${u.titleEn} · ${u.levelId.toUpperCase()}</p>
+            <h2>${u.titleAr}</h2>
+            <p class="tiny">${u.blurbAr}</p>
+            ${ls
+              .map((l) => {
+                const lk = locked(l);
+                const done = isDone(l.id);
+                return `<button class="lesson-row ${lk ? "locked" : ""}" data-go="lesson" data-id="${l.id}" ${lk ? "data-locked=1" : ""}>
+                  <span><b>${l.titleAr}</b><br><span class="tiny en">${l.titleEn} · ${l.minutes} د</span></span>
+                  <span>${done ? svg.check : lk ? svg.lock : svg.play}</span>
+                </button>`;
+              })
+              .join("")}
+          </section>`;
+        })
+        .join("")}
+    </div>`;
+  }
 
-                // 2. الأرقام والحساب والتقويم
-                numbersData: {
-                    cardinal: [
-                        { en: "One (1)", ar: "واحد", p: "وَان" }, { en: "Two (2)", ar: "اثنان", p: "تُو" },
-                        { en: "Three (3)", ar: "ثلاثة", p: "ثْرِي" }, { en: "Four (4)", ar: "أربعة", p: "فُور" },
-                        { en: "Five (5)", ar: "خمسة", p: "فَايْف" }, { en: "Six (6)", ar: "ستة", p: "سِكْس" },
-                        { en: "Seven (7)", ar: "سبعة", p: "سِيفِن" }, { en: "Eight (8)", ar: "ثمانية", p: "إِيت" },
-                        { en: "Nine (9)", ar: "تسعة", p: "نَايْن" }, { en: "Ten (10)", ar: "عشرة", p: "تِين" },
-                        { en: "Twenty (20)", ar: "عشرون", p: "تْوِينْتِي" }, { en: "Fifty (50)", ar: "خمسون", p: "فِيفْتِي" },
-                        { en: "One Hundred (100)", ar: "مائة", p: "وَانْ هَانْدْرِد" }, { en: "One Thousand (1,000)", ar: "ألف", p: "وَانْ ثَاوْزَانْد" }
-                    ],
-                    ordinal: [
-                        { en: "First (1st)", ar: "الأول", p: "فِيرْسْت" }, { en: "Second (2nd)", ar: "الثاني", p: "سِيكَانْد" },
-                        { en: "Third (3rd)", ar: "الثالث", p: "ثِيرْد" }, { en: "Fourth (4th)", ar: "الرابع", p: "فُورْث" },
-                        { en: "Fifth (5th)", ar: "الخامس", p: "فِيفْث" }, { en: "Tenth (10th)", ar: "العاشر", p: "تِينْث" }
-                    ],
-                    days: [
-                        { en: "Sunday", ar: "الأحد", p: "سَانْدِي" }, { en: "Monday", ar: "الإثنين", p: "مَانْدِي" },
-                        { en: "Tuesday", ar: "الثلاثاء", p: "تْيُوزْدِي" }, { en: "Wednesday", ar: "الأربعاء", p: "وِينْزْدِي" },
-                        { en: "Thursday", ar: "الخميس", p: "ثِيرْزْدِي" }, { en: "Friday", ar: "الجمعة", p: "فْرَايْدِي" },
-                        { en: "Saturday", ar: "السبت", p: "سَاتِرْدِي" }
-                    ],
-                    months: [
-                        { en: "January", ar: "يناير (شهر 1)", p: "جَانْيُوارِي" }, { en: "February", ar: "فبراير (شهر 2)", p: "فِيبْرُوارِي" },
-                        { en: "March", ar: "مارس (شهر 3)", p: "مَارْتْش" }, { en: "April", ar: "أبريل (شهر 4)", p: "إِيبْرِل" },
-                        { en: "May", ar: "مايو (شهر 5)", p: "مِي" }, { en: "June", ar: "يونيو (شهر 6)", p: "جُون" },
-                        { en: "July", ar: "يوليو (شهر 7)", p: "جُولَاي" }, { en: "August", ar: "أغسطس (شهر 8)", p: "أُوغَسْت" },
-                        { en: "September", ar: "سبتمبر (شهر 9)", p: "سِيبْتِمْبَر" }, { en: "October", ar: "أكتوبر (شهر 10)", p: "أُوكْتُوبَر" },
-                        { en: "November", ar: "نوفمبر (شهر 11)", p: "نُوفِمْبَر" }, { en: "December", ar: "ديسمبر (شهر 12)", p: "دِيسِمْبَر" }
-                    ],
-                    seasons: [
-                        { en: "Spring", ar: "الربيع", p: "سْبْرِينْغ" }, { en: "Summer", ar: "الصيف", p: "سَامَرْ" },
-                        { en: "Autumn / Fall", ar: "الخريف", p: "أُوتُوم / فُول" }, { en: "Winter", ar: "الشتاء", p: "وِينْتَرْ" }
-                    ],
-                    math: [
-                        { en: "Plus (+)", ar: "زائد / إضافة", p: "بْلَاس" }, { en: "Minus (-)", ar: "ناقص / طرح", p: "مَايْنَس" },
-                        { en: "Multiplied by (×)", ar: "ضرب / جداء", p: "مَالْتِبْلَايْدْ بَاي" }, { en: "Divided by (÷)", ar: "قسمة / مقسوم على", p: "دِيفَايْدِدْ بَاي" },
-                        { en: "Equals (=)", ar: "يساوي", p: "إِيكْوَلْز" }
-                    ]
-                },
+  function viewLesson(id) {
+    const l = DATA.lessons.find((x) => x.id === id);
+    if (!l) return `<div class="page wrap"><p>الدرس غير موجود.</p></div>`;
+    if (locked(l)) {
+      return `<div class="page wrap"><div class="panel"><h1>الدرس مقفل</h1><p class="muted">أكمل الدرس السابق أولًا.</p><button class="btn btn-gold" data-go="learn">العودة للمسار</button></div></div>`;
+    }
+    const words = (l.wordIds || []).map(wordById).filter(Boolean);
+    const exHtml = (l.exercises || [])
+      .map((q, i) => renderQ(q, i, "lesson-" + l.id))
+      .join("");
+    return `<div class="page wrap">
+      <p class="kicker">${l.levelId.toUpperCase()} · ${l.minutes} دقيقة</p>
+      <h1>${l.titleAr}</h1>
+      <p class="en muted">${l.titleEn}</p>
+      <h3 style="margin-top:22px">أهداف الدرس</h3>
+      <ul class="obj">${(l.objectives || []).map((o) => `<li>${o}</li>`).join("")}</ul>
+      <h3 style="margin-top:22px">الشرح</h3>
+      <p>${l.explanationAr}</p>
+      <h3 style="margin-top:22px">أمثلة</h3>
+      ${(l.examples || [])
+        .map(
+          (e) =>
+            `<div class="ex"><div style="display:flex;justify-content:space-between;gap:8px"><b class="en">${e.en}</b><button class="speak" data-speak="${encodeURIComponent(e.en)}">${svg.play}</button></div><p class="muted">${e.ar}${e.phonetic ? " · " + e.phonetic : ""}</p></div>`,
+        )
+        .join("")}
+      ${
+        words.length
+          ? `<h3 style="margin-top:22px">كلمات الدرس</h3><div class="words">${words.map(wordCard).join("")}</div>`
+          : ""
+      }
+      ${
+        l.dialogue
+          ? `<h3 style="margin-top:22px">محادثة</h3><div class="dialogue">${l.dialogue
+              .map(
+                (ln) =>
+                  `<div class="line"><b>${ln.speaker}</b><p class="en">${ln.en}</p><p class="muted">${ln.ar}</p><button class="speak" data-speak="${encodeURIComponent(ln.en)}">${svg.play}</button></div>`,
+              )
+              .join("")}</div>`
+          : ""
+      }
+      ${l.culturalNote ? `<p class="tiny" style="margin-top:16px">ملاحظة: ${l.culturalNote}</p>` : ""}
+      <h3 style="margin-top:22px">ملخص</h3><p>${l.summaryAr}</p>
+      <h3 style="margin-top:22px">تمارين</h3>
+      <div class="rate">السرعة
+        <button data-rate="0.7" class="${rate === 0.7 ? "on" : ""}">بطيء</button>
+        <button data-rate="0.85" class="${rate === 0.85 ? "on" : ""}">عادي</button>
+        <button data-rate="1" class="${rate === 1 ? "on" : ""}">سريع</button>
+      </div>
+      ${exHtml}
+      <div class="row-btns">
+        <button class="btn btn-gold" data-act="complete" data-id="${l.id}">أكملت الدرس</button>
+        <button class="btn btn-line" data-go="learn">العودة للمسار</button>
+      </div>
+    </div>`;
+  }
 
-                // 3. خزانة المفردات الشاملة (8 تصنيفات)
-                vocabData: {
-                    colors: [
-                        { en: "Red", ar: "أحمر", p: "رِيد" }, { en: "Blue", ar: "أزرق", p: "بْلُو" },
-                        { en: "Green", ar: "أخضر", p: "غْرِين" }, { en: "White", ar: "أبيض", p: "وَايْت" },
-                        { en: "Black", ar: "أسود", p: "بْلَاك" }, { en: "Yellow", ar: "أصفر", p: "يِيلُو" },
-                        { en: "Purple", ar: "أرجواني / بنفسجي", p: "بِيرْبِل" }, { en: "Gold", ar: "ذهبي", p: "غُولْد" }
-                    ],
-                    family: [
-                        { en: "Father", ar: "أب / والد", p: "فَاذَرْ" }, { en: "Mother", ar: "أم / والدة", p: "مَاذَرْ" },
-                        { en: "Brother", ar: "أخ", p: "بْرَاذَرْ" }, { en: "Sister", ar: "أخت", p: "سِيسْتَرْ" },
-                        { en: "Grandfather", ar: "جد", p: "غْرَانْدْ فَاذَرْ" }, { en: "Grandmother", ar: "جدة", p: "غْرَانْدْ مَاذَرْ" },
-                        { en: "Uncle", ar: "عم / خال", p: "أَنْكِل" }, { en: "Aunt", ar: "عمة / خالة", p: "آَنْت" }
-                    ],
-                    body: [
-                        { en: "Head", ar: "رأس", p: "هِيد" }, { en: "Eye", ar: "عين", p: "آي" },
-                        { en: "Ear", ar: "أذن", p: "إِير" }, { en: "Nose", ar: "أنف", p: "نُوز" },
-                        { en: "Mouth", ar: "فم", p: "مَاوْث" }, { en: "Hand", ar: "يد", p: "هَانْد" },
-                        { en: "Heart", ar: "قلب", p: "هَارْت" }, { en: "Leg", ar: "ساق", p: "لِيغ" }
-                    ],
-                    food: [
-                        { en: "Bread", ar: "خبز", p: "بْرِيد" }, { en: "Water", ar: "ماء", p: "وَاتَرْ" },
-                        { en: "Milk", ar: "حليب", p: "مِيلْك" }, { en: "Meat", ar: "لحم", p: "مِيت" },
-                        { en: "Chicken", ar: "دجاج", p: "تْشِيكِن" }, { en: "Rice", ar: "أرز", p: "رَايْس" },
-                        { en: "Apple", ar: "تفاح", p: "أَبِل" }, { en: "Coffee", ar: "قهوة", p: "كُوفِي" }
-                    ],
-                    clothes: [
-                        { en: "Shirt", ar: "قميص", p: "شِيرْت" }, { en: "Trousers / Pants", ar: "بنطال", p: "تْرَاوْزَرْزْ" },
-                        { en: "Jacket", ar: "سترة / جاكيت", p: "جَاكِيت" }, { en: "Shoes", ar: "حذاء", p: "شُوز" },
-                        { en: "Dress", ar: "فستان", p: "دْرِيس" }, { en: "Hat", ar: "قبعة", p: "هَات" }
-                    ],
-                    jobs: [
-                        { en: "Doctor", ar: "طبيب / طبيبة", p: "دَاكْتُور" }, { en: "Teacher", ar: "معلم / معلمة", p: "تِيتْشَرْ" },
-                        { en: "Engineer", ar: "مهندس / مهندسة", p: "إِنْجِنِير" }, { en: "Manager", ar: "مدير", p: "مَانِيجَرْ" },
-                        { en: "Lawyer", ar: "محامٍ", p: "لُويَرْ" }, { en: "Nurse", ar: "ممرض / ممرضة", p: "نِيرْس" }
-                    ],
-                    house: [
-                        { en: "Living room", ar: "غرفة الجلوس", p: "لِيفِينْغ رُوم" }, { en: "Bedroom", ar: "غرفة النوم", p: "بِيدْرُوم" },
-                        { en: "Kitchen", ar: "مطبخ", p: "كِيتْشِن" }, { en: "Bathroom", ar: "حمام", p: "بَاثْرُوم" },
-                        { en: "Door", ar: "باب", p: "دُور" }, { en: "Window", ar: "نافذة", p: "وِينْدُو" }
-                    ],
-                    animals: [
-                        { en: "Horse", ar: "حصان", p: "هُورْس" }, { en: "Camel", ar: "جمل", p: "كَامِل" },
-                        { en: "Falcon / Eagle", ar: "صقر / نسر", p: "فَالْكُون" }, { en: "Cat", ar: "قطة", p: "كَات" },
-                        { en: "Bird", ar: "طائر", p: "بِيرْد" }, { en: "Fish", ar: "سمكة", p: "فِيش" }
-                    ]
-                },
+  function wordCard(w) {
+    const on = P.saved.includes(w.id);
+    return `<article class="word">
+      <div class="word-top">
+        <div><b class="en" style="font-size:1.25rem">${w.en}</b><div class="tiny">${w.ar} · ${w.phonetic}</div></div>
+        <div style="display:flex;gap:6px">
+          <button class="speak" data-speak="${encodeURIComponent(w.en)}" aria-label="نطق">${svg.play}</button>
+          <button class="save ${on ? "on" : ""}" data-save="${w.id}" aria-label="حفظ">${svg.star}</button>
+        </div>
+      </div>
+      <p class="en tiny">${w.exampleEn}</p>
+      <p class="tiny">${w.exampleAr}</p>
+    </article>`;
+  }
 
-                // 4. جمل مواقف الحياة اليومية (8 مجالات)
-                lifeSentences: {
-                    airport: [
-                        { en: "Where is the check-in counter for Flight 204?", ar: "أين يقع مكتب تسجيل الرحلة 204؟", p: "وِيرْ إِزْ ذَا تْشِيكْ إِنْ كَاوْنْتَرْ...؟" },
-                        { en: "Here is my passport and boarding pass.", ar: "تفضل، هذا جواز سفري وتذكرة الصعود.", p: "هِيرْ إِزْ مَايْ بَاسْبُورْتْ أَنْدْ بُورْدِينْغ بَاسْ." },
-                        { en: "Which gate does the plane depart from?", ar: "من أي بوابة تغادر الطائرة؟", p: "وِتْشْ غِيتْ دَازْ ذَا بْلِينْ دِيبَارْتْ فْرُومْ؟" },
-                        { en: "Where can I collect my luggage?", ar: "أين يمكنني استلام حقائبي؟", p: "وِيرْ كَانْ آيْ كُولِيكْتْ مَايْ لَاغِيجْ؟" }
-                    ],
-                    hotel: [
-                        { en: "I have a reservation under the name Ahmed.", ar: "لدي حجز مسبق باسم أحمد.", p: "آيْ هَافْ أَيْ رِيزِرْفِيشِنْ أَنْدَرْ ذَا نِيمْ أَحْمَدْ." },
-                        { en: "What time is breakfast served in the morning?", ar: "في أي وقت يُقدم الإفطار صباحاً؟", p: "وَاتْ تَايْمْ إِزْ بْرِيكْفَاسْتْ سِيرْفْدْ...؟" },
-                        { en: "What is the Wi-Fi password, please?", ar: "ما هي كلمة سر الإنترنت لو سمحت؟", p: "وَاتْ إِزْ ذَا وَايْ فَايْ بَاسْوُورْدْ بْلِيزْ؟" },
-                        { en: "Could I have extra clean towels?", ar: "هل يمكنني الحصول على مناشف نظيفة إضافية؟", p: "كُودْ آيْ هَافْ إِكْسْتْرَا كْلِينْ تَاوِلْزْ؟" }
-                    ],
-                    restaurant: [
-                        { en: "A table for two by the window, please.", ar: "طاولة لشخصين بجانب النافذة من فضلك.", p: "أَيْ تِيبِلْ فُورْ تُو بَايْ ذَا وِينْدُو بْلِيزْ." },
-                        { en: "Could we have the menu, please?", ar: "هل يمكننا الحصول على قائمة الطعام؟", p: "كُودْ وِي هَافْ ذَا مِينْيُو بْلِيزْ؟" },
-                        { en: "I would like to order grilled chicken.", ar: "أود أن أطلب دجاجاً مشوياً.", p: "آيْ وُودْ لَايْكْ تُو أُورْدَرْ غْرِيلْدْ تْشِيكِنْ." },
-                        { en: "Could we have the bill, please?", ar: "هل يمكننا الحصول على الفاتورة لو سمحت؟", p: "كُودْ وِي هَافْ ذَا بِلْ بْلِيزْ؟" }
-                    ],
-                    shopping: [
-                        { en: "How much is this shirt?", ar: "كم سعر هذا القميص؟", p: "هَاوْ مَاتْشْ إِزْ ذِسْ شِيرْتْ؟" },
-                        { en: "Do you have this in a larger size?", ar: "هل يتوفر هذا بمقاس أكبر؟", p: "دُو يُو هَافْ ذِسْ إِنْ أَيْ لَارْجَرْ سَايْزْ؟" },
-                        { en: "Can I try this on in the fitting room?", ar: "هل يمكنني تجربة هذا في غرفة القياس؟", p: "كَانْ آيْ تْرَايْ ذِسْ أُونْ...؟" },
-                        { en: "Do you accept credit card payments?", ar: "هل تقبلون الدفع بالبطاقة الائتمانية؟", p: "دُو يُو أَكْسِيبْتْ كْرِيدِتْ كَارْدْ بِيمِينْتْسْ؟" }
-                    ],
-                    hospital: [
-                        { en: "I have a severe headache and fever.", ar: "أعاني من صداع شديد وارتفاع في الحرارة.", p: "آيْ هَافْ أَيْ سِيفِيرْ هِيدِيكْ أَنْدْ فِيفَرْ." },
-                        { en: "How many times a day should I take this medicine?", ar: "كم مرة في اليوم يجب أن أتناول هذا الدواء؟", p: "هَاوْ مِينِي تَايْمْزْ أَيْ دِي شُودْ آيْ تِيكْ...؟" },
-                        { en: "I need a painkiller, please.", ar: "أحتاج إلى مسكن للألم لو سمحت.", p: "آيْ نِيدْ أَيْ بِينْ كِيلَرْ بْلِيزْ." },
-                        { en: "Where is the nearest pharmacy?", ar: "أين تقع أقرب صيدلية من هنا؟", p: "وِيرْ إِزْ ذَا نِيرِسْتْ فَارْمَاسِي؟" }
-                    ],
-                    directions: [
-                        { en: "Excuse me, how do I get to the train station?", ar: "معذرة، كيف أصل إلى محطة القطار؟", p: "إِكْسْكْيُوزْ مِي، هَاوْ دُو آيْ غِيتْ تُو...؟" },
-                        { en: "Go straight and turn left at the traffic light.", ar: "امشِ للأمام مباشرة ثم انعطف يساراً عند الإشارة.", p: "غُو سْتْرِيتْ أَنْدْ تِيرْنْ لِيفْتْ...؟" },
-                        { en: "Is it within walking distance?", ar: "هل المكان قريب ويمكن الوصول إليه مشياً؟", p: "إِزْ إِتْ وِذِينْ وَوكِينْغ دِسْتَانْسْ؟" }
-                    ],
-                    work: [
-                        { en: "Let me introduce myself, my name is Ahmed.", ar: "اسمحوا لي بتقديم نفسي، اسمي أحمد.", p: "لِتْ مِي إِنْتْرُودْيُوسْ مَايْسِيلْفْ..." },
-                        { en: "I have five years of professional experience.", ar: "لدي خمس سنوات من الخبرة المهنية.", p: "آيْ هَافْ فَايْفْ يِيرْزْ أُوفْ إِكْسْبِيرِيَانْسْ." },
-                        { en: "I will send you the report by email.", ar: "سأرسل لك التقرير عبر البريد الإلكتروني.", p: "آيْ وِلْ سِينْدْ يُو ذَا رِيبُورْتْ بَايْ إِيمِيلْ." }
-                    ],
-                    daily: [
-                        { en: "Good morning! How are you doing today?", ar: "صباح الخير! كيف حالك اليوم؟", p: "جُودْ مُورْنِينْغ! هَاوْ آرْ يُو دُوئِينْغ تُودِي؟" },
-                        { en: "Thank you very much for your help.", ar: "شكراً جزيلاً لك على مساعدتك.", p: "ثَانْكْ يُو فِيرِي مَاتْشْ فُورْ يُورْ هِيلْبْ." },
-                        { en: "Have a wonderful and blessed day!", ar: "أتمنى لك يوماً رائعاً ومباركاً!", p: "هَافْ أَيْ وَانْدَرْفُولْ أَنْدْ بْلِيسْدْ دِي!" }
-                    ]
-                },
+  function renderQ(q, i, ns) {
+    const key = ns + "-" + q.id;
+    if (q.type === "fill" || q.type === "translate") {
+      return `<div class="q" data-qid="${q.id}" data-ns="${ns}">
+        <p>${i + 1}. ${q.promptAr}${q.promptEn ? ` <span class="en">(${q.promptEn})</span>` : ""}</p>
+        <input class="field" data-fill="${key}" placeholder="اكتب الإجابة">
+        <button class="btn btn-navy" style="margin-top:8px" data-check-fill="${key}" data-correct="${encodeURIComponent(q.correct)}" data-why="${encodeURIComponent(q.explanationAr)}">تحقق</button>
+        <div class="feedback" data-fb="${key}"></div>
+      </div>`;
+    }
+    if (q.type === "order") {
+      const opts = shuffle(q.options || q.correct.split(" "));
+      return `<div class="q" data-qid="${q.id}">
+        <p>${i + 1}. ${q.promptAr}</p>
+        <p class="tiny">اضغط الكلمات بالترتيب الصحيح</p>
+        <div class="opts" data-order="${key}" data-correct="${encodeURIComponent(q.correct)}" data-why="${encodeURIComponent(q.explanationAr)}">
+          ${opts.map((o) => `<button class="opt" data-token="${encodeURIComponent(o)}">${o}</button>`).join("")}
+        </div>
+        <p class="tiny" data-built="${key}"></p>
+        <div class="feedback" data-fb="${key}"></div>
+      </div>`;
+    }
+    const opts = q.options || [];
+    const listen = q.type === "listen" && q.audioText
+      ? `<button class="btn btn-line" data-speak="${encodeURIComponent(q.audioText)}">${svg.play} استمع</button>`
+      : "";
+    return `<div class="q" data-qid="${q.id}">
+      <p>${i + 1}. ${q.promptAr}</p>
+      ${listen}
+      <div class="opts">${opts
+        .map(
+          (o) =>
+            `<button class="opt" data-pick="${encodeURIComponent(o)}" data-correct="${encodeURIComponent(q.correct)}" data-why="${encodeURIComponent(q.explanationAr)}" data-fb="${key}">${o}</button>`,
+        )
+        .join("")}</div>
+      <div class="feedback" data-fb="${key}"></div>
+    </div>`;
+  }
 
-                // 5. تصاريف الأفعال الشائعة
-                verbs: [
-                    { base: "Be (am/is/are)", past: "was / were", pp: "been", ar: "يكون" },
-                    { base: "Have / Has", past: "had", pp: "had", ar: "يملك / يتناول" },
-                    { base: "Do / Does", past: "did", pp: "done", ar: "يفعل / ينجز" },
-                    { base: "Go", past: "went", pp: "gone", ar: "يذهب" },
-                    { base: "See", past: "saw", pp: "seen", ar: "يرى" },
-                    { base: "Speak", past: "spoke", pp: "spoken", ar: "يتحدث" },
-                    { base: "Write", past: "wrote", pp: "written", ar: "يكتب" },
-                    { base: "Take", past: "took", pp: "taken", ar: "يأخذ" },
-                    { base: "Give", past: "gave", pp: "given", ar: "يعطي" },
-                    { base: "Come", past: "came", pp: "come", ar: "يأتي" }
-                ],
+  function viewAlphabet() {
+    return `<div class="page wrap">
+      <p class="kicker">الحروف والنطق</p>
+      <h1>الأبجدية الإنجليزية</h1>
+      <p class="muted">اضغط الحرف للاستماع إلى اسمه. الكبيرة والصغيرة لهما الاسم نفسه.</p>
+      <div class="rate" style="margin:12px 0">السرعة
+        <button data-rate="0.7" class="${rate === 0.7 ? "on" : ""}">بطيء</button>
+        <button data-rate="0.85" class="${rate === 0.85 ? "on" : ""}">عادي</button>
+        <button data-rate="1" class="${rate === 1 ? "on" : ""}">سريع</button>
+      </div>
+      <div class="letters">${DATA.letters
+        .map(
+          (L) =>
+            `<button class="letter" data-speak="${encodeURIComponent(L[0])}" data-speak2="${encodeURIComponent(L[4])}">
+              <b>${L[0]} ${L[1]}</b>
+              <span class="tiny">${L[3]}</span>
+              <span class="tiny en">${L[4]} · ${L[5]}</span>
+            </button>`,
+        )
+        .join("")}</div>
+      <h3 style="margin-top:28px">أيام الأسبوع</h3>
+      <div class="grid-4">${DATA.days.map((d) => `<button class="card" data-speak="${encodeURIComponent(d[0])}"><b class="en">${d[0]}</b><p class="tiny">${d[1]}</p></button>`).join("")}</div>
+      <h3 style="margin-top:28px">الشهور</h3>
+      <div class="grid-4">${DATA.months.map((d) => `<button class="card" data-speak="${encodeURIComponent(d[0])}"><b class="en">${d[0]}</b><p class="tiny">${d[1]}</p></button>`).join("")}</div>
+    </div>`;
+  }
 
-                // 6. التعبيرات الشائعة والأمثال
-                idioms: [
-                    { en: "Piece of cake", ar: "أمر سهل للغاية (شديد السهولة)", p: "بِيسْ أُوفْ كِيكْ", ex: "The test was a piece of cake." },
-                    { en: "Break a leg", ar: "أتمنى لك حظاً موفقاً وتألقاً", p: "بْرِيكْ أَيْ لِيغ", ex: "Break a leg in your presentation!" },
-                    { en: "Better late than never", ar: "أن تصل متأخراً خير من ألا تصل أبداً", p: "بِيتَرْ لِيتْ ذَانْ نِيفَرْ", ex: "He finished his work; better late than never." },
-                    { en: "Actions speak louder than words", ar: "الأفعال أبلغ وأصدق من الأقوال", p: "أَكْشِنْزْ سْبِيكْ لَاوْدَرْ ذَانْ وِيرْدْزْ", ex: "Show me your progress; actions speak louder." },
-                    { en: "Time is money", ar: "الوقت كالسيف / الوقت من ذهب", p: "تَايْمْ إِزْ مَانِي", ex: "Let us start the meeting, time is money." }
-                ],
+  function viewVocab(topic) {
+    const topics = DATA.topics;
+    const q = (window.__q || "").trim().toLowerCase();
+    let words = DATA.words;
+    if (topic) words = words.filter((w) => w.topicId === topic);
+    if (q) words = words.filter((w) => (w.en + w.ar + w.phonetic).toLowerCase().includes(q));
+    return `<div class="page wrap">
+      <p class="kicker">المفردات</p>
+      <h1>كلمات مناحي الحياة</h1>
+      <input class="search" id="vocab-q" value="${window.__q || ""}" placeholder="ابحث عن كلمة أو ترجمتها">
+      <div class="filters">
+        <button class="chip ${!topic ? "on" : ""}" data-go="vocab">الكل</button>
+        ${topics.map((t) => `<button class="chip ${topic === t.id ? "on" : ""}" data-go="vocab" data-id="${t.id}">${t.titleAr}</button>`).join("")}
+      </div>
+      <p class="tiny">${words.length} كلمة</p>
+      <div class="words">${words.map(wordCard).join("")}</div>
+    </div>`;
+  }
 
-                // 7. البطاقات التعليمية التفاعلية
-                flashcards: [
-                    { en: "Knowledge", ar: "المَعْرِفَة والعِلْم", p: "نُولِيدْج" },
-                    { en: "Determination", ar: "العَزِيمَة والإِصْرَار", p: "دِيتِيرْمِنِيشِن" },
-                    { en: "Success", ar: "النَّجَاح والتَّفَوُّق", p: "سَاكْسِيس" },
-                    { en: "Confidence", ar: "الثِّقَة بالنَّفْس", p: "كُونْفِيدَانْس" },
-                    { en: "Opportunity", ar: "الفُرْصَة الثَّمِينَة", p: "أُوبُورْتْيُونِيتِي" }
-                ]
-            },
+  function viewGrammar(id) {
+    if (id) {
+      const g = DATA.grammar.find((x) => x.id === id);
+      if (!g) return `<div class="page wrap"><p>غير موجود</p></div>`;
+      const table = g.table
+        ? `<table class="g"><thead><tr>${g.table.headers.map((h) => `<th>${h}</th>`).join("")}</tr></thead><tbody>${g.table.rows
+            .map((r) => `<tr>${r.map((c) => `<td>${c}</td>`).join("")}</tr>`)
+            .join("")}</tbody></table>`
+        : "";
+      return `<div class="page wrap">
+        <p class="kicker">${g.levelId.toUpperCase()}</p>
+        <h1>${g.titleAr}</h1>
+        <p class="en muted">${g.titleEn}</p>
+        <p>${g.explanationAr}</p>
+        ${table}
+        <h3>صحيح</h3>${(g.good || []).map((x) => `<p class="good en">${x.en} — ${x.ar}</p>`).join("")}
+        <h3>خطأ شائع</h3>${(g.bad || []).map((x) => `<p class="bad">${x.en} — ${x.why}</p>`).join("")}
+        <h3>تمارين</h3>${(g.exercises || []).map((q, i) => renderQ(q, i, "g-" + g.id)).join("")}
+        <button class="btn btn-line" data-go="grammar">كل القواعد</button>
+      </div>`;
+    }
+    return `<div class="page wrap">
+      <p class="kicker">القواعد</p>
+      <h1>شرح عربي وجداول قصيرة</h1>
+      <div class="grid-3" style="margin-top:18px">${DATA.grammar
+        .map((g) => `<a class="card" data-go="grammar" data-id="${g.id}"><p class="tiny en">${g.titleEn}</p><h3>${g.titleAr}</h3><p class="muted">${g.explanationAr.slice(0, 90)}…</p></a>`)
+        .join("")}</div>
+    </div>`;
+  }
 
-            init() {
-                this.filterAlphabet('all');
-                this.filterNumbersTab('cardinal');
-                this.filterVocab('colors');
-                this.filterLifeCategory('airport');
-                this.renderVerbs();
-                this.renderIdioms();
-                this.renderFlashcard();
-            },
+  function viewTalks(id) {
+    if (id) {
+      const c = DATA.talks.find((x) => x.id === id);
+      if (!c) return `<div class="page wrap"><p>غير موجود</p></div>`;
+      return `<div class="page wrap">
+        <p class="kicker">${c.levelId.toUpperCase()}</p>
+        <h1>${c.titleAr}</h1>
+        <p class="en muted">${c.titleEn}</p>
+        <p class="muted">${c.sceneAr}</p>
+        <div class="row-btns"><button class="btn btn-gold" data-act="play-all" data-id="${c.id}">تشغيل الحوار</button></div>
+        <div class="dialogue" style="margin-top:16px">${c.lines
+          .map(
+            (ln, i) =>
+              `<div class="line"><b>${ln.speaker}</b><p class="en">${ln.en}</p><p class="muted">${ln.ar}</p><button class="speak" data-speak="${encodeURIComponent(ln.en)}">${svg.play}</button></div>`,
+          )
+          .join("")}</div>
+        <button class="btn btn-line" style="margin-top:16px" data-go="talks">كل المحادثات</button>
+      </div>`;
+    }
+    return `<div class="page wrap">
+      <p class="kicker">المحادثات</p>
+      <h1>مشاهد من الحياة اليومية</h1>
+      <div class="grid-3" style="margin-top:18px">${DATA.talks
+        .map((c) => `<a class="card" data-go="talks" data-id="${c.id}"><p class="tiny en">${c.titleEn}</p><h3>${c.titleAr}</h3><p class="muted">${c.sceneAr}</p></a>`)
+        .join("")}</div>
+    </div>`;
+  }
 
-            navigate(viewId) {
-                document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
-                document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
-                const target = document.getElementById('view-' + viewId);
-                if (target) target.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            },
+  function viewQuiz() {
+    const qs = DATA.placement;
+    return `<div class="page wrap">
+      <p class="kicker">تحديد المستوى</p>
+      <h1>اختبار قصير للمبتدئين</h1>
+      <p class="muted">أجب ثم اضغط «احسب النتيجة». يمكنك تخطي الاختبار والبدء من الحروف.</p>
+      ${qs.map((q, i) => renderQ(q, i, "place")).join("")}
+      <div class="row-btns">
+        <button class="btn btn-gold" data-act="score-place">احسب النتيجة</button>
+        <button class="btn btn-line" data-go="learn">تخطي والبدء من الصفر</button>
+      </div>
+      <div id="place-result"></div>
+    </div>`;
+  }
 
-            filterAlphabet(type) {
-                const c = document.getElementById('alphabet-grid-container');
-                if (!c) return;
-                let list = this.state.alphabet;
-                if (type === 'vowels') list = list.filter(i => i.type === 'vowel');
-                if (type === 'consonants') list = list.filter(i => i.type === 'consonant');
+  function viewMe() {
+    const total = DATA.lessons.length;
+    const done = P.completed.length;
+    const pct = Math.round((done / total) * 100);
+    const name = P.name || "متعلم";
+    const badges = [
+      { id: "first", ok: done >= 1, t: "أول خطوة", n: "أكمل درسًا واحدًا" },
+      { id: "s3", ok: P.streak >= 3, t: "ثلاثة أيام", n: "سلسلة تعلم 3 أيام" },
+      { id: "w20", ok: P.saved.length >= 20, t: "جامع الكلمات", n: "احفظ 20 كلمة" },
+      { id: "half", ok: done >= 9, t: "منتصف الطريق", n: "أكمل نصف الدروس" },
+      { id: "all", ok: done >= total, t: "مستوى مكتمل", n: "أنهِ كل الدروس" },
+    ];
+    const cert =
+      done >= 8
+        ? `<div class="cert" style="margin-top:24px">
+            <p class="kicker">شهادة إتمام</p>
+            <h2>English بالعربي</h2>
+            <p>تُمنح هذه الشهادة إلى</p>
+            <h3>${name}</h3>
+            <p class="muted">لإتمام ${done} درسًا في مسار المبتدئين</p>
+            <p class="tiny">إشراف: عبد الله أحمد · البركة ديجيتال</p>
+          </div>`
+        : `<p class="tiny">أكمل 8 دروس لفتح الشهادة الرقمية.</p>`;
+    return `<div class="page wrap">
+      <p class="kicker">لوحة المتعلم</p>
+      <h1>مرحبًا ${name}</h1>
+      <label class="tiny">اسمك على الشهادة</label>
+      <input class="search" id="uname" value="${P.name || ""}" placeholder="اكتب اسمك">
+      <div class="panel" style="margin-top:16px">
+        <p>التقدم العام</p>
+        <div class="progress-bar"><span style="width:${pct}%"></span></div>
+        <p class="tiny">${done} / ${total} درسًا · ${P.xp} نقطة · سلسلة ${P.streak} يومًا · ${P.saved.length} كلمة محفوظة</p>
+      </div>
+      <div class="grid-3" style="margin-top:16px">${badges
+        .map((b) => `<article class="card"><div class="ico">${b.ok ? svg.check : svg.star}</div><h3>${b.t}</h3><p class="muted">${b.n}</p></article>`)
+        .join("")}</div>
+      ${cert}
+      <h3 style="margin-top:24px">كلمات محفوظة</h3>
+      <div class="words">${DATA.words.filter((w) => P.saved.includes(w.id)).map(wordCard).join("") || "<p class='muted'>لم تحفظ كلمات بعد.</p>"}</div>
+      <h3 style="margin-top:24px">أخطائي</h3>
+      ${P.mistakes.length ? P.mistakes.slice(-12).map((m) => `<p class="tiny">• ${m}</p>`).join("") : "<p class='muted'>لا أخطاء مسجّلة.</p>"}
+    </div>`;
+  }
 
-                c.innerHTML = list.map(item => `
-                    <div class="alpha-card" onclick="app.speak('${item.l}. ${item.w}')">
-                        <h2 class="en-text" style="color:var(--royal-blue); font-size:2rem;">${item.l}</h2>
-                        <p class="en-text" style="font-weight:800; color:var(--accent-gold);">${item.w}</p>
-                        <p style="font-size:0.85rem; color:var(--text-muted);">${item.ar}</p>
-                        <p style="font-size:0.75rem; color:var(--accent-gold); margin-top:2px;">${item.p}</p>
-                    </div>
-                `).join('');
-            },
+  function viewAbout() {
+    return `<div class="page wrap">
+      <p class="kicker">عن المنصة</p>
+      <h1>English بالعربي</h1>
+      <p class="lead">منصة تعليمية لتعليم الإنجليزية للمبتدئين الناطقين بالعربية. رحلة من الحروف والكلمات حتى الجمل والمحادثات اليومية.</p>
+      <div class="panel" style="margin-top:18px">
+        <p class="kicker">المشرف العام</p>
+        <h2>عبد الله أحمد</h2>
+        <p class="muted">يشرف على المسار والمحتوى والأسلوب التعليمي.</p>
+      </div>
+      <div class="panel" style="margin-top:12px">
+        <p class="kicker">الإنتاج</p>
+        <h2>البركة ديجيتال</h2>
+        <p class="muted">تصميم وتجربة استخدام عربية فخمة وسهلة لكبار السن والمبتدئين.</p>
+      </div>
+      <p class="tiny" style="margin-top:18px">هذا الملف يعمل بالكامل من GitHub Pages دون خادم. التقدّم يُحفظ محليًا في المتصفح.</p>
+    </div>`;
+  }
 
-            filterNumbersTab(tabKey) {
-                const data = this.state.numbersData[tabKey];
-                const c = document.getElementById('numbers-data-container');
-                if (!c) return;
-                c.innerHTML = data.map(i => `
-                    <div class="card">
-                        <div>
-                            <h3 class="en-text" style="color:var(--royal-blue); font-size:1.3rem;">${i.en}</h3>
-                            <p style="font-weight:800; margin:4px 0;">${i.ar}</p>
-                            <p style="color:var(--accent-gold); font-size:0.85rem;">نطق: ${i.p}</p>
-                        </div>
-                        <button class="btn-gold" style="margin-top:1rem; padding:0.45rem; justify-content:center;" onclick="app.speak('${i.en.replace(/'/g, "\\'")}')">
-                            <i class="fa-solid fa-volume-high"></i> استمع
-                        </button>
-                    </div>
-                `).join('');
-            },
+  function page() {
+    const { view, id } = parseHash();
+    const map = {
+      home: viewHome,
+      learn: viewLearn,
+      lesson: () => viewLesson(id),
+      alphabet: viewAlphabet,
+      vocab: () => viewVocab(id),
+      grammar: () => viewGrammar(id),
+      talks: () => viewTalks(id),
+      quiz: viewQuiz,
+      me: viewMe,
+      about: viewAbout,
+    };
+    const body = (map[view] || viewHome)();
+    $("#app").innerHTML = `<div class="site">${header()}<main>${body}</main>${footer()}${bottom()}</div>`;
+    const vq = $("#vocab-q");
+    if (vq) {
+      vq.focus();
+      const len = vq.value.length;
+      vq.setSelectionRange(len, len);
+    }
+    window.scrollTo(0, 0);
+  }
 
-            filterVocab(catKey) {
-                const data = this.state.vocabData[catKey];
-                const c = document.getElementById('vocab-cards-container');
-                if (!c) return;
-                c.innerHTML = data.map(i => `
-                    <div class="card">
-                        <div>
-                            <h3 class="en-text" style="color:var(--royal-blue); font-size:1.25rem;">${i.en}</h3>
-                            <p style="font-weight:800; margin:4px 0;">${i.ar}</p>
-                            <p style="color:var(--accent-gold); font-size:0.85rem;">نطق: ${i.p}</p>
-                        </div>
-                        <button class="btn-gold" style="margin-top:1rem; padding:0.45rem; justify-content:center;" onclick="app.speak('${i.en.replace(/'/g, "\\'")}')">
-                            <i class="fa-solid fa-volume-high"></i> استمع
-                        </button>
-                    </div>
-                `).join('');
-            },
+  const orderState = {};
 
-            filterLifeCategory(catKey) {
-                const data = this.state.lifeSentences[catKey];
-                const c = document.getElementById('life-sentences-container');
-                if (!c) return;
-                c.innerHTML = data.map(i => `
-                    <div class="card">
-                        <div>
-                            <h4 class="en-text" style="color:var(--royal-blue); font-size:1.15rem;">${i.en}</h4>
-                            <p style="font-weight:800; margin:4px 0;">${i.ar}</p>
-                            <p style="color:var(--accent-gold); font-size:0.85rem;">نطق: ${i.p}</p>
-                        </div>
-                        <button class="btn-gold" style="margin-top:1rem; padding:0.45rem; justify-content:center;" onclick="app.speak('${i.en.replace(/'/g, "\\'")}')">
-                            <i class="fa-solid fa-volume-high"></i> استمع
-                        </button>
-                    </div>
-                `).join('');
-            },
+  document.addEventListener("input", (e) => {
+    const el = e.target;
+    if (!(el instanceof HTMLInputElement)) return;
+    if (el.id === "vocab-q") {
+      window.__q = el.value;
+      const { id } = parseHash();
+      const main = $("main");
+      if (main) main.innerHTML = viewVocab(id);
+      const n = $("#vocab-q");
+      if (n) {
+        n.focus();
+        n.setSelectionRange(n.value.length, n.value.length);
+      }
+    }
+    if (el.id === "uname") {
+      P.name = el.value.trim();
+      save();
+    }
+  });
 
-            renderVerbs() {
-                const tbody = document.querySelector('#verbs-table-body tbody');
-                if (!tbody) return;
-                tbody.innerHTML = this.state.verbs.map(v => `
-                    <tr>
-                        <td class="en-text" style="font-weight:800; color:var(--royal-blue);">${v.base}</td>
-                        <td class="en-text">${v.past}</td>
-                        <td class="en-text">${v.pp}</td>
-                        <td><strong>${v.ar}</strong></td>
-                        <td>
-                            <button class="btn-gold" style="padding:4px 10px; font-size:0.75rem;" onclick="app.speak('${v.base}. ${v.past}. ${v.pp}')">
-                                <i class="fa-solid fa-volume-high"></i>
-                            </button>
-                        </td>
-                    </tr>
-                `).join('');
-            },
+  document.addEventListener("click", (e) => {
+    if (!(e.target instanceof Element)) return;
+    const t = e.target.closest("[data-go]");
+    if (t) {
+      if (t.dataset.locked) {
+        toast("أكمل الدرس السابق أولًا");
+        return;
+      }
+      go(t.dataset.go, t.dataset.id || "");
+      return;
+    }
+    const th = e.target.closest("[data-act='theme']");
+    if (th) {
+      P.theme = P.theme === "light" ? "dark" : "light";
+      save();
+      applyTheme();
+      page();
+      return;
+    }
+    const sp = e.target.closest("[data-speak]");
+    if (sp) {
+      speak(decodeURIComponent(sp.dataset.speak));
+      if (sp.dataset.speak2) setTimeout(() => speak(decodeURIComponent(sp.dataset.speak2)), 700);
+      return;
+    }
+    const rt = e.target.closest("[data-rate]");
+    if (rt) {
+      rate = Number(rt.dataset.rate);
+      P.rate = rate;
+      save();
+      page();
+      return;
+    }
+    const sv = e.target.closest("[data-save]");
+    if (sv) {
+      const id = sv.dataset.save;
+      if (P.saved.includes(id)) P.saved = P.saved.filter((x) => x !== id);
+      else {
+        P.saved.push(id);
+        P.xp += 2;
+        touchStreak();
+      }
+      save();
+      page();
+      return;
+    }
+    const pick = e.target.closest("[data-pick]");
+    if (pick) {
+      const parent = pick.parentElement;
+      $$(".opt", parent).forEach((b) => b.classList.remove("ok", "bad"));
+      const val = decodeURIComponent(pick.dataset.pick);
+      const correct = decodeURIComponent(pick.dataset.correct);
+      const why = decodeURIComponent(pick.dataset.why);
+      const ok = val === correct;
+      pick.classList.add(ok ? "ok" : "bad");
+      if (!ok) {
+        const right = $$(".opt", parent).find((b) => decodeURIComponent(b.dataset.pick) === correct);
+        if (right) right.classList.add("ok");
+        P.mistakes.push(why);
+        save();
+      } else {
+        P.xp += 1;
+        touchStreak();
+        save();
+      }
+      const fb = document.querySelector(`[data-fb="${pick.dataset.fb}"]`);
+      if (fb) {
+        fb.className = "feedback " + (ok ? "ok" : "bad");
+        fb.textContent = (ok ? "أحسنت. " : "حاول مرة أخرى. ") + why;
+      }
+      return;
+    }
+    const cf = e.target.closest("[data-check-fill]");
+    if (cf) {
+      const key = cf.dataset.checkFill;
+      const input = document.querySelector(`[data-fill="${key}"]`);
+      const got = (input.value || "").trim().toLowerCase();
+      const correct = decodeURIComponent(cf.dataset.correct).trim().toLowerCase();
+      const why = decodeURIComponent(cf.dataset.why);
+      const ok = got === correct;
+      const fb = document.querySelector(`[data-fb="${key}"]`);
+      fb.className = "feedback " + (ok ? "ok" : "bad");
+      fb.textContent = (ok ? "صحيح. " : `الإجابة: ${decodeURIComponent(cf.dataset.correct)}. `) + why;
+      if (!ok) {
+        P.mistakes.push(why);
+      } else {
+        P.xp += 1;
+        touchStreak();
+      }
+      save();
+      return;
+    }
+    const tok = e.target.closest("[data-token]");
+    if (tok) {
+      const box = tok.closest("[data-order]");
+      const key = box.dataset.order;
+      orderState[key] = orderState[key] || [];
+      orderState[key].push(decodeURIComponent(tok.dataset.token));
+      tok.disabled = true;
+      const built = document.querySelector(`[data-built="${key}"]`);
+      built.textContent = orderState[key].join(" ");
+      const need = decodeURIComponent(box.dataset.correct).split(" ").length;
+      if (orderState[key].length >= need) {
+        const ok = orderState[key].join(" ") === decodeURIComponent(box.dataset.correct);
+        const fb = document.querySelector(`[data-fb="${key}"]`);
+        const why = decodeURIComponent(box.dataset.why);
+        fb.className = "feedback " + (ok ? "ok" : "bad");
+        fb.textContent = (ok ? "ترتيب سليم. " : `الترتيب: ${decodeURIComponent(box.dataset.correct)}. `) + why;
+        if (!ok) P.mistakes.push(why);
+        else {
+          P.xp += 1;
+          touchStreak();
+        }
+        save();
+      }
+      return;
+    }
+    const done = e.target.closest("[data-act='complete']");
+    if (done) {
+      const id = done.dataset.id;
+      if (!P.completed.includes(id)) {
+        P.completed.push(id);
+        P.xp += 10;
+        touchStreak();
+        save();
+      }
+      toast("أحسنت — نُقل الدرس إلى المكتمل");
+      const cur = DATA.lessons.find((l) => l.id === id);
+      const next = DATA.lessons.find((l) => l.order === (cur ? cur.order + 1 : -1));
+      if (next) go("lesson", next.id);
+      else go("me");
+      return;
+    }
+    const playAll = e.target.closest("[data-act='play-all']");
+    if (playAll) {
+      const c = DATA.talks.find((x) => x.id === playAll.dataset.id);
+      if (!c) return;
+      let i = 0;
+      const next = () => {
+        if (!c.lines[i]) return;
+        speak(c.lines[i].en);
+        i += 1;
+        setTimeout(next, 2400);
+      };
+      next();
+      return;
+    }
+    const sc = e.target.closest("[data-act='score-place']");
+    if (sc) {
+      const qs = DATA.placement;
+      let n = 0;
+      qs.forEach((q) => {
+        const box = document.querySelector(`[data-qid="${q.id}"]`);
+        if (!box) return;
+        let got = "";
+        const fill = $("[data-fill]", box);
+        if (fill) got = fill.value.trim();
+        const okBtn = $(".opt.ok", box);
+        if (okBtn && okBtn.dataset.pick) got = decodeURIComponent(okBtn.dataset.pick);
+        const built = $("[data-built]", box);
+        if (built && built.textContent) got = built.textContent;
+        if (got.toLowerCase() === String(q.correct).toLowerCase()) n += 1;
+      });
+      const r = n / qs.length;
+      const lv = r < 0.4 ? "pre-a1" : r < 0.75 ? "a1" : "a2";
+      const title = DATA.levels.find((l) => l.id === lv);
+      P.scores.place = n;
+      P.xp += n * 2;
+      save();
+      $("#place-result").innerHTML = `<div class="panel" style="margin-top:16px"><h2>نتيجتك: ${n} / ${qs.length}</h2><p>المستوى المقترح: <b>${title.titleAr}</b> (${title.titleEn})</p><p class="muted">${title.blurb}</p><button class="btn btn-gold" data-go="learn">ابدأ المسار</button></div>`;
+    }
+  });
 
-            renderIdioms() {
-                const c = document.getElementById('idioms-container');
-                if (!c) return;
-                c.innerHTML = this.state.idioms.map(i => `
-                    <div class="card">
-                        <div>
-                            <h3 class="en-text" style="color:var(--royal-blue); font-size:1.25rem;">"${i.en}"</h3>
-                            <p style="font-weight:800; margin:4px 0;">المعنى: ${i.ar}</p>
-                            <p style="color:var(--accent-gold); font-size:0.85rem;">نطق: ${i.p}</p>
-                            <p style="color:var(--text-muted); font-size:0.85rem; margin-top:6px;">مثال: <em>${i.ex}</em></p>
-                        </div>
-                        <button class="btn-gold" style="margin-top:1rem; padding:0.45rem; justify-content:center;" onclick="app.speak('${i.en}. Example: ${i.ex}')">
-                            <i class="fa-solid fa-volume-high"></i> استمع للمثل والمثال
-                        </button>
-                    </div>
-                `).join('');
-            },
+  window.addEventListener("hashchange", page);
+  applyTheme();
+  if (!location.hash) location.hash = "#/home";
+  page();
+})();
 
-            flipFlashcard() {
-                document.getElementById('flashcard-element').classList.toggle('flipped');
-            },
-
-            renderFlashcard() {
-                const fc = this.state.flashcards[this.state.currentFcIndex];
-                document.getElementById('fc-word').innerText = fc.en;
-                document.getElementById('fc-trans').innerText = fc.ar;
-                document.getElementById('fc-pron').innerText = "نطق: " + fc.p;
-                document.getElementById('flashcard-element').classList.remove('flipped');
-            },
-
-            nextFlashcard() {
-                this.state.currentFcIndex = (this.state.currentFcIndex + 1) % this.state.flashcards.length;
-                this.renderFlashcard();
-            },
-
-            prevFlashcard() {
-                this.state.currentFcIndex = (this.state.currentFcIndex - 1 + this.state.flashcards.length) % this.state.flashcards.length;
-                this.renderFlashcard();
-            },
-
-            speakCurrentFlashcard() {
-                const fc = this.state.flashcards[this.state.currentFcIndex];
-                this.speak(fc.en);
-            },
-
-            speak(text) {
-                if ('speechSynthesis' in window) {
-                    window.speechSynthesis.cancel();
-                    const u = new SpeechSynthesisUtterance(text);
-                    u.lang = 'en-US';
-                    u.rate = 0.85;
-                    window.speechSynthesis.speak(u);
-                }
-            }
-        };
-
-        window.addEventListener('DOMContentLoaded', () => app.init());
-    </script>
+  </script>
 </body>
 </html>
