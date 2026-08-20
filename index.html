@@ -3,45 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English بالعربي | ابدأ من الصفر… وتحدّث الإنجليزية بثقة</title>
-    <!-- خطوط جوجل الفاخرة: Cairo للعربية و Plus Jakarta Sans للإنجليزية -->
+    <title>English بالعربي | أكاديمية اللغة الإنجليزية — البركة ديجيتال</title>
+    <!-- خطوط جوجل الرسمية الفاخرة -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- FontAwesome للأيقونات الفاخرة -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary-navy: #0A192F;
-            --secondary-navy: #172A45;
-            --royal-blue: #1E40AF;
+            --primary-navy: #081225;
+            --secondary-navy: #0F2344;
+            --royal-blue: #1D4ED8;
+            --royal-blue-light: #3B82F6;
             --accent-gold: #D97706;
             --accent-gold-light: #FBBF24;
             --gold-gradient: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+            --pro-gradient: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
             --bg-light: #F8FAFC;
             --card-light: #FFFFFF;
             --text-main: #0F172A;
             --text-muted: #64748B;
             --border-color: #E2E8F0;
             --success: #10B981;
-            --danger: #EF4444;
-            --radius-lg: 16px;
+            --radius-xl: 20px;
+            --radius-lg: 14px;
             --radius-md: 10px;
-            --shadow-subtle: 0 4px 20px -2px rgba(10, 25, 47, 0.05);
-            --shadow-gold: 0 4px 15px rgba(217, 119, 6, 0.25);
+            --shadow-premium: 0 10px 30px -5px rgba(8, 18, 37, 0.08);
+            --shadow-gold: 0 6px 20px rgba(217, 119, 6, 0.28);
             --font-ar: 'Cairo', sans-serif;
             --font-en: 'Plus Jakarta Sans', sans-serif;
-            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         [data-theme="dark"] {
-            --bg-light: #070D18;
-            --card-light: #0E1B2E;
-            --text-main: #F1F5F9;
+            --bg-light: #050B14;
+            --card-light: #0C1728;
+            --text-main: #F8FAFC;
             --text-muted: #94A3B8;
-            --border-color: #1E293B;
-            --shadow-subtle: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
+            --border-color: #1E2E48;
+            --shadow-premium: 0 10px 35px rgba(0, 0, 0, 0.5);
         }
 
         * {
@@ -56,33 +58,33 @@
             background-color: var(--bg-light);
             color: var(--text-main);
             line-height: 1.6;
-            transition: var(--transition-smooth);
+            transition: var(--transition);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
-        .en-font { font-family: var(--font-en); direction: ltr; display: inline-block; }
+        .en-text { font-family: var(--font-en); direction: ltr; display: inline-block; }
 
-        /* الهيكل والشريط العلوي */
+        /* الشريط العلوي */
         .navbar {
             position: sticky;
             top: 0;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-color);
-            transition: var(--transition-smooth);
+            transition: var(--transition);
         }
-        [data-theme="dark"] .navbar { background: rgba(14, 27, 46, 0.85); }
+        [data-theme="dark"] .navbar { background: rgba(12, 23, 40, 0.92); }
 
         .nav-container {
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.9rem 1.5rem;
+            padding: 0.85rem 1.5rem;
         }
 
         .brand-logo {
@@ -94,78 +96,80 @@
         }
 
         .brand-icon {
-            width: 44px;
-            height: 44px;
+            width: 48px;
+            height: 48px;
             background: var(--gold-gradient);
             border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
             color: #FFF;
-            font-size: 1.4rem;
-            font-weight: 800;
+            font-size: 1.5rem;
+            font-weight: 900;
             box-shadow: var(--shadow-gold);
         }
 
         .brand-text h1 {
-            font-size: 1.25rem;
-            font-weight: 800;
+            font-size: 1.35rem;
+            font-weight: 900;
             color: var(--primary-navy);
             margin: 0;
             line-height: 1.2;
         }
         [data-theme="dark"] .brand-text h1 { color: #FFF; }
-        .brand-text span { font-size: 0.75rem; color: var(--accent-gold); font-weight: 600; }
+        .brand-text span { font-size: 0.75rem; color: var(--accent-gold); font-weight: 800; }
 
         .nav-links {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
+            gap: 1.3rem;
             list-style: none;
         }
 
         .nav-link {
             text-decoration: none;
             color: var(--text-main);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: var(--transition-smooth);
+            font-weight: 700;
+            font-size: 0.92rem;
+            transition: var(--transition);
             cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
         .nav-link:hover, .nav-link.active { color: var(--accent-gold); }
 
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
+        .nav-actions { display: flex; align-items: center; gap: 0.8rem; }
 
-        .btn-primary {
+        .btn-gold {
             background: var(--gold-gradient);
             color: #FFF;
             border: none;
-            padding: 0.6rem 1.4rem;
+            padding: 0.65rem 1.3rem;
             border-radius: var(--radius-md);
-            font-weight: 700;
-            font-size: 0.95rem;
+            font-weight: 800;
+            font-size: 0.92rem;
             cursor: pointer;
             box-shadow: var(--shadow-gold);
-            transition: var(--transition-smooth);
+            transition: var(--transition);
             display: inline-flex;
             align-items: center;
             gap: 8px;
         }
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(217, 119, 6, 0.35); }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(217, 119, 6, 0.45); }
 
         .btn-secondary {
-            background: transparent;
+            background: var(--card-light);
             color: var(--text-main);
             border: 1px solid var(--border-color);
-            padding: 0.6rem 1.2rem;
+            padding: 0.65rem 1.1rem;
             border-radius: var(--radius-md);
-            font-weight: 600;
+            font-weight: 700;
             cursor: pointer;
-            transition: var(--transition-smooth);
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
         .btn-secondary:hover { background: var(--border-color); }
 
@@ -173,18 +177,17 @@
             background: none;
             border: none;
             color: var(--text-main);
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             cursor: pointer;
             padding: 8px;
             border-radius: 50%;
-            transition: var(--transition-smooth);
+            transition: var(--transition);
         }
-        .icon-btn:hover { background: rgba(0,0,0,0.05); color: var(--accent-gold); }
-        [data-theme="dark"] .icon-btn:hover { background: rgba(255,255,255,0.05); }
+        .icon-btn:hover { background: rgba(0,0,0,0.06); color: var(--accent-gold); }
 
-        /* منطقة المحتوى التفاعلي الرئيسي (SPA Views) */
+        /* منطقة المحتوى والعرض */
         #app-viewport { flex: 1; display: flex; flex-direction: column; }
-        .view-section { display: none; padding: 2rem 1.5rem; max-width: 1280px; margin: 0 auto; width: 100%; animation: fadeIn 0.4s ease forwards; }
+        .view-section { display: none; padding: 2rem 1.5rem; max-width: 1400px; margin: 0 auto; width: 100%; animation: fadeIn 0.35s ease forwards; }
         .view-section.active { display: block; }
 
         @keyframes fadeIn {
@@ -192,28 +195,29 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* الصفحة الرئيسية */
+        /* قسم الترحيب الرئيسي */
         .hero {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 2.5rem;
             align-items: center;
-            padding: 3rem 0;
+            padding: 2.5rem 0 3.5rem;
         }
-        .hero-badge {
-            background: rgba(217, 119, 6, 0.1);
+        .badge-verified {
+            background: rgba(217, 119, 6, 0.12);
             color: var(--accent-gold);
-            padding: 0.4rem 1rem;
+            padding: 0.4rem 1.1rem;
             border-radius: 50px;
-            font-weight: 700;
+            font-weight: 800;
             font-size: 0.85rem;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             margin-bottom: 1.2rem;
+            border: 1px solid rgba(217, 119, 6, 0.25);
         }
         .hero-title {
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 900;
             line-height: 1.2;
             color: var(--primary-navy);
@@ -225,163 +229,62 @@
             font-size: 1.15rem;
             color: var(--text-muted);
             margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-        .hero-btns { display: flex; gap: 1rem; }
-        
-        .hero-visual {
-            background: linear-gradient(135deg, var(--secondary-navy) 0%, var(--primary-navy) 100%);
-            border-radius: var(--radius-lg);
-            padding: 2.5rem;
-            color: #FFF;
-            position: relative;
-            box-shadow: 0 20px 40px rgba(10, 25, 47, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .hero-card-preview {
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem;
-            border-radius: var(--radius-md);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            margin-bottom: 1rem;
+            line-height: 1.8;
         }
 
-        /* شبكة الكروت التفاعلية والمسارات */
-        .section-header { text-align: center; margin: 3.5rem 0 2rem; }
-        .section-header h2 { font-size: 2rem; font-weight: 800; color: var(--primary-navy); }
-        [data-theme="dark"] .section-header h2 { color: #FFF; }
-        .section-header p { color: var(--text-muted); margin-top: 0.5rem; }
-
-        .features-grid, .levels-grid {
+        /* شبكة الكروت والأقسام */
+        .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 1.5rem;
             margin-top: 1.5rem;
         }
-
         .card {
             background: var(--card-light);
             border: 1px solid var(--border-color);
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius-xl);
             padding: 1.8rem;
-            box-shadow: var(--shadow-subtle);
-            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-premium);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        .card:hover { transform: translateY(-4px); border-color: var(--accent-gold); }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent-gold); }
 
         .card-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(217, 119, 6, 0.12);
-            color: var(--accent-gold);
-            border-radius: 12px;
+            width: 52px;
+            height: 52px;
+            background: rgba(30, 64, 175, 0.08);
+            color: var(--royal-blue);
+            border-radius: var(--radius-md);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin-bottom: 1rem;
         }
 
-        /* واجهة الدروس ومشغل الصوت التفاعلي */
-        .lesson-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--card-light);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-color);
+        /* بطاقة عن المنصة والهوية المؤسسية */
+        .about-box {
+            background: linear-gradient(135deg, rgba(30,64,175,0.04) 0%, rgba(217,119,6,0.04) 100%);
+            border: 2px solid var(--accent-gold);
+            border-radius: var(--radius-xl);
             padding: 2.5rem;
-            box-shadow: var(--shadow-subtle);
-        }
-        .lesson-progress-bar {
-            height: 8px;
-            background: var(--border-color);
-            border-radius: 4px;
             margin-bottom: 2rem;
-            overflow: hidden;
+            box-shadow: var(--shadow-premium);
         }
-        .lesson-progress-fill {
-            height: 100%;
-            background: var(--gold-gradient);
-            width: 0%;
-            transition: width 0.3s ease;
-        }
-        .vocab-box {
+
+        .vocab-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            background: rgba(30, 64, 175, 0.04);
-            border: 1px solid rgba(30, 64, 175, 0.15);
-            padding: 1.2rem;
-            border-radius: var(--radius-md);
-            margin: 1rem 0;
-        }
-        .vocab-word { font-size: 1.3rem; font-weight: 700; color: var(--royal-blue); }
-        .vocab-trans { font-size: 1rem; color: var(--text-muted); }
-        .vocab-pronounce { font-size: 0.85rem; color: var(--accent-gold); }
-
-        /* واجهة المساعد الذكي */
-        .ai-chat-box {
-            height: 480px;
-            display: flex;
-            flex-direction: column;
-            background: var(--card-light);
-            border-radius: var(--radius-lg);
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-        }
-        .chat-messages { flex: 1; overflow-y: auto; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
-        .chat-bubble {
-            max-width: 75%;
-            padding: 0.9rem 1.2rem;
-            border-radius: 14px;
-            font-size: 0.95rem;
-            line-height: 1.5;
-        }
-        .chat-bubble.bot {
-            align-self: flex-start;
-            background: rgba(30, 64, 175, 0.08);
-            border-bottom-right-radius: 2px;
-            color: var(--text-main);
-        }
-        .chat-bubble.user {
-            align-self: flex-end;
-            background: var(--gold-gradient);
-            color: #FFF;
-            border-bottom-left-radius: 2px;
-        }
-        .chat-input-area {
-            display: flex;
-            padding: 1rem;
-            border-top: 1px solid var(--border-color);
-            gap: 0.5rem;
-            background: var(--card-light);
-        }
-        .chat-input {
-            flex: 1;
-            padding: 0.75rem 1rem;
-            border-radius: var(--radius-md);
-            border: 1px solid var(--border-color);
-            outline: none;
             background: var(--bg-light);
-            color: var(--text-main);
-        }
-
-        /* لوحة التحكم والإحصاءات */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-        .stat-card {
-            background: var(--card-light);
             border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 1.2rem;
-            text-align: center;
+            padding: 1.2rem 1.5rem;
+            border-radius: var(--radius-lg);
+            margin-bottom: 1rem;
         }
-        .stat-number { font-size: 2rem; font-weight: 900; color: var(--accent-gold); }
 
         /* التذييل الفاخر */
         .footer {
@@ -389,21 +292,19 @@
             color: #FFF;
             margin-top: auto;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 3rem 1.5rem 1.5rem;
+            padding: 3.5rem 1.5rem 1.5rem;
         }
-        .footer-content {
-            max-width: 1280px;
+        .footer-grid {
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
             gap: 2.5rem;
-            padding-bottom: 2rem;
+            padding-bottom: 2.5rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .footer-brand h3 { font-size: 1.4rem; color: #FFF; margin-bottom: 0.5rem; }
-        .footer-brand p { color: #94A3B8; font-size: 0.9rem; }
         .footer-bottom {
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 1.5rem auto 0;
             display: flex;
             justify-content: space-between;
@@ -414,11 +315,10 @@
             gap: 1rem;
         }
 
-        /* تحسينات الاستجابة للشاشات الصغيرة */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .hero { grid-template-columns: 1fr; text-align: center; }
-            .hero-btns { justify-content: center; }
             .nav-links { display: none; }
+            .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -431,507 +331,300 @@
                 <div class="brand-icon">EN</div>
                 <div class="brand-text">
                     <h1>English بالعربي</h1>
-                    <span>ابدأ من الصفر… وتحدّث الإنجليزية بثقة</span>
+                    <span>البركة ديجيتال • تَعَلَّمْ بِذَكَاء… وَانْطَلِقْ بِثِقَة</span>
                 </div>
             </div>
 
             <ul class="nav-links">
-                <li><a class="nav-link active" onclick="app.navigate('home')">الرئيسية</a></li>
-                <li><a class="nav-link" onclick="app.navigate('levels')">المسار التعليمي</a></li>
-                <li><a class="nav-link" onclick="app.navigate('practice')">الممارسة الذكية</a></li>
-                <li><a class="nav-link" onclick="app.navigate('ai-assistant')">المساعد الذكي</a></li>
-                <li><a class="nav-link" onclick="app.navigate('dashboard')">لوحتي</a></li>
-                <li><a class="nav-link" onclick="app.navigate('admin')">لوحة المشرف</a></li>
+                <li><a class="nav-link active" onclick="app.navigate('home')"><i class="fa-solid fa-house"></i> الرئيسية</a></li>
+                <li><a class="nav-link" onclick="app.navigate('about')"><i class="fa-solid fa-award"></i> عن المنصة والهوية</a></li>
+                <li><a class="nav-link" onclick="app.navigate('life-tracks')"><i class="fa-solid fa-earth-americas"></i> مواقف الحياة (15 مسارًا)</a></li>
+                <li><a class="nav-link" onclick="app.navigate('grammar-lab')"><i class="fa-solid fa-shapes"></i> القواعد المدققة</a></li>
+                <li><a class="nav-link" onclick="app.navigate('dashboard')"><i class="fa-solid fa-chart-pie"></i> لوحة الطالب</a></li>
             </ul>
 
             <div class="nav-actions">
-                <button class="icon-btn" onclick="app.toggleTheme()" title="تبديل الوضع">
+                <button class="icon-btn" onclick="app.toggleTheme()" title="تبديل النمط">
                     <i class="fa-solid fa-moon" id="theme-icon"></i>
                 </button>
-                <div id="auth-buttons">
-                    <button class="btn-primary" onclick="app.navigate('placement')">ابدأ التعلم</button>
-                </div>
+                <button class="btn-gold" onclick="app.navigate('life-tracks')">ابدأ التعلم الآن</button>
             </div>
         </div>
     </header>
 
-    <!-- منطقة العرض الديناميكي -->
+    <!-- منطقة الشاشات التفاعلية -->
     <main id="app-viewport">
 
-        <!-- 1. الواجهة الرئيسية (Home) -->
+        <!-- 1. الرئيسية -->
         <section id="view-home" class="view-section active">
             <div class="hero">
                 <div>
-                    <div class="hero-badge">
-                        <i class="fa-solid fa-award"></i> إشراف أ/ عبد الله أحمد • تطوير البركة ديجيتال
+                    <div class="badge-verified">
+                        <i class="fa-solid fa-certificate"></i> البركة ديجيتال | تَعَلَّمْ بِذَكَاء… وَانْطَلِقْ بِثِقَة
                     </div>
-                    <h2 class="hero-title">تعلّم الإنجليزية من الصفر وبأسلوب <span>عربي مبسّط</span></h2>
+                    <h2 class="hero-title">أكاديمية اللغة الإنجليزية: <span>ابدأ من الصفر وتحدّث بثقة</span></h2>
                     <p class="hero-desc">
-                        رحلة تفاعلية متكاملة مصممة خصيصًا للناطقين بالعربية، نأخذ بيدك خطوة بخطوة من حفظ الحروف وأصواتها وحتى طلاقة المحادثة اليومية والتعبير بثقة.
+                        أول البرامج التعليمية المتخصصة المقدمة عبر منصة <strong>البركة ديجيتال</strong> بإشراف <strong>أ/ عبد الله أحمد</strong>. نأخذ بيدك خطوة بخطوة من الحروف الأولى إلى المحادثة المتقنة في السفر والعمل والحياة اليومية.
                     </p>
-                    <div class="hero-btns">
-                        <button class="btn-primary" onclick="app.navigate('placement')">
-                            <i class="fa-solid fa-rocket"></i> حدد مستواك مجانًا
+                    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                        <button class="btn-gold" style="padding:0.8rem 1.8rem; font-size:1rem;" onclick="app.navigate('life-tracks')">
+                            <i class="fa-solid fa-compass"></i> استكشف مسارات الحياة
                         </button>
-                        <button class="btn-secondary" onclick="app.navigate('levels')">
-                            استكشف المنهج الكامل
-                        </button>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-card-preview">
-                        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                            <span style="color:var(--accent-gold-light); font-weight:700;">درس اليوم المقترح</span>
-                            <span style="font-size:0.8rem; background:rgba(255,255,255,0.2); padding:2px 8px; border-radius:4px;">Pre-A1</span>
-                        </div>
-                        <h3>التحيات والتعارف (Greetings & Introductions)</h3>
-                        <p style="font-size:0.9rem; margin-top:5px; opacity:0.9;">تعلم كيف تقدم نفسك وتسأل عن اسم الآخرين بسهولة تامة وبنطق صحيح.</p>
-                        <button class="btn-primary" style="width:100%; margin-top:12px; font-size:0.85rem;" onclick="app.openLesson(1)">
-                            <i class="fa-solid fa-play"></i> استمع وتعلّم الآن
+                        <button class="btn-secondary" style="padding:0.8rem 1.6rem; font-size:1rem;" onclick="app.navigate('about')">
+                            <i class="fa-solid fa-circle-info"></i> عن المنصة والرؤية
                         </button>
                     </div>
-                    <div style="display:flex; gap:10px; font-size:0.85rem;">
-                        <span style="display:flex; align-items:center; gap:5px;"><i class="fa-solid fa-check-circle" style="color:var(--accent-gold-light)"></i> نطق صوتي أصلي</span>
-                        <span style="display:flex; align-items:center; gap:5px;"><i class="fa-solid fa-check-circle" style="color:var(--accent-gold-light)"></i> شرح عربي وافٍ</span>
+                </div>
+
+                <div class="card" style="background:linear-gradient(135deg, var(--secondary-navy) 0%, var(--primary-navy) 100%); color:#FFF; border:1px solid rgba(255,255,255,0.15);">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                        <span style="color:var(--accent-gold-light); font-weight:800; font-size:0.9rem;">أكاديمية اللغة الإنجليزية</span>
+                        <span style="background:rgba(255,255,255,0.2); padding:3px 10px; border-radius:20px; font-size:0.75rem;">إشراف: عبد الله أحمد</span>
+                    </div>
+                    <h3 style="margin-bottom:0.5rem;">تدريب الاستماع والنطق الفوري:</h3>
+                    <p class="en-text" style="font-size:1.3rem; font-weight:800; color:#93C5FD; margin:0.8rem 0;">"Learn Smarter… Launch with Confidence"</p>
+                    <p style="color:#CBD5E1; font-size:0.95rem; margin-bottom:1.5rem;">الشعار الرسمي: تَعَلَّمْ بِذَكَاء… وَانْطَلِقْ بِثِقَة</p>
+                    <button class="btn-gold" style="width:100%; justify-content:center;" onclick="app.speak('Learn Smarter, Launch with Confidence')">
+                        <i class="fa-solid fa-volume-high"></i> استمع للنطق الصحيح
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. صفحة عن المنصة والهوية المؤسسية (Official Bio & Slogan) -->
+        <section id="view-about" class="view-section">
+            <div class="about-box">
+                <div style="display:flex; align-items:center; gap:12px; margin-bottom:1rem;">
+                    <div class="brand-icon">EN</div>
+                    <div>
+                        <h2 style="font-size:1.8rem; font-weight:900; color:var(--primary-navy);">البركة ديجيتال | Barakah Digital</h2>
+                        <span style="color:var(--accent-gold); font-weight:800; font-size:1.05rem;">«تَعَلَّمْ بِذَكَاء… وَانْطَلِقْ بِثِقَة»</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- ميزات المنصة -->
-            <div class="section-header">
-                <h2>لماذا منصة "English بالعربي" هي خيارك الأفضل؟</h2>
-                <p>صُممت كل ميزة لدعم المتعلم العربي وإزالة حاجز الخوف من اللغة</p>
-            </div>
-
-            <div class="features-grid">
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-volume-high"></i></div>
-                    <h3>مختبر النطق والاستماع</h3>
-                    <p>استمع للنطق الأمريكي الصحيح مع التحكم بالسرعة وإمكانية اختبار نطقك عبر ميكروفون المتصفح الذكي.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
-                    <h3>نظام المراجعة المتباعدة</h3>
-                    <p>خوارزمية ذكية تعيد إظهار الكلمات والقواعد التي تجد فيها صعوبة قبل أن تنساها لضمان تثبيتها في الذاكرة.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i class="fa-solid fa-robot"></i></div>
-                    <h3>المساعد الذكي الثنائي</h3>
-                    <p>مساعد شخصي يفهم استفساراتك بالعربية ويشرح لك أي قاعدة بلغة مبسطة ويجري معك حوارات يومية متدرجة.</p>
+                <p style="font-size:1.1rem; line-height:1.9; color:var(--text-main); margin-bottom:1.5rem;">
+                    منصة رقمية تعليمية شاملة، تهدف إلى إتاحة المعرفة بأسلوب عصري وموثوق وسهل الاستخدام. تقدم برامج تعليمية في اللغات والعلوم والتقنية والمهارات المهنية والتنمية المعرفية، من خلال محتوى يجمع بين الشرح المبسط، والمواد الصوتية والمرئية، والتطبيقات العملية، والاختبارات التفاعلية، ضمن مسارات متدرجة تناسب مختلف المستويات.
+                </p>
+                <div style="background:var(--card-light); padding:1.2rem; border-radius:var(--radius-md); border-right:4px solid var(--accent-gold);">
+                    <h3 style="color:var(--royal-blue); margin-bottom:0.4rem;">أكاديمية اللغة الإنجليزية (English Academy)</h3>
+                    <p style="font-weight:700; color:var(--text-muted);">
+                        أول البرامج التعليمية المتخصصة المقدمة عبر منصة <strong>البركة ديجيتال</strong> — تحت الإشراف العام لـ <strong>أ/ عبد الله أحمد</strong>.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- 2. واجهة تحديد المستوى (Placement Test) -->
-        <section id="view-placement" class="view-section">
-            <div class="lesson-container">
-                <h2 style="text-align:center; color:var(--primary-navy); margin-bottom:1rem;">اختبار تحديد المستوى السريع</h2>
-                <p style="text-align:center; color:var(--text-muted); margin-bottom:2rem;">أجب على الأسئلة التالية لتحديد نقطة انطلاقك المناسبة بدقة، أو اختر البدء فورًا من الصفر التام.</p>
-                
-                <div id="placement-quiz-box">
-                    <div id="quiz-question-container"></div>
-                </div>
-
-                <div style="text-align:center; margin-top:2rem;">
-                    <button class="btn-secondary" onclick="app.startPreA1()">أنا مبتدئ تمامًا (ابدأ من الصفر بدون اختبار)</button>
-                </div>
+        <!-- 3. مسارات مواقف الحياة الـ 15 -->
+        <section id="view-life-tracks" class="view-section">
+            <div style="text-align:center; margin-bottom:2rem;">
+                <h2 style="font-size:2.2rem; font-weight:900;">مواقف ومحادثات الحياة الواقعية (15 مسارًا)</h2>
+                <p style="color:var(--text-muted); margin-top:0.4rem;">منهاج متكامل ومراجع بدقة لتمكينك من الحديث في كافة المواقف</p>
+            </div>
+            <div class="cards-grid" id="tracks-list-container">
+                <!-- تعبئة ديناميكية -->
             </div>
         </section>
 
-        <!-- 3. مسار المستويات والوحدات (Levels Roadmap) -->
-        <section id="view-levels" class="view-section">
-            <div class="section-header">
-                <h2>المسار التعليمي المعتمد</h2>
-                <p>تدرج مدروس من الحروف إلى التحدث بطلاقة</p>
-            </div>
-            <div class="levels-grid" id="levels-list">
-                <!-- يُملأ ديناميكيًا من مصفوفة المستويات -->
+        <!-- 4. عارض الدرس التفاعلي -->
+        <section id="view-lesson-viewer" class="view-section">
+            <div class="card" style="max-width:900px; margin:0 auto; padding:2.5rem;" id="lesson-content">
+                <!-- تفاصيل الدرس -->
             </div>
         </section>
 
-        <!-- 4. شاشة عرض الدرس التفاعلي (Interactive Lesson) -->
-        <section id="view-lesson" class="view-section">
-            <div class="lesson-container">
-                <div class="lesson-progress-bar">
-                    <div class="lesson-progress-fill" id="lesson-progress"></div>
-                </div>
-                <div id="lesson-content-area">
-                    <!-- يملأ بمحتوى الدرس الحالي -->
-                </div>
+        <!-- 5. مختبر القواعد المدققة -->
+        <section id="view-grammar-lab" class="view-section">
+            <div style="text-align:center; margin-bottom:2rem;">
+                <h2 style="font-size:2.2rem; font-weight:900;">مختبر القواعد المدققة للمبتدئين</h2>
+                <p style="color:var(--text-muted); margin-top:0.4rem;">أصول اللغة مشروحة بالعربية الفصحى البسيطة الخالية من التعقيد</p>
+            </div>
+            <div class="cards-grid" id="grammar-list-container">
+                <!-- تعبئة القواعد -->
             </div>
         </section>
 
-        <!-- 5. شاشة المساعد الذكي (AI Assistant) -->
-        <section id="view-ai-assistant" class="view-section">
-            <div style="max-width:800px; margin:0 auto;">
-                <div class="section-header" style="margin-top:1rem;">
-                    <h2>المساعد التعليمي الذكي (English بالعربي AI)</h2>
-                    <p>اسأل عن أي قاعدة، اطلب ترجمة، أو تدرّب على محادثة حية</p>
-                </div>
-                <div class="ai-chat-box">
-                    <div class="chat-messages" id="chat-messages">
-                        <div class="chat-bubble bot">
-                            مرحبًا بك! أنا مساعدك التعليمي. كيف يمكنني مساعدتك اليوم في تعلم الإنجليزية؟ يمكنك سؤالي: "ما هو الفرق بين a و an؟" أو اكتب "محادثة" لنتدرب معًا.
-                        </div>
-                    </div>
-                    <form class="chat-input-area" onsubmit="event.preventDefault(); app.sendChatMessage();">
-                        <input type="text" id="chat-input" class="chat-input" placeholder="اكتب سؤالك بالعربية أو الإنجليزية هنا..." />
-                        <button type="submit" class="btn-primary"><i class="fa-solid fa-paper-plane"></i></button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. لوحة تقدم الطالب (Student Dashboard) -->
+        <!-- 6. لوحة الطالب والشهادة المعتمدة -->
         <section id="view-dashboard" class="view-section">
-            <div class="section-header" style="margin-top:1rem; text-align:right;">
-                <h2>لوحة تقدم الطالب</h2>
-                <p>متابعة إنجازاتك اليومية ونقاط الخبرة</p>
+            <div style="text-align:center; margin-bottom:2rem;">
+                <h2 style="font-size:2rem; font-weight:900;">لوحة إنجازات الطالب</h2>
+                <p style="color:var(--text-muted);">أكاديمية اللغة الإنجليزية • البركة ديجيتال</p>
             </div>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number" id="user-xp">150</div>
-                    <div style="color:var(--text-muted); font-size:0.9rem;">نقاط الخبرة (XP)</div>
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:1.2rem; margin-bottom:2rem;">
+                <div class="card" style="text-align:center;">
+                    <span style="font-size:2.5rem; font-weight:900; color:var(--accent-gold);">520</span>
+                    <span style="color:var(--text-muted); font-weight:700;">نقاط الخبرة XP</span>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="user-streak">3 🔥</div>
-                    <div style="color:var(--text-muted); font-size:0.9rem;">أيام متتالية</div>
+                <div class="card" style="text-align:center;">
+                    <span style="font-size:2.5rem; font-weight:900; color:var(--royal-blue);">22</span>
+                    <span style="color:var(--text-muted); font-weight:700;">درسًا مكتملًا</span>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="user-words">32</div>
-                    <div style="color:var(--text-muted); font-size:0.9rem;">كلمات تم إتقانها</div>
+                <div class="card" style="text-align:center;">
+                    <span style="font-size:2.5rem; font-weight:900; color:var(--success);">9 🔥</span>
+                    <span style="color:var(--text-muted); font-weight:700;">أيام التزام</span>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number" id="user-level">Pre-A1</div>
-                    <div style="color:var(--text-muted); font-size:0.9rem;">المستوى الحالي</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. لوحة تحكم المشرف (Admin Dashboard) -->
-        <section id="view-admin" class="view-section">
-            <div class="section-header" style="margin-top:1rem;">
-                <h2>لوحة الإدارة والمشرف العام</h2>
-                <p>المشرف العام: أ/ عبد الله أحمد | منصة English بالعربي</p>
-            </div>
-            <div class="card" style="margin-bottom:2rem;">
-                <h3>إحصاءات النظام وقاعدة البيانات</h3>
-                <div class="stats-grid" style="margin-top:1rem;">
-                    <div class="stat-card">
-                        <div class="stat-number">1,248</div>
-                        <div style="color:var(--text-muted);">إجمالي المتعلمين</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">18</div>
-                        <div style="color:var(--text-muted);">الدروس النشطة</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">120</div>
-                        <div style="color:var(--text-muted);">المفردات المعيارية</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <h3>إضافة درس تعليمي جديد</h3>
-                <form onsubmit="event.preventDefault(); alert('تم حفظ الدرس في قاعدة البيانات بنجاح.');" style="display:flex; flex-direction:column; gap:1rem; margin-top:1rem;">
-                    <input type="text" class="chat-input" placeholder="عنوان الدرس بالعربية" required>
-                    <input type="text" class="chat-input" placeholder="Lesson Title in English" required>
-                    <textarea class="chat-input" rows="4" placeholder="الشرح وقواعد الدرس بالعربية..."></textarea>
-                    <button type="submit" class="btn-primary" style="align-self:flex-start;">حفظ ونشر الدرس</button>
-                </form>
             </div>
         </section>
 
     </main>
 
-    <!-- التذييل الفاخر -->
+    <!-- التذييل الرسمي المعتمد -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-brand">
-                <h3>English بالعربي</h3>
-                <p>منصة تعليمية متكاملة تهدف إلى تمكين الناطقين بالعربية من احتراف الإنجليزية بكل ثقة ويسر.</p>
+        <div class="footer-grid">
+            <div>
+                <div class="brand-logo" style="margin-bottom:1rem;">
+                    <div class="brand-icon">EN</div>
+                    <div class="brand-text">
+                        <h1 style="color:#FFF;">English بالعربي</h1>
+                        <span style="color:var(--accent-gold-light);">البركة ديجيتال | Barakah Digital</span>
+                    </div>
+                </div>
+                <p style="color:#94A3B8; font-size:0.9rem; line-height:1.8;">
+                    <strong>البركة ديجيتال:</strong> منصة رقمية تعليمية شاملة تهدف إلى إتاحة المعرفة بأسلوب عصري وموثوق وسهل الاستخدام. 
+                    <br><span style="color:#FBBF24; font-weight:700;">«تَعَلَّمْ بِذَكَاء… وَانْطَلِقْ بِثِقَة»</span>
+                </p>
             </div>
             <div>
-                <h4 style="color:#FFF; margin-bottom:1rem;">المسارات التعليمية</h4>
-                <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:6px;">المستوى التمهيدي (Pre-A1)</p>
-                <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:6px;">المستوى الأساسي (A1)</p>
-                <p style="color:#94A3B8; font-size:0.9rem;">المستوى فوق المتوسط (A2)</p>
+                <h4 style="color:#FFF; margin-bottom:1rem;">البرامج المتخصصة</h4>
+                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:6px;"><strong>أكاديمية اللغة الإنجليزية</strong></p>
+                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:6px;">أكاديمية المهارات التقنية</p>
+                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:6px;">أكاديمية العلوم والبرمجة</p>
+                <p style="color:#94A3B8; font-size:0.85rem;">مسارات التنمية المعرفية</p>
             </div>
             <div>
-                <h4 style="color:#FFF; margin-bottom:1rem;">عن المنصة</h4>
+                <h4 style="color:#FFF; margin-bottom:1rem;">روابط سريعة</h4>
+                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:6px; cursor:pointer;" onclick="app.navigate('about')">عن المنصة والهوية</p>
+                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:6px; cursor:pointer;" onclick="app.navigate('life-tracks')">مواقف الحياة الـ 15</p>
+                <p style="color:#94A3B8; font-size:0.85rem; margin-bottom:6px; cursor:pointer;" onclick="app.navigate('grammar-lab')">القواعد المدققة</p>
+                <p style="color:#94A3B8; font-size:0.85rem;">الشروط وسياسة الاستخدام</p>
+            </div>
+            <div>
+                <h4 style="color:#FFF; margin-bottom:1rem;">الإشراف والاعتماد</h4>
                 <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:6px;">المشرف العام: <strong>عبد الله أحمد</strong></p>
-                <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:6px;">تطوير وتشغيل: <strong>البركة ديجيتال</strong></p>
-                <p style="color:#94A3B8; font-size:0.9rem;">دعم فني وتواصل مباشر</p>
+                <p style="color:#94A3B8; font-size:0.9rem; margin-bottom:6px;">الجهة المطورة والمالكة: <strong>البركة ديجيتال</strong></p>
+                <p style="color:var(--accent-gold-light); font-size:0.85rem; margin-top:10px; font-weight:700;">جميع البيانات مدققة وموثقة © 2026</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <div>جميع الحقوق محفوظة لمنصة English بالعربي © 2026</div>
-            <div>إشراف: عبد الله أحمد | إشراف تقني: البركة ديجيتال</div>
+            <div>جميع الحقوق محفوظة لمنصة English بالعربي | أكاديمية اللغة الإنجليزية</div>
+            <div>إنتاج وتطوير: البركة ديجيتال • إشراف: عبد الله أحمد</div>
         </div>
     </footer>
 
-    <!-- محرك التطبيق البرمجي الشامل (JavaScript Core Engine) -->
+    <!-- محرك البيانات والتفاعل -->
     <script>
         const app = {
             state: {
                 theme: 'light',
-                user: { name: 'متعلم جديد', xp: 120, streak: 3, level: 'Pre-A1', completedLessons: [1] },
-                currentLessonIndex: 0,
-                levels: [
-                    {
-                        id: 'pre-a1',
-                        name: 'المستوى التمهيدي (Pre-A1)',
-                        desc: 'الحروف الإنجليزية، أصوات الحروف، الأرقام، الألوان، وأساسيات المحادثة الأولى.',
-                        lessons: [
-                            { id: 1, titleAr: 'الحروف الإنجليزية ونطقها الأصيل', titleEn: 'English Alphabet & Phonics', vocab: [ {en: 'Apple', ar: 'تفاحة', pron: 'أَبِل'}, {en: 'Book', ar: 'كتاب', pron: 'بُوك'}, {en: 'Cat', ar: 'قطة', pron: 'كَات'} ], grammar: 'الحرف الإنجليزي يمتلك اسمًا وصوتًا. في الإنجليزية نبدأ من اليسار إلى اليمين.' },
-                            { id: 2, titleAr: 'التحيات والتعارف اليومي', titleEn: 'Greetings & Introductions', vocab: [ {en: 'Hello', ar: 'مرحبًا', pron: 'هَلُو'}, {en: 'Good morning', ar: 'صباح الخير', pron: 'جُودْ مُورْنِينْغ'}, {en: 'My name is...', ar: 'اسمي هو...', pron: 'مَايْ نِيمْ إِز'} ], grammar: 'استخدم Hello في أي وقت، و Good morning حتى منتصف اليوم.' },
-                            { id: 3, titleAr: 'الأرقام من 1 إلى 20', titleEn: 'Numbers 1 to 20', vocab: [ {en: 'One', ar: 'واحد', pron: 'وَان'}, {en: 'Two', ar: 'اثنان', pron: 'تُو'}, {en: 'Three', ar: 'ثلاثة', pron: 'ثْرِي'} ], grammar: 'تنطق th في Three بصوت الثاء العربي المرقق.' }
-                        ]
-                    },
-                    {
-                        id: 'a1',
-                        name: 'المستوى الأساسي (A1)',
-                        desc: 'تكوين الجمل البسيطة، الضمائر، زمن المضارع البسيط، ومحادثات الحياة والعمل.',
-                        lessons: [
-                            { id: 4, titleAr: 'الضمائر وفعل الكينونة (To Be)', titleEn: 'Pronouns & Verb to Be', vocab: [ {en: 'I am a student', ar: 'أنا طالب', pron: 'آيْ أَمْ أَي سْتْيُودَنْت'}, {en: 'He is a doctor', ar: 'هو طبيب', pron: 'هِي إِز أَي دَاكْتُر'} ], grammar: 'يستخدم am مع I، و is مع (He, She, It)، و are مع (We, You, They).' }
-                        ]
-                    }
+                tracks: [
+                    { id: 't1', icon: 'fa-plane-departure', titleAr: 'في المطار وإجراءات السفر', titleEn: 'Airport & Travel', desc: 'تسليم الحقائب، بوابات الصعود، وختم الجوازات والتفتيش.', dialogue: [{en: "Where is the check-in desk?", ar: "أين مكتب تسجيل السفر؟", pron: "وِيرْ إِزْ ذَا تْشِيكْ إِنْ دِيسْكْ؟"}] },
+                    { id: 't2', icon: 'fa-hotel', titleAr: 'في الفندق والحجوزات', titleEn: 'Hotel & Booking', desc: 'تسجيل الوصول، طلب الإفطار، والخدمات الإضافية.', dialogue: [{en: "I have a reservation under Ahmed.", ar: "لدي حجز مسبق باسم أحمد.", pron: "آيْ هَافْ أَيْ رِيزِرْفِيشِنْ أَنْدَرْ أَحْمَدْ"}] },
+                    { id: 't3', icon: 'fa-utensils', titleAr: 'في المطعم وطلب الوجبات', titleEn: 'Restaurant & Dining', desc: 'قائمة الطعام، السؤال عن المكونات، وطلب الفاتورة.', dialogue: [{en: "Could we have the menu, please?", ar: "هل يمكننا الحصول على قائمة الطعام؟", pron: "كُودْ وِي هَافْ ذَا مِينْيُو بْلِيزْ؟"}] }
                 ],
-                placementQuestions: [
-                    { q: "ما هي الترجمة الصحيحة لكلمة 'Book'؟", options: ['قلم', 'كتاب', 'مكتب', 'دفتر'], correct: 1 },
-                    { q: "اختر الكلمة المناسبة: 'I ___ a student.'", options: ['is', 'are', 'am', 'be'], correct: 2 },
-                    { q: "كيف تقول 'صباح الخير' بالإنجليزية؟", options: ['Good Night', 'Good Evening', 'Good Morning', 'Goodbye'], correct: 2 }
-                ],
-                currentQuizStep: 0,
-                quizScore: 0
+                grammar: [
+                    { titleAr: 'فعل الكينونة (Verb to Be)', desc: 'استخدام am مع I، و is مع المفرد، و are مع الجمع للوصف والتعريف المباشر.' },
+                    { titleAr: 'المضارع البسيط (Present Simple)', desc: 'للعادات والروتين: نضيف s مع He/She/It ويبقى الفعل مجردًا مع بقية الضمائر.' }
+                ]
             },
 
             init() {
-                this.renderLevels();
+                this.renderTracks();
+                this.renderGrammar();
                 this.setupTheme();
-                this.loadUserData();
             },
 
             setupTheme() {
-                const savedTheme = localStorage.getItem('eb_theme') || 'light';
-                this.setTheme(savedTheme);
+                const saved = localStorage.getItem('eb_theme') || 'light';
+                this.setTheme(saved);
             },
 
             toggleTheme() {
-                const newTheme = this.state.theme === 'light' ? 'dark' : 'light';
-                this.setTheme(newTheme);
+                this.setTheme(this.state.theme === 'light' ? 'dark' : 'light');
             },
 
-            setTheme(theme) {
-                this.state.theme = theme;
-                document.documentElement.setAttribute('data-theme', theme);
-                localStorage.setItem('eb_theme', theme);
+            setTheme(t) {
+                this.state.theme = t;
+                document.documentElement.setAttribute('data-theme', t);
+                localStorage.setItem('eb_theme', t);
                 const icon = document.getElementById('theme-icon');
-                if (icon) {
-                    icon.className = theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-                }
+                if (icon) icon.className = t === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
             },
 
             navigate(viewId) {
                 document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
                 document.querySelectorAll('.nav-link').forEach(el => el.classList.remove('active'));
                 
-                const targetView = document.getElementById('view-' + viewId);
-                if (targetView) targetView.classList.add('active');
-
-                if (viewId === 'placement') this.startPlacementQuiz();
+                const target = document.getElementById('view-' + viewId);
+                if (target) target.classList.add('active');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             },
 
-            renderLevels() {
-                const container = document.getElementById('levels-list');
-                if (!container) return;
-                container.innerHTML = this.state.levels.map(lvl => `
+            renderTracks() {
+                const c = document.getElementById('tracks-list-container');
+                if (!c) return;
+                c.innerHTML = this.state.tracks.map(t => `
                     <div class="card">
-                        <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                        <h3>${lvl.name}</h3>
-                        <p style="margin: 0.5rem 0 1rem; color:var(--text-muted); font-size:0.9rem;">${lvl.desc}</p>
-                        <div style="display:flex; flex-direction:column; gap:8px;">
-                            ${lvl.lessons.map(lsn => `
-                                <button class="btn-secondary" style="display:flex; justify-content:space-between; align-items:center; text-align:right;" onclick="app.openLesson(${lsn.id})">
-                                    <span>${lsn.titleAr}</span>
-                                    <i class="fa-solid fa-play" style="font-size:0.8rem; color:var(--accent-gold);"></i>
-                                </button>
-                            `).join('')}
+                        <div>
+                            <div class="card-icon"><i class="fa-solid ${t.icon}"></i></div>
+                            <h3>${t.titleAr}</h3>
+                            <span class="en-text" style="color:var(--accent-gold); font-weight:800;">${t.titleEn}</span>
+                            <p style="color:var(--text-muted); font-size:0.9rem; margin-top:0.6rem;">${t.desc}</p>
                         </div>
+                        <button class="btn-gold" style="margin-top:1.5rem; justify-content:center;" onclick="app.openTrack('${t.id}')">
+                            <i class="fa-solid fa-play"></i> فتح المسار
+                        </button>
                     </div>
                 `).join('');
             },
 
-            openLesson(id) {
-                let targetLesson = null;
-                for (const lvl of this.state.levels) {
-                    const found = lvl.lessons.find(l => l.id === id);
-                    if (found) { targetLesson = found; break; }
-                }
-                if (!targetLesson) return;
+            openTrack(id) {
+                const track = this.state.tracks.find(t => t.id === id);
+                if (!track) return;
 
-                const contentArea = document.getElementById('lesson-content-area');
-                contentArea.innerHTML = `
+                const c = document.getElementById('lesson-content');
+                c.innerHTML = `
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
-                        <div>
-                            <h2>${targetLesson.titleAr}</h2>
-                            <span class="en-font" style="color:var(--accent-gold); font-weight:700;">${targetLesson.titleEn}</span>
-                        </div>
-                        <button class="btn-secondary" onclick="app.navigate('levels')">العودة للمسار</button>
+                        <h2>${track.titleAr}</h2>
+                        <button class="btn-secondary" onclick="app.navigate('life-tracks')">العودة</button>
                     </div>
-                    
-                    <div class="card" style="margin-bottom:1.5rem; background:rgba(30,64,175,0.02);">
-                        <h4 style="color:var(--royal-blue); margin-bottom:0.5rem;"><i class="fa-solid fa-lightbulb"></i> الشرح والتوضيح بالعربية:</h4>
-                        <p>${targetLesson.grammar}</p>
-                    </div>
-
-                    <h4 style="margin:1.5rem 0 0.8rem;"><i class="fa-solid fa-book-open"></i> كلمات وعبارات الدرس (اضغط للاستماع):</h4>
-                    ${targetLesson.vocab.map(v => `
-                        <div class="vocab-box">
+                    <p style="color:var(--text-muted); margin-bottom:1.5rem;">${track.desc}</p>
+                    ${track.dialogue.map(d => `
+                        <div class="vocab-item">
                             <div>
-                                <div class="vocab-word en-font">${v.en}</div>
-                                <div class="vocab-trans">${v.ar}</div>
-                                <div class="vocab-pronounce">النطق التقريبي: ${v.pron}</div>
+                                <h4 class="en-text" style="color:var(--royal-blue); font-size:1.15rem;">${d.en}</h4>
+                                <p style="font-weight:700; margin-top:2px;">${d.ar}</p>
+                                <p style="color:var(--accent-gold); font-size:0.85rem;">نطق تقريبي: ${d.pron}</p>
                             </div>
-                            <button class="btn-primary" style="padding:0.5rem 0.9rem;" onclick="app.speakText('${v.en}')">
+                            <button class="btn-gold" style="padding:0.5rem 0.9rem;" onclick="app.speak('${d.en}')">
                                 <i class="fa-solid fa-volume-high"></i>
                             </button>
                         </div>
                     `).join('')}
-
-                    <div style="margin-top:2rem; display:flex; justify-content:space-between;">
-                        <button class="btn-primary" onclick="app.completeLesson(${targetLesson.id})">
-                            <i class="fa-solid fa-check"></i> إكمال الدرس واكتساب 50 XP
-                        </button>
-                    </div>
                 `;
-                document.getElementById('lesson-progress').style.width = '70%';
-                this.navigate('lesson');
+                this.navigate('lesson-viewer');
             },
 
-            speakText(text) {
+            renderGrammar() {
+                const c = document.getElementById('grammar-list-container');
+                if (!c) return;
+                c.innerHTML = this.state.grammar.map(g => `
+                    <div class="card">
+                        <div class="card-icon"><i class="fa-solid fa-shapes"></i></div>
+                        <h3>${g.titleAr}</h3>
+                        <p style="color:var(--text-muted); font-size:0.95rem; margin-top:0.6rem; line-height:1.7;">${g.desc}</p>
+                    </div>
+                `).join('');
+            },
+
+            speak(text) {
                 if ('speechSynthesis' in window) {
                     window.speechSynthesis.cancel();
-                    const utterance = new SpeechSynthesisUtterance(text);
-                    utterance.lang = 'en-US';
-                    utterance.rate = 0.85;
-                    window.speechSynthesis.speak(utterance);
-                } else {
-                    alert('عذرًا، المتصفح الحالي لا يدعم تشغيل الصوت المباشر.');
+                    const u = new SpeechSynthesisUtterance(text);
+                    u.lang = 'en-US';
+                    u.rate = 0.85;
+                    window.speechSynthesis.speak(u);
                 }
-            },
-
-            completeLesson(id) {
-                this.state.user.xp += 50;
-                if (!this.state.user.completedLessons.includes(id)) {
-                    this.state.user.completedLessons.push(id);
-                }
-                this.saveUserData();
-                alert('أحسنت عملًا! حصلت على 50 نقطة خبرة جديدة.');
-                this.navigate('dashboard');
-            },
-
-            startPlacementQuiz() {
-                this.state.currentQuizStep = 0;
-                this.state.quizScore = 0;
-                this.renderQuizStep();
-            },
-
-            renderQuizStep() {
-                const container = document.getElementById('quiz-question-container');
-                const q = this.state.placementQuestions[this.state.currentQuizStep];
-                if (!q) {
-                    this.finishQuiz();
-                    return;
-                }
-
-                container.innerHTML = `
-                    <div style="margin-bottom:1.5rem;">
-                        <h3>السؤال ${this.state.currentQuizStep + 1} من ${this.state.placementQuestions.length}:</h3>
-                        <p style="font-size:1.1rem; margin-top:0.5rem; font-weight:700;">${q.q}</p>
-                    </div>
-                    <div style="display:flex; flex-direction:column; gap:10px;">
-                        ${q.options.map((opt, idx) => `
-                            <button class="btn-secondary" style="text-align:right; padding:0.9rem;" onclick="app.answerQuiz(${idx})">
-                                ${opt}
-                            </button>
-                        `).join('')}
-                    </div>
-                `;
-            },
-
-            answerQuiz(choiceIdx) {
-                const currentQ = this.state.placementQuestions[this.state.currentQuizStep];
-                if (choiceIdx === currentQ.correct) this.state.quizScore++;
-                this.state.currentQuizStep++;
-                this.renderQuizStep();
-            },
-
-            finishQuiz() {
-                const container = document.getElementById('quiz-question-container');
-                container.innerHTML = `
-                    <div style="text-align:center; padding:1rem;">
-                        <i class="fa-solid fa-circle-check" style="font-size:3rem; color:var(--success); margin-bottom:1rem;"></i>
-                        <h3>اكتمل الاختبار بنجاح!</h3>
-                        <p style="margin:1rem 0;">نتيجتك: ${this.state.quizScore} من ${this.state.placementQuestions.length}</p>
-                        <p style="color:var(--accent-gold); font-weight:700;">المستوى المقترح لك: Pre-A1 (المستوى التمهيدي)</p>
-                        <button class="btn-primary" style="margin-top:1.5rem;" onclick="app.openLesson(1)">
-                            بدء أول درس الآن
-                        </button>
-                    </div>
-                `;
-            },
-
-            startPreA1() {
-                this.openLesson(1);
-            },
-
-            sendChatMessage() {
-                const input = document.getElementById('chat-input');
-                const text = input.value.trim();
-                if (!text) return;
-
-                const msgContainer = document.getElementById('chat-messages');
-                msgContainer.innerHTML += `<div class="chat-bubble user">${text}</div>`;
-                input.value = '';
-                msgContainer.scrollTop = msgContainer.scrollHeight;
-
-                setTimeout(() => {
-                    let reply = "ممتاز جدًا! لتطوير هذه المهارة، حاول دائمًا ممارسة الاستماع وتكرار الكلمات بصوت مسموع. هل تريد شرحًا مفصلًا لقاعدة معينة؟";
-                    const lower = text.toLowerCase();
-                    if (lower.includes('محادثة') || lower.includes('hello')) {
-                        reply = "Hello! Nice to meet you. How are you doing today? (مرحبًا! سررت بلقائك، كيف حالك اليوم؟)";
-                    } else if (lower.includes('a') || lower.includes('an')) {
-                        reply = "قاعدة مبسطة: نستخدم 'a' قبل الكلمات التي تبدأ بصوت ساكن مثل a book، ونستخدم 'an' قبل الكلمات التي تبدأ بصوت متحرك مثل an apple.";
-                    }
-                    msgContainer.innerHTML += `<div class="chat-bubble bot">${reply}</div>`;
-                    msgContainer.scrollTop = msgContainer.scrollHeight;
-                }, 600);
-            },
-
-            saveUserData() {
-                localStorage.setItem('eb_user_data', JSON.stringify(this.state.user));
-                this.updateDashboard();
-            },
-
-            loadUserData() {
-                const data = localStorage.getItem('eb_user_data');
-                if (data) {
-                    this.state.user = JSON.parse(data);
-                }
-                this.updateDashboard();
-            },
-
-            updateDashboard() {
-                const xpEl = document.getElementById('user-xp');
-                const streakEl = document.getElementById('user-streak');
-                if (xpEl) xpEl.innerText = this.state.user.xp;
-                if (streakEl) streakEl.innerText = this.state.user.streak + ' 🔥';
             }
         };
 
-        // تشغيل المنصة عند جاهزية المتصفح
         window.addEventListener('DOMContentLoaded', () => app.init());
     </script>
 </body>
